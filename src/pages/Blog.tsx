@@ -65,10 +65,10 @@ export default function Blog() {
       <Header />
       
       {/* Page Title */}
-      <section className="py-16 bg-secondary">
+      <section className="pt-24 pb-16" style={{ backgroundColor: '#4B3022' }}>
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-serif text-5xl font-bold text-primary mb-4">Our Blog</h1>
-          <p className="font-sans text-xl text-muted-foreground max-w-2xl mx-auto">
+          <h1 className="font-elsie text-8xl font-medium text-white mb-4">Our Blog</h1>
+          <p className="font-montserrat text-xl text-white/90 max-w-2xl mx-auto">
             Stay updated with the latest beauty tips, treatment insights, and wellness advice from our expert team
           </p>
         </div>
@@ -99,27 +99,27 @@ export default function Blog() {
                         <div className="flex items-center space-x-4 text-sm text-muted-foreground mb-3">
                           <div className="flex items-center space-x-1">
                             <Calendar className="w-4 h-4" />
-                            <span className="font-sans">{post.date}</span>
+                            <span className="font-montserrat">{post.date}</span>
                           </div>
                           <div className="flex items-center space-x-1">
                             <User className="w-4 h-4" />
-                            <span className="font-sans">{post.author}</span>
+                            <span className="font-montserrat">{post.author}</span>
                           </div>
-                          <span className="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs font-sans">
+                          <span className="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs font-montserrat">
                             {post.category}
                           </span>
                         </div>
                         
-                        <h3 className="font-serif text-2xl font-bold text-primary mb-4 leading-tight">
+                        <h3 className="font-montserrat text-2xl font-bold text-primary mb-4 leading-tight">
                           {post.title}
                         </h3>
                         
-                        <p className="font-sans text-muted-foreground mb-6 leading-relaxed">
+                        <p className="font-montserrat text-muted-foreground mb-6 leading-relaxed">
                           {post.excerpt}
                         </p>
                       </div>
                       
-                      <Button variant="outline" className="self-start font-sans group">
+                      <Button variant="outline" className="self-start font-montserrat group">
                         Read More
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                       </Button>
@@ -132,7 +132,7 @@ export default function Blog() {
           
           {/* Load More Button */}
           <div className="text-center mt-12">
-            <Button size="lg" className="font-sans font-medium">
+            <Button size="lg" className="font-montserrat font-medium">
               Load More Articles
             </Button>
           </div>
