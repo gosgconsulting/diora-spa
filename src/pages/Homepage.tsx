@@ -88,7 +88,7 @@ export default function Homepage() {
         />
         <div className="relative text-center text-white">
           <div className="space-y-2">
-            <p className="font-poppins text-2xl md:text-3xl font-light tracking-widest">Welcome to</p>
+            <p className="font-poppins text-2xl md:text-3xl font-light tracking-widest uppercase">Welcome to</p>
             <h1 className="font-heading text-8xl md:text-9xl font-medium leading-tight">Nail Queen</h1>
             <p className="font-allura text-2xl md:text-3xl">by Michelle Tran</p>
           </div>
@@ -100,7 +100,7 @@ export default function Homepage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-montserrat text-6xl font-medium text-primary mb-4">Our Services</h2>
-            <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="font-montserrat text-lg text-muted-foreground max-w-2xl mx-auto">
               Experience our signature treatments crafted with care and expertise
             </p>
           </div>
@@ -117,14 +117,14 @@ export default function Homepage() {
                   <div className="absolute inset-0 bg-black/30"></div>
                   <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6">
                     <h3 className="font-serif text-2xl font-semibold mb-3">{service.title}</h3>
-                    <p className="font-sans text-sm leading-relaxed">{service.description}</p>
+                    <p className="font-montserrat text-sm leading-relaxed">{service.description}</p>
                   </div>
                   <div className="absolute bottom-4 left-4 text-white font-serif text-xl font-bold">
                     {service.price}
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <Button className="font-sans px-6 py-2 rounded-full w-fit">Explore More</Button>
+                  <Button className="font-montserrat px-6 py-2 rounded-full w-fit">Explore More</Button>
                 </div>
               </div>
             ))}
@@ -137,7 +137,7 @@ export default function Homepage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-heading text-5xl font-medium text-white mb-4">Why Choose Serenity Spa</h2>
-            <p className="font-sans text-lg text-white/90 max-w-2xl mx-auto">
+            <p className="font-montserrat text-lg text-white/90 max-w-2xl mx-auto">
               Discover what makes our spa experience truly exceptional
             </p>
           </div>
@@ -159,8 +159,8 @@ export default function Homepage() {
                      />
                    </div>
                    <h3 className="font-serif text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                   <p className="font-sans text-white/90 mb-6 leading-relaxed">{feature.description}</p>
-                    <Button size="lg" className="font-sans font-medium bg-transparent text-white border border-white hover:bg-white/10">
+                    <p className="font-montserrat text-white/90 mb-6 leading-relaxed">{feature.description}</p>
+                     <Button size="lg" className="font-montserrat font-medium bg-transparent text-white border border-white hover:bg-white/10">
                       Learn More
                     </Button>
                  </div>
@@ -175,7 +175,7 @@ export default function Homepage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-heading text-6xl font-medium text-white mb-4">Our Ingredients</h2>
-            <p className="font-sans text-lg text-white/90 max-w-2xl mx-auto">
+            <p className="font-montserrat text-lg text-white/90 max-w-2xl mx-auto">
               We carefully select premium natural ingredients known for their therapeutic properties and gentle effectiveness.
             </p>
           </div>
@@ -205,7 +205,7 @@ export default function Homepage() {
                       />
                    </div>
                    <h4 className="font-serif font-semibold text-white text-sm mb-2">{ingredient.name}</h4>
-                   <p className="font-sans text-xs text-white/90">{ingredient.benefit}</p>
+                   <p className="font-montserrat text-xs text-white/90">{ingredient.benefit}</p>
                  </div>
                );
              })}
@@ -238,8 +238,8 @@ export default function Homepage() {
                       />
                    </div>
                    <h3 className="font-serif text-lg font-semibold mb-2" style={{ color: '#4B3022' }}>{member.name}</h3>
-                   <p className="font-sans text-sm text-muted-foreground mb-1">{member.role}</p>
-                   <p className="font-sans text-xs text-accent">{member.experience}</p>
+                    <p className="font-montserrat text-sm text-muted-foreground mb-1">{member.role}</p>
+                    <p className="font-montserrat text-xs text-accent">{member.experience}</p>
                  </div>
                );
              })}
@@ -261,10 +261,10 @@ export default function Homepage() {
             
             <div>
               <h2 className="font-heading text-5xl font-medium mb-6" style={{ color: '#4B3022' }}>About Serenity Spa</h2>
-              <p className="font-sans text-lg mb-6 leading-relaxed" style={{ color: '#4B3022' }}>
+              <p className="font-montserrat text-lg mb-6 leading-relaxed" style={{ color: '#4B3022' }}>
                 For over a decade, Serenity Spa has been a sanctuary of wellness and beauty in our community. We believe that true beauty comes from within, and our treatments are designed to nurture both your physical and emotional well-being.
               </p>
-              <p className="font-sans text-lg leading-relaxed" style={{ color: '#4B3022' }}>
+              <p className="font-montserrat text-lg leading-relaxed" style={{ color: '#4B3022' }}>
                 Our commitment to excellence means using only the finest natural products and maintaining the highest standards of service. Every visit to Serenity Spa is an opportunity to escape, rejuvenate, and rediscover your inner glow.
               </p>
             </div>
@@ -296,7 +296,7 @@ export default function Homepage() {
                           <Star key={i} className="w-6 h-6 fill-white text-white" />
                         ))}
                       </div>
-                      <p className="font-sans text-white mb-6 italic text-lg leading-relaxed">
+                      <p className="font-montserrat text-white mb-6 italic text-lg leading-relaxed">
                         "{testimonial.text}"
                       </p>
                       <p className="font-serif font-semibold text-white text-lg">
