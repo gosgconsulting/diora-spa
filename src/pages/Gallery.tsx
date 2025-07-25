@@ -30,10 +30,10 @@ export default function Gallery() {
       <Header />
       
       {/* Page Title */}
-      <section className="py-16 bg-secondary">
+      <section className="pt-24 pb-16" style={{ backgroundColor: '#4B3022' }}>
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-serif text-5xl font-bold text-primary mb-4">Gallery</h1>
-          <p className="font-sans text-xl text-muted-foreground max-w-2xl mx-auto">
+          <h1 className="font-elsie text-8xl font-medium text-white mb-4">Gallery</h1>
+          <p className="font-montserrat text-xl text-white/90 max-w-2xl mx-auto">
             Take a visual journey through our serene spa environment and professional treatments
           </p>
         </div>
@@ -43,8 +43,8 @@ export default function Gallery() {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-primary mb-4">Hair Washing Treatments</h2>
-            <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="font-montserrat text-4xl font-bold text-primary mb-4">Hair Washing Treatments</h2>
+            <p className="font-montserrat text-lg text-muted-foreground max-w-2xl mx-auto">
               Experience our luxurious hair cleansing and scalp massage treatments
             </p>
           </div>
@@ -67,8 +67,8 @@ export default function Gallery() {
       <section className="py-16 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-primary mb-4">Waxing Treatments</h2>
-            <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="font-montserrat text-4xl font-bold text-primary mb-4">Waxing Treatments</h2>
+            <p className="font-montserrat text-lg text-muted-foreground max-w-2xl mx-auto">
               Professional waxing services in our comfortable and hygienic environment
             </p>
           </div>
