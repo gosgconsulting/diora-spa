@@ -145,13 +145,13 @@ export default function Homepage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="mb-6">
-                  <img 
-                    src={teamImage} 
-                    alt={feature.title}
-                    className="w-full h-48 object-cover rounded-lg shadow-lg"
-                  />
-                </div>
+                 <div className="mb-6">
+                   <img 
+                     src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop" 
+                     alt={feature.title}
+                     className="w-full h-48 object-cover rounded-lg shadow-lg"
+                   />
+                 </div>
                 <h3 className="font-serif text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="font-sans text-white/90 mb-6 leading-relaxed">{feature.description}</p>
                 <Button size="lg" className="font-sans font-medium bg-white text-[#4B3022] hover:bg-white/90">
@@ -178,13 +178,13 @@ export default function Homepage() {
               const ingredient = ingredients[index % ingredients.length];
               return (
                 <div key={index} className="text-center">
-                  <div className="mb-4">
-                    <img 
-                      src={ingredientsImage} 
-                      alt={ingredient.name}
-                      className="w-full h-24 object-cover rounded-lg shadow-lg"
-                    />
-                  </div>
+                   <div className="mb-4">
+                     <img 
+                       src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=150&h=96&fit=crop" 
+                       alt={ingredient.name}
+                       className="w-full h-24 object-cover rounded-lg shadow-lg"
+                     />
+                   </div>
                   <h4 className="font-serif font-semibold text-white text-sm mb-2">{ingredient.name}</h4>
                   <p className="font-sans text-xs text-white/90">{ingredient.benefit}</p>
                 </div>
@@ -204,13 +204,13 @@ export default function Homepage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="text-center">
-                <div className="mb-4">
-                  <img 
-                    src={teamImage} 
-                    alt={member.name}
-                    className="w-full h-48 object-cover rounded-lg shadow-lg"
-                  />
-                </div>
+                 <div className="mb-4">
+                   <img 
+                     src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=300&h=300&fit=crop" 
+                     alt={member.name}
+                     className="w-full h-48 object-cover rounded-lg shadow-lg"
+                   />
+                 </div>
                 <h3 className="font-serif text-lg font-semibold mb-2" style={{ color: '#4B3022' }}>{member.name}</h3>
                 <p className="font-sans text-sm text-muted-foreground mb-1">{member.role}</p>
                 <p className="font-sans text-xs text-accent">{member.experience}</p>
@@ -247,10 +247,10 @@ export default function Homepage() {
 
       {/* Reviews Section */}
       <section className="relative py-24">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${teamImage})` }}
-        />
+         <div 
+           className="absolute inset-0 bg-cover bg-center"
+           style={{ backgroundImage: `url(https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=1920&h=1080&fit=crop)` }}
+         />
         <div className="absolute inset-0" style={{ backgroundColor: 'rgba(75, 48, 34, 0.8)' }}></div>
         
         <div className="relative container mx-auto px-4">

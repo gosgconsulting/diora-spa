@@ -50,16 +50,16 @@ export default function Footer() {
             <h3 className="font-serif text-xl font-semibold mb-4 text-white">Get Social</h3>
             <div className="flex space-x-4 mb-6">
               <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
-                <Facebook className="w-6 h-6 fill-white" />
+                <Facebook className="w-6 h-6" />
               </a>
               <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
-                <Twitter className="w-6 h-6 fill-white" />
+                <Twitter className="w-6 h-6" />
               </a>
               <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
-                <Instagram className="w-6 h-6 fill-white" />
+                <Instagram className="w-6 h-6" />
               </a>
               <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
-                <Youtube className="w-6 h-6 fill-white" />
+                <Youtube className="w-6 h-6" />
               </a>
             </div>
             <div className="inline-block border-2 border-white rounded-full px-6 py-3 text-white font-sans text-sm">
