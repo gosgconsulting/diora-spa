@@ -142,24 +142,31 @@ export default function Homepage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                 <div className="mb-6">
-                   <img 
-                     src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop" 
-                     alt={feature.title}
-                     className="w-full h-48 object-cover rounded-lg shadow-lg"
-                   />
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+             {features.map((feature, index) => {
+               const images = [
+                 "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
+                 "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop", 
+                 "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&h=300&fit=crop"
+               ];
+               return (
+                 <div key={index} className="text-center">
+                   <div className="mb-6">
+                     <img 
+                       src={images[index]} 
+                       alt={feature.title}
+                       className="w-full h-48 object-cover rounded-lg shadow-lg"
+                     />
+                   </div>
+                   <h3 className="font-serif text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                   <p className="font-sans text-white/90 mb-6 leading-relaxed">{feature.description}</p>
+                   <Button size="lg" className="font-sans font-medium bg-white text-[#4B3022] hover:bg-white/90">
+                     Learn More
+                   </Button>
                  </div>
-                <h3 className="font-serif text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="font-sans text-white/90 mb-6 leading-relaxed">{feature.description}</p>
-                <Button size="lg" className="font-sans font-medium bg-white text-[#4B3022] hover:bg-white/90">
-                  Learn More
-                </Button>
-              </div>
-            ))}
-          </div>
+               );
+             })}
+           </div>
         </div>
       </section>
 
@@ -173,24 +180,36 @@ export default function Homepage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-5 gap-4">
-            {Array.from({ length: 10 }, (_, index) => {
-              const ingredient = ingredients[index % ingredients.length];
-              return (
-                <div key={index} className="text-center">
+           <div className="grid grid-cols-5 gap-4">
+             {Array.from({ length: 10 }, (_, index) => {
+               const ingredient = ingredients[index % ingredients.length];
+               const images = [
+                 "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=150&h=96&fit=crop",
+                 "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=150&h=96&fit=crop",
+                 "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=96&fit=crop",
+                 "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=150&h=96&fit=crop",
+                 "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=96&fit=crop",
+                 "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=150&h=96&fit=crop",
+                 "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=150&h=96&fit=crop",
+                 "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=150&h=96&fit=crop",
+                 "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=96&fit=crop",
+                 "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=150&h=96&fit=crop"
+               ];
+               return (
+                 <div key={index} className="text-center">
                    <div className="mb-4">
                      <img 
-                       src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=150&h=96&fit=crop" 
+                       src={images[index]} 
                        alt={ingredient.name}
                        className="w-full h-24 object-cover rounded-lg shadow-lg"
                      />
                    </div>
-                  <h4 className="font-serif font-semibold text-white text-sm mb-2">{ingredient.name}</h4>
-                  <p className="font-sans text-xs text-white/90">{ingredient.benefit}</p>
-                </div>
-              );
-            })}
-          </div>
+                   <h4 className="font-serif font-semibold text-white text-sm mb-2">{ingredient.name}</h4>
+                   <p className="font-sans text-xs text-white/90">{ingredient.benefit}</p>
+                 </div>
+               );
+             })}
+           </div>
         </div>
       </section>
 
@@ -201,22 +220,30 @@ export default function Homepage() {
             <h2 className="font-serif text-4xl font-bold" style={{ color: '#4B3022' }}>Our Expert Team</h2>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="text-center">
-                 <div className="mb-4">
-                   <img 
-                     src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=300&h=300&fit=crop" 
-                     alt={member.name}
-                     className="w-full h-48 object-cover rounded-lg shadow-lg"
-                   />
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+             {teamMembers.map((member, index) => {
+               const images = [
+                 "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=300&h=300&fit=crop",
+                 "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300&h=300&fit=crop",
+                 "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop",
+                 "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=300&h=300&fit=crop"
+               ];
+               return (
+                 <div key={index} className="text-center">
+                   <div className="mb-4">
+                     <img 
+                       src={images[index]} 
+                       alt={member.name}
+                       className="w-full h-48 object-cover rounded-lg shadow-lg"
+                     />
+                   </div>
+                   <h3 className="font-serif text-lg font-semibold mb-2" style={{ color: '#4B3022' }}>{member.name}</h3>
+                   <p className="font-sans text-sm text-muted-foreground mb-1">{member.role}</p>
+                   <p className="font-sans text-xs text-accent">{member.experience}</p>
                  </div>
-                <h3 className="font-serif text-lg font-semibold mb-2" style={{ color: '#4B3022' }}>{member.name}</h3>
-                <p className="font-sans text-sm text-muted-foreground mb-1">{member.role}</p>
-                <p className="font-sans text-xs text-accent">{member.experience}</p>
-              </div>
-            ))}
-          </div>
+               );
+             })}
+           </div>
         </div>
       </section>
 
@@ -249,7 +276,7 @@ export default function Homepage() {
       <section className="relative py-24">
          <div 
            className="absolute inset-0 bg-cover bg-center"
-           style={{ backgroundImage: `url(https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=1920&h=1080&fit=crop)` }}
+           style={{ backgroundImage: `url(https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=1920&h=1080&fit=crop)` }}
          />
         <div className="absolute inset-0" style={{ backgroundColor: 'rgba(75, 48, 34, 0.8)' }}></div>
         
