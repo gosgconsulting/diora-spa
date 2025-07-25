@@ -125,7 +125,9 @@ export default function Homepage() {
                     {service.price}
                   </div>
                 </div>
-                <Button className="font-sans px-6 py-2 rounded-full w-fit mx-auto">Explore More</Button>
+                <div className="flex justify-center">
+                  <Button className="font-sans px-6 py-2 rounded-full w-fit">Explore More</Button>
+                </div>
               </div>
             ))}
           </div>
@@ -160,9 +162,9 @@ export default function Homepage() {
                    </div>
                    <h3 className="font-serif text-xl font-semibold text-white mb-4">{feature.title}</h3>
                    <p className="font-sans text-white/90 mb-6 leading-relaxed">{feature.description}</p>
-                   <Button size="lg" className="font-sans font-medium bg-white text-[#4B3022] hover:bg-white/90">
-                     Learn More
-                   </Button>
+                    <Button size="lg" className="font-sans font-medium bg-transparent text-white border border-white hover:bg-white/10">
+                      Learn More
+                    </Button>
                  </div>
                );
              })}
