@@ -89,7 +89,7 @@ export default function Homepage() {
         <div className="relative text-center text-white">
           <div className="space-y-2">
             <p className="font-poppins text-2xl md:text-3xl font-medium tracking-widest uppercase">Welcome to</p>
-            <h1 className="font-heading text-8xl md:text-9xl font-medium leading-tight">Nail Queen</h1>
+            <h1 className="font-heading text-8xl md:text-9xl font-medium leading-tight">Diora spa</h1>
             <p className="font-allura text-2xl md:text-3xl">by Michelle Tran</p>
           </div>
         </div>
@@ -136,7 +136,7 @@ export default function Homepage() {
       <section className="py-16" style={{ backgroundColor: '#4B3022' }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-5xl font-medium text-white mb-4">Why Choose Nail Queen</h2>
+            <h2 className="font-heading text-5xl font-medium text-white mb-4">Why Choose Diora spa</h2>
             <p className="font-montserrat text-lg text-white/90 max-w-2xl mx-auto">
               Discover what makes our spa experience truly exceptional
             </p>
@@ -260,12 +260,12 @@ export default function Homepage() {
             </div>
             
             <div>
-              <h2 className="font-heading text-5xl font-medium mb-6" style={{ color: '#4B3022' }}>About Nail Queen</h2>
+              <h2 className="font-heading text-5xl font-medium mb-6" style={{ color: '#4B3022' }}>About Diora spa</h2>
               <p className="font-montserrat text-lg mb-6 leading-relaxed" style={{ color: '#4B3022' }}>
-                For over a decade, Nail Queen has been a sanctuary of wellness and beauty in our community. We believe that true beauty comes from within, and our treatments are designed to nurture both your physical and emotional well-being.
+                For over a decade, Diora spa has been a sanctuary of wellness and beauty in our community. We believe that true beauty comes from within, and our treatments are designed to nurture both your physical and emotional well-being.
               </p>
               <p className="font-montserrat text-lg leading-relaxed" style={{ color: '#4B3022' }}>
-                Our commitment to excellence means using only the finest natural products and maintaining the highest standards of service. Every visit to Nail Queen is an opportunity to escape, rejuvenate, and rediscover your inner glow.
+                Our commitment to excellence means using only the finest natural products and maintaining the highest standards of service. Every visit to Diora spa is an opportunity to escape, rejuvenate, and rediscover your inner glow.
               </p>
             </div>
           </div>

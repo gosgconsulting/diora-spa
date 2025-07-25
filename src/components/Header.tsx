@@ -23,12 +23,8 @@ export default function Header() {
     }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className={`text-2xl font-montserrat font-bold transition-colors ${
-            isScrolled ? 'text-white' : 'text-white'
-          }`}>
-            Nail Queen
-          </Link>
+          {/* Spacer for layout */}
+          <div></div>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
