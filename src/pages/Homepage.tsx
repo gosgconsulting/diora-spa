@@ -15,11 +15,13 @@ export default function Homepage() {
       title: "Hair Wash",
       description: "Luxurious hair cleansing and scalp massage with premium organic products",
       image: hairWashImage,
+      price: "$25"
     },
     {
-      title: "Waxing",
+      title: "Waxing", 
       description: "Professional waxing services using gentle, skin-friendly formulations",
       image: waxingImage,
+      price: "$35"
     }
   ];
 
@@ -78,27 +80,19 @@ export default function Homepage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center">
+      <section className="relative h-[600px] flex items-center justify-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
-        >
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
-        <div className="relative container mx-auto px-4 text-white">
-          <div className="max-w-2xl">
-            <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Experience Pure
-              <br />
-              <span className="text-accent">Serenity</span>
-            </h1>
-            <p className="font-sans text-xl mb-8 text-white/90 leading-relaxed">
-              Discover our luxury spa treatments designed to rejuvenate your body and soul in an atmosphere of complete tranquility.
-            </p>
-            <Button size="lg" className="font-sans font-medium">
-              Book Your Treatment
-            </Button>
-          </div>
+        />
+        <div className="relative text-center text-white">
+          <h1 className="font-serif text-5xl md:text-6xl font-bold leading-tight">
+            Welcome to
+            <br />
+            Nail queen
+            <br />
+            by Michelle Tran
+          </h1>
         </div>
       </section>
 
@@ -114,45 +108,49 @@ export default function Homepage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {services.map((service, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-[4/3] overflow-hidden">
+              <div key={index} className="space-y-4">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
                   <img 
                     src={service.image} 
                     alt={service.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover"
                   />
+                  <div className="absolute inset-0 bg-black/30"></div>
+                  <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6">
+                    <h3 className="font-serif text-2xl font-semibold mb-3">{service.title}</h3>
+                    <p className="font-sans text-sm leading-relaxed">{service.description}</p>
+                  </div>
+                  <div className="absolute bottom-4 left-4 text-white font-serif text-xl font-bold">
+                    {service.price}
+                  </div>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="font-serif text-2xl font-semibold text-primary mb-3">{service.title}</h3>
-                  <p className="font-sans text-muted-foreground mb-4">{service.description}</p>
-                  <Button variant="outline" className="font-sans">Learn More</Button>
-                </CardContent>
-              </Card>
+                <Button className="w-full font-sans">Explore More</Button>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-secondary">
+      <section className="py-16" style={{ backgroundColor: '#4B3022' }}>
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-primary mb-4">Why Choose Serenity Spa</h2>
-            <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
-              Discover what makes our spa experience truly exceptional
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="font-serif text-xl font-semibold text-primary mb-3">{feature.title}</h3>
-                <p className="font-sans text-muted-foreground">{feature.description}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <img 
+                src={teamImage} 
+                alt="Why choose us"
+                className="w-full h-96 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+            <div>
+              <h2 className="font-serif text-4xl font-bold text-white mb-6">Why Choose Serenity Spa</h2>
+              <p className="font-sans text-lg text-white/90 mb-8 leading-relaxed">
+                Discover what makes our spa experience truly exceptional with premium products, caring approach, and safe hygienic environment.
+              </p>
+              <Button size="lg" className="font-sans font-medium bg-white text-[#4B3022] hover:bg-white/90">
+                Learn More
+              </Button>
+            </div>
           </div>
         </div>
       </section>
