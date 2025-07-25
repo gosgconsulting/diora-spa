@@ -61,7 +61,7 @@ export default function Pricing() {
       {/* Page Title */}
       <section className="pt-24 pb-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-heading text-6xl font-medium text-white mb-4">Pricing</h1>
+          <h1 className="font-elsie text-8xl font-medium text-white mb-4">Pricing</h1>
         </div>
       </section>
 
@@ -81,7 +81,7 @@ export default function Pricing() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h2 className="font-heading text-4xl font-medium text-black mb-4">Hair Wash Services</h2>
+                <h2 className="font-montserrat text-4xl font-medium text-black mb-4">Hair Wash Services</h2>
               </div>
               
               {/* Zig-zag Layout */}
@@ -89,12 +89,12 @@ export default function Pricing() {
                 {hairServices.map((service, index) => (
                   <div key={index} className={`flex items-center gap-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                     <div className="flex-1">
-                      <h3 className="font-serif text-xl font-semibold text-black mb-3">{service.name}</h3>
-                      <p className="font-sans text-gray-700 mb-3">{service.description}</p>
+                      <h3 className="font-montserrat text-xl font-semibold text-black mb-3">{service.name}</h3>
+                      <p className="font-montserrat text-gray-700 mb-3">{service.description}</p>
                       <div className="flex items-center justify-between mb-4">
-                        <span className="font-sans text-sm text-gray-600">Duration: {service.duration}</span>
+                        <span className="font-montserrat text-sm text-gray-600">Duration: {service.duration}</span>
                       </div>
-                      <Button className="font-sans rounded-full" style={{ backgroundColor: '#3a2d1a' }}>Enquire Now</Button>
+                      <Button className="font-montserrat rounded-full" style={{ backgroundColor: '#3a2d1a' }}>Enquire Now</Button>
                     </div>
                     <div className="flex-1">
                       <div className="aspect-[4/3] overflow-hidden rounded-lg">
@@ -121,7 +121,7 @@ export default function Pricing() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h2 className="font-heading text-4xl font-medium text-black mb-4">Waxing Services</h2>
+                <h2 className="font-montserrat text-4xl font-medium text-black mb-4">Waxing Services</h2>
               </div>
               
               {/* Zig-zag Layout */}
@@ -129,12 +129,12 @@ export default function Pricing() {
                 {waxingServices.map((service, index) => (
                   <div key={index} className={`flex items-center gap-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                     <div className="flex-1">
-                      <h3 className="font-serif text-xl font-semibold text-black mb-3">{service.name}</h3>
-                      <p className="font-sans text-gray-700 mb-3">{service.description}</p>
+                      <h3 className="font-montserrat text-xl font-semibold text-black mb-3">{service.name}</h3>
+                      <p className="font-montserrat text-gray-700 mb-3">{service.description}</p>
                       <div className="flex items-center justify-between mb-4">
-                        <span className="font-sans text-sm text-gray-600">Duration: {service.duration}</span>
+                        <span className="font-montserrat text-sm text-gray-600">Duration: {service.duration}</span>
                       </div>
-                      <Button className="font-sans rounded-full" style={{ backgroundColor: '#3a2d1a' }}>Enquire Now</Button>
+                      <Button className="font-montserrat rounded-full" style={{ backgroundColor: '#3a2d1a' }}>Enquire Now</Button>
                     </div>
                     <div className="flex-1">
                       <div className="aspect-[4/3] overflow-hidden rounded-lg">

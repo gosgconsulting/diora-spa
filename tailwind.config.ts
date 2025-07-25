@@ -26,6 +26,7 @@ export default {
 				'allura': ['Allura', 'cursive'],
 				'montserrat': ['Montserrat', 'sans-serif'],
 				'josefin': ['Josefin Sans', 'sans-serif'],
+				'elsie': ['Elsie Swash Caps', 'cursive'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
