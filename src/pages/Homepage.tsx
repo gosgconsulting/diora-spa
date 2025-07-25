@@ -124,7 +124,7 @@ export default function Homepage() {
                     {service.price}
                   </div>
                 </div>
-                <Button className="w-full font-sans">Explore More</Button>
+                <Button className="font-sans px-6 py-2 rounded-full w-fit mx-auto">Explore More</Button>
               </div>
             ))}
           </div>
@@ -134,80 +134,86 @@ export default function Homepage() {
       {/* Why Choose Us */}
       <section className="py-16" style={{ backgroundColor: '#4B3022' }}>
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <img 
-                src={teamImage} 
-                alt="Why choose us"
-                className="w-full h-96 object-cover rounded-lg shadow-lg"
-              />
-            </div>
-            <div>
-              <h2 className="font-serif text-4xl font-bold text-white mb-6">Why Choose Serenity Spa</h2>
-              <p className="font-sans text-lg text-white/90 mb-8 leading-relaxed">
-                Discover what makes our spa experience truly exceptional with premium products, caring approach, and safe hygienic environment.
-              </p>
-              <Button size="lg" className="font-sans font-medium bg-white text-[#4B3022] hover:bg-white/90">
-                Learn More
-              </Button>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-4xl font-bold text-white mb-4">Why Choose Serenity Spa</h2>
+            <p className="font-sans text-lg text-white/90 max-w-2xl mx-auto">
+              Discover what makes our spa experience truly exceptional
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="text-center">
+                <div className="mb-6">
+                  <img 
+                    src={teamImage} 
+                    alt={feature.title}
+                    className="w-full h-48 object-cover rounded-lg shadow-lg"
+                  />
+                </div>
+                <h3 className="font-serif text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="font-sans text-white/90 mb-6 leading-relaxed">{feature.description}</p>
+                <Button size="lg" className="font-sans font-medium bg-white text-[#4B3022] hover:bg-white/90">
+                  Learn More
+                </Button>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Ingredients Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16" style={{ backgroundColor: '#4B3022' }}>
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-serif text-4xl font-bold text-primary mb-6">Natural Ingredients</h2>
-              <p className="font-sans text-lg text-muted-foreground mb-8">
-                We carefully select premium natural ingredients known for their therapeutic properties and gentle effectiveness.
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {ingredients.map((ingredient, index) => (
-                  <div key={index} className="border border-border rounded-lg p-4">
-                    <h4 className="font-serif font-semibold text-primary mb-2">{ingredient.name}</h4>
-                    <p className="font-sans text-sm text-muted-foreground">{ingredient.benefit}</p>
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-4xl font-bold text-white mb-4">Natural Ingredients</h2>
+            <p className="font-sans text-lg text-white/90 max-w-2xl mx-auto">
+              We carefully select premium natural ingredients known for their therapeutic properties and gentle effectiveness.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-5 gap-4">
+            {Array.from({ length: 25 }, (_, index) => {
+              const ingredient = ingredients[index % ingredients.length];
+              return (
+                <div key={index} className="text-center">
+                  <div className="mb-4">
+                    <img 
+                      src={ingredientsImage} 
+                      alt={ingredient.name}
+                      className="w-full h-24 object-cover rounded-lg shadow-lg"
+                    />
                   </div>
-                ))}
-              </div>
-            </div>
-            
-            <div className="relative">
-              <img 
-                src={ingredientsImage} 
-                alt="Natural spa ingredients"
-                className="w-full h-96 object-cover rounded-lg shadow-lg"
-              />
-            </div>
+                  <h4 className="font-serif font-semibold text-white text-sm mb-2">{ingredient.name}</h4>
+                  <p className="font-sans text-xs text-white/90">{ingredient.benefit}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Team Section */}
-      <section className="py-16 bg-secondary">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-primary mb-4">Our Expert Team</h2>
-            <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
-              Meet our skilled professionals dedicated to providing you with exceptional care
-            </p>
+            <h2 className="font-serif text-4xl font-bold" style={{ color: '#4B3022' }}>Our Expert Team</h2>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
-              <Card key={index} className="text-center">
-                <CardContent className="p-6">
-                  <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Users className="w-12 h-12 text-primary" />
-                  </div>
-                  <h3 className="font-serif text-lg font-semibold text-primary mb-2">{member.name}</h3>
-                  <p className="font-sans text-sm text-muted-foreground mb-1">{member.role}</p>
-                  <p className="font-sans text-xs text-accent">{member.experience}</p>
-                </CardContent>
-              </Card>
+              <div key={index} className="text-center">
+                <div className="mb-4">
+                  <img 
+                    src={teamImage} 
+                    alt={member.name}
+                    className="w-full h-48 object-cover rounded-lg shadow-lg"
+                  />
+                </div>
+                <h3 className="font-serif text-lg font-semibold mb-2" style={{ color: '#4B3022' }}>{member.name}</h3>
+                <p className="font-sans text-sm text-muted-foreground mb-1">{member.role}</p>
+                <p className="font-sans text-xs text-accent">{member.experience}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -226,16 +232,13 @@ export default function Homepage() {
             </div>
             
             <div>
-              <h2 className="font-serif text-4xl font-bold text-primary mb-6">About Serenity Spa</h2>
-              <p className="font-sans text-lg text-muted-foreground mb-6 leading-relaxed">
+              <h2 className="font-serif text-4xl font-bold mb-6" style={{ color: '#4B3022' }}>About Serenity Spa</h2>
+              <p className="font-sans text-lg mb-6 leading-relaxed" style={{ color: '#4B3022' }}>
                 For over a decade, Serenity Spa has been a sanctuary of wellness and beauty in our community. We believe that true beauty comes from within, and our treatments are designed to nurture both your physical and emotional well-being.
               </p>
-              <p className="font-sans text-lg text-muted-foreground mb-8 leading-relaxed">
+              <p className="font-sans text-lg leading-relaxed" style={{ color: '#4B3022' }}>
                 Our commitment to excellence means using only the finest natural products and maintaining the highest standards of service. Every visit to Serenity Spa is an opportunity to escape, rejuvenate, and rediscover your inner glow.
               </p>
-              <Button size="lg" className="font-sans font-medium">
-                Learn More About Us
-              </Button>
             </div>
           </div>
         </div>
