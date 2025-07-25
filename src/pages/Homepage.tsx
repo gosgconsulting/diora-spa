@@ -176,7 +176,7 @@ export default function Homepage() {
       <section className="py-16" style={{ backgroundColor: '#4B3022' }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-5xl font-medium text-white mb-4">Natural Ingredients</h2>
+            <h2 className="font-heading text-6xl font-medium text-white mb-4">Our Ingredients</h2>
             <p className="font-sans text-lg text-white/90 max-w-2xl mx-auto">
               We carefully select premium natural ingredients known for their therapeutic properties and gentle effectiveness.
             </p>
@@ -200,11 +200,11 @@ export default function Homepage() {
                return (
                  <div key={index} className="text-center">
                    <div className="mb-4">
-                     <img 
-                       src={images[index]} 
-                       alt={ingredient.name}
-                       className="w-full h-24 object-cover rounded-lg shadow-lg"
-                     />
+                      <img 
+                        src={images[index]} 
+                        alt={ingredient.name}
+                        className="w-full aspect-square object-cover rounded-lg shadow-lg"
+                      />
                    </div>
                    <h4 className="font-serif font-semibold text-white text-sm mb-2">{ingredient.name}</h4>
                    <p className="font-sans text-xs text-white/90">{ingredient.benefit}</p>
@@ -219,7 +219,7 @@ export default function Homepage() {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-5xl font-medium" style={{ color: '#4B3022' }}>Our Expert Team</h2>
+            <h2 className="font-heading text-6xl font-medium" style={{ color: '#4B3022' }}>Meet Our Team</h2>
           </div>
           
            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -233,11 +233,11 @@ export default function Homepage() {
                return (
                  <div key={index} className="text-center">
                    <div className="mb-4">
-                     <img 
-                       src={images[index]} 
-                       alt={member.name}
-                       className="w-full h-48 object-cover rounded-lg shadow-lg"
-                     />
+                      <img 
+                        src={images[index]} 
+                        alt={member.name}
+                        className="w-full aspect-square object-cover rounded-lg shadow-lg"
+                      />
                    </div>
                    <h3 className="font-serif text-lg font-semibold mb-2" style={{ color: '#4B3022' }}>{member.name}</h3>
                    <p className="font-sans text-sm text-muted-foreground mb-1">{member.role}</p>
@@ -257,7 +257,7 @@ export default function Homepage() {
               <img 
                 src={teamImage} 
                 alt="Spa team"
-                className="w-full h-96 object-cover rounded-lg shadow-lg"
+                className="w-full h-[500px] object-cover rounded-lg shadow-lg"
               />
             </div>
             
