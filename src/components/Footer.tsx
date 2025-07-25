@@ -2,7 +2,7 @@ import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube } from "luci
 
 export default function Footer() {
   return (
-    <footer className="bg-[#4B3022] text-primary-foreground">
+    <footer className="bg-[#3a2d1a] text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
         {/* First Row - Site Name */}
         <div className="mb-8">
@@ -50,16 +50,16 @@ export default function Footer() {
             <h3 className="font-serif text-xl font-semibold mb-4 text-white">Get Social</h3>
             <div className="flex space-x-4 mb-6">
               <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
-                <Facebook className="w-6 h-6" />
+                <Facebook className="w-6 h-6 fill-white" />
               </a>
               <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
-                <Twitter className="w-6 h-6" />
+                <Twitter className="w-6 h-6 fill-white" />
               </a>
               <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
-                <Instagram className="w-6 h-6" />
+                <Instagram className="w-6 h-6 fill-white" />
               </a>
               <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
-                <Youtube className="w-6 h-6" />
+                <Youtube className="w-6 h-6 fill-white" />
               </a>
             </div>
             <div className="inline-block border-2 border-white rounded-full px-6 py-3 text-white font-sans text-sm">
