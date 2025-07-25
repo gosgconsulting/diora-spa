@@ -173,7 +173,7 @@ export default function Homepage() {
           </div>
           
           <div className="grid grid-cols-5 gap-4">
-            {Array.from({ length: 25 }, (_, index) => {
+            {Array.from({ length: 10 }, (_, index) => {
               const ingredient = ingredients[index % ingredients.length];
               return (
                 <div key={index} className="text-center">
