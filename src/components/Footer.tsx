@@ -16,15 +16,15 @@ export default function Footer() {
             <h3 className="font-serif text-xl font-semibold mb-4 text-white">Contact Us</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-white fill-white" />
+                <MapPin className="w-5 h-5 text-white" />
                 <span className="font-sans text-white">123 Wellness Ave, Spa District</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-white fill-white" />
+                <Phone className="w-5 h-5 text-white" />
                 <span className="font-sans text-white">(555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-white fill-white" />
+                <Mail className="w-5 h-5 text-white" />
                 <span className="font-sans text-white">hello@nailqueen.com</span>
               </div>
             </div>
@@ -50,16 +50,16 @@ export default function Footer() {
             <h3 className="font-serif text-xl font-semibold mb-4 text-white">Get Social</h3>
             <div className="flex space-x-3 mb-4">
               <a href="#" className="w-10 h-10 border border-white rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors">
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-5 h-5 fill-white" />
               </a>
               <a href="#" className="w-10 h-10 border border-white rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors">
-                <Twitter className="w-5 h-5" />
+                <Twitter className="w-5 h-5 fill-white" />
               </a>
               <a href="#" className="w-10 h-10 border border-white rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors">
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-5 h-5 fill-white" />
               </a>
               <a href="#" className="w-10 h-10 border border-white rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors">
-                <Youtube className="w-5 h-5" />
+                <Youtube className="w-5 h-5 fill-white" />
               </a>
             </div>
             <div className="inline-block border border-white rounded-full px-4 py-2 text-white font-sans text-sm">
