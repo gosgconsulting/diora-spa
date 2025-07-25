@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Star, Sparkles, Heart, Shield, Leaf, Droplets, Clock, Users } from "lucide-react";
@@ -245,33 +246,42 @@ export default function Homepage() {
       </section>
 
       {/* Reviews Section */}
-      <section className="py-16 bg-secondary">
-        <div className="container mx-auto px-4">
+      <section className="relative py-16">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${teamImage})` }}
+        />
+        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(75, 48, 34, 0.8)' }}></div>
+        
+        <div className="relative container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-primary mb-4">What Our Clients Say</h2>
-            <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
-              Read testimonials from our valued clients who have experienced our services
-            </p>
+            <h2 className="font-serif text-4xl font-bold text-white mb-4">Reviews</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index}>
-                <CardContent className="p-6">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                    ))}
-                  </div>
-                  <p className="font-sans text-muted-foreground mb-4 italic">
-                    "{testimonial.text}"
-                  </p>
-                  <p className="font-serif font-semibold text-primary">
-                    — {testimonial.author}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="max-w-4xl mx-auto">
+            <Carousel className="w-full">
+              <CarouselContent>
+                {testimonials.map((testimonial, index) => (
+                  <CarouselItem key={index} className="md:basis-1/3">
+                    <div className="p-6 text-center">
+                      <div className="flex justify-center mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 fill-white text-white" />
+                        ))}
+                      </div>
+                      <p className="font-sans text-white mb-4 italic text-lg">
+                        "{testimonial.text}"
+                      </p>
+                      <p className="font-serif font-semibold text-white">
+                        — {testimonial.author}
+                      </p>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4 bg-white/20 border-white text-white hover:bg-white/30 w-12 h-12" />
+              <CarouselNext className="right-4 bg-white/20 border-white text-white hover:bg-white/30 w-12 h-12" />
+            </Carousel>
           </div>
         </div>
       </section>
