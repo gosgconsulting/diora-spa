@@ -55,83 +55,101 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ backgroundColor: '#4B3022' }}>
       <Header />
       
       {/* Page Title */}
-      <section className="py-16 bg-secondary">
+      <section className="py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-serif text-5xl font-bold text-primary mb-4">Pricing</h1>
-          <p className="font-sans text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discover our comprehensive range of treatments and services designed to pamper and rejuvenate
-          </p>
+          <h1 className="font-serif text-5xl font-bold text-white mb-4">Pricing</h1>
         </div>
       </section>
 
-      {/* Hair Wash Services */}
-      <section className="py-16 bg-background">
+      {/* Two Column Layout */}
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-primary mb-4">Hair Wash Services</h2>
-            <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
-              Luxurious hair cleansing treatments using premium organic products
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {hairServices.map((service, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-[4/3] overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            {/* Hair Wash Services Column */}
+            <div className="bg-white rounded-lg p-8">
+              {/* Header with Image and Title */}
+              <div className="text-center mb-12">
+                <div className="aspect-[4/3] overflow-hidden rounded-lg mb-6">
                   <img 
-                    src={service.image} 
-                    alt={service.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    src={hairWashImage} 
+                    alt="Hair Wash Services"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="font-serif text-xl font-semibold text-primary mb-2">{service.name}</h3>
-                  <p className="font-sans text-muted-foreground mb-3">{service.description}</p>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="font-sans text-sm text-accent">Duration: {service.duration}</span>
+                <h2 className="font-serif text-3xl font-bold text-black mb-4">Hair Wash Services</h2>
+              </div>
+              
+              {/* Zig-zag Layout */}
+              <div className="space-y-12">
+                {hairServices.map((service, index) => (
+                  <div key={index} className={`flex items-center gap-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                    <div className="flex-1">
+                      <h3 className="font-serif text-xl font-semibold text-black mb-3">{service.name}</h3>
+                      <p className="font-sans text-gray-700 mb-3">{service.description}</p>
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="font-sans text-sm text-gray-600">Duration: {service.duration}</span>
+                      </div>
+                      <Button className="font-sans">Enquire Now</Button>
+                    </div>
+                    <div className="flex-1">
+                      <div className="aspect-[4/3] overflow-hidden rounded-lg">
+                        <img 
+                          src={service.image} 
+                          alt={service.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
                   </div>
-                  <Button className="w-full font-sans">Enquire Now</Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+                ))}
+              </div>
+            </div>
 
-      {/* Waxing Services */}
-      <section className="py-16 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-primary mb-4">Waxing Services</h2>
-            <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
-              Professional waxing treatments using gentle, skin-friendly formulations
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {waxingServices.map((service, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-[4/3] overflow-hidden">
+            {/* Waxing Services Column */}
+            <div className="bg-white rounded-lg p-8">
+              {/* Header with Image and Title */}
+              <div className="text-center mb-12">
+                <div className="aspect-[4/3] overflow-hidden rounded-lg mb-6">
                   <img 
-                    src={service.image} 
-                    alt={service.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    src={waxingImage} 
+                    alt="Waxing Services"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="font-serif text-lg font-semibold text-primary mb-2">{service.name}</h3>
-                  <p className="font-sans text-sm text-muted-foreground mb-3">{service.description}</p>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="font-sans text-xs text-accent">Duration: {service.duration}</span>
+                <h2 className="font-serif text-3xl font-bold text-black mb-4">Waxing Services</h2>
+              </div>
+              
+              {/* Zig-zag Layout */}
+              <div className="space-y-12">
+                {waxingServices.map((service, index) => (
+                  <div key={index} className={`flex items-center gap-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                    <div className="flex-1">
+                      <h3 className="font-serif text-xl font-semibold text-black mb-3">{service.name}</h3>
+                      <p className="font-sans text-gray-700 mb-3">{service.description}</p>
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="font-sans text-sm text-gray-600">Duration: {service.duration}</span>
+                      </div>
+                      <Button className="font-sans">Enquire Now</Button>
+                    </div>
+                    <div className="flex-1">
+                      <div className="aspect-[4/3] overflow-hidden rounded-lg">
+                        <img 
+                          src={service.image} 
+                          alt={service.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
                   </div>
-                  <Button size="sm" className="w-full font-sans">Enquire Now</Button>
-                </CardContent>
-              </Card>
-            ))}
+                ))}
+              </div>
+            </div>
+            
           </div>
         </div>
       </section>
