@@ -55,11 +55,11 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#4B3022' }}>
+    <div className="min-h-screen" style={{ backgroundColor: '#3a2d1a' }}>
       <Header />
       
       {/* Page Title */}
-      <section className="py-16">
+      <section className="pt-24 pb-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-serif text-5xl font-bold text-white mb-4">Pricing</h1>
         </div>
@@ -71,7 +71,7 @@ export default function Pricing() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
             {/* Hair Wash Services Column */}
-            <div className="bg-white rounded-lg p-8">
+            <div className="bg-white rounded-2xl p-8">
               {/* Header with Image and Title */}
               <div className="text-center mb-12">
                 <div className="aspect-[4/3] overflow-hidden rounded-lg mb-6">
@@ -94,7 +94,7 @@ export default function Pricing() {
                       <div className="flex items-center justify-between mb-4">
                         <span className="font-sans text-sm text-gray-600">Duration: {service.duration}</span>
                       </div>
-                      <Button className="font-sans">Enquire Now</Button>
+                      <Button className="font-sans rounded-full" style={{ backgroundColor: '#3a2d1a' }}>Enquire Now</Button>
                     </div>
                     <div className="flex-1">
                       <div className="aspect-[4/3] overflow-hidden rounded-lg">
@@ -111,7 +111,7 @@ export default function Pricing() {
             </div>
 
             {/* Waxing Services Column */}
-            <div className="bg-white rounded-lg p-8">
+            <div className="bg-white rounded-2xl p-8">
               {/* Header with Image and Title */}
               <div className="text-center mb-12">
                 <div className="aspect-[4/3] overflow-hidden rounded-lg mb-6">
@@ -134,7 +134,7 @@ export default function Pricing() {
                       <div className="flex items-center justify-between mb-4">
                         <span className="font-sans text-sm text-gray-600">Duration: {service.duration}</span>
                       </div>
-                      <Button className="font-sans">Enquire Now</Button>
+                      <Button className="font-sans rounded-full" style={{ backgroundColor: '#3a2d1a' }}>Enquire Now</Button>
                     </div>
                     <div className="flex-1">
                       <div className="aspect-[4/3] overflow-hidden rounded-lg">
