@@ -25,7 +25,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className={`text-2xl font-serif font-bold transition-colors ${
-            isScrolled ? 'text-white' : 'text-primary'
+            isScrolled ? 'text-white' : 'text-white'
           }`}>
             Serenity Spa
           </Link>
@@ -37,7 +37,7 @@ export default function Header() {
               className={`font-sans font-medium transition-colors ${
                 isScrolled 
                   ? (isActive('/') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/') ? 'text-primary' : 'text-foreground hover:text-primary')
+                  : (isActive('/') ? 'text-white' : 'text-white/80 hover:text-white')
               }`}
             >
               Home
@@ -47,7 +47,7 @@ export default function Header() {
               className={`font-sans font-medium transition-colors ${
                 isScrolled 
                   ? (isActive('/services') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/services') ? 'text-primary' : 'text-foreground hover:text-primary')
+                  : (isActive('/services') ? 'text-white' : 'text-white/80 hover:text-white')
               }`}
             >
               Services
@@ -57,7 +57,7 @@ export default function Header() {
               className={`font-sans font-medium transition-colors ${
                 isScrolled 
                   ? (isActive('/pricing') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/pricing') ? 'text-primary' : 'text-foreground hover:text-primary')
+                  : (isActive('/pricing') ? 'text-white' : 'text-white/80 hover:text-white')
               }`}
             >
               Pricing
@@ -67,7 +67,7 @@ export default function Header() {
               className={`font-sans font-medium transition-colors ${
                 isScrolled 
                   ? (isActive('/find-us') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/find-us') ? 'text-primary' : 'text-foreground hover:text-primary')
+                  : (isActive('/find-us') ? 'text-white' : 'text-white/80 hover:text-white')
               }`}
             >
               Find Us
@@ -77,7 +77,7 @@ export default function Header() {
               className={`font-sans font-medium transition-colors ${
                 isScrolled 
                   ? (isActive('/gallery') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/gallery') ? 'text-primary' : 'text-foreground hover:text-primary')
+                  : (isActive('/gallery') ? 'text-white' : 'text-white/80 hover:text-white')
               }`}
             >
               Gallery
@@ -87,7 +87,7 @@ export default function Header() {
               className={`font-sans font-medium transition-colors ${
                 isScrolled 
                   ? (isActive('/about') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/about') ? 'text-primary' : 'text-foreground hover:text-primary')
+                  : (isActive('/about') ? 'text-white' : 'text-white/80 hover:text-white')
               }`}
             >
               About
@@ -97,7 +97,7 @@ export default function Header() {
               className={`font-sans font-medium transition-colors ${
                 isScrolled 
                   ? (isActive('/blog') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/blog') ? 'text-primary' : 'text-foreground hover:text-primary')
+                  : (isActive('/blog') ? 'text-white' : 'text-white/80 hover:text-white')
               }`}
             >
               Blog
@@ -105,7 +105,9 @@ export default function Header() {
           </nav>
 
           {/* Book Now Button */}
-          <Button className="font-sans font-medium">
+          <Button className={`font-sans font-medium transition-colors ${
+            isScrolled ? 'bg-white text-[#4B3022] hover:bg-white/90' : 'bg-white/20 text-white border border-white/30 hover:bg-white/30'
+          }`}>
             Book Now
           </Button>
         </div>

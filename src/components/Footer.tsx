@@ -48,21 +48,21 @@ export default function Footer() {
           {/* Get Social */}
           <div className="border border-white p-6">
             <h3 className="font-serif text-xl font-semibold mb-4 text-white">Get Social</h3>
-            <div className="flex space-x-3 mb-4">
-              <a href="#" className="w-10 h-10 border border-white rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors">
-                <Facebook className="w-5 h-5 fill-white" />
+            <div className="flex space-x-4 mb-6">
+              <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
+                <Facebook className="w-6 h-6 fill-white" />
               </a>
-              <a href="#" className="w-10 h-10 border border-white rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors">
-                <Twitter className="w-5 h-5 fill-white" />
+              <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
+                <Twitter className="w-6 h-6 fill-white" />
               </a>
-              <a href="#" className="w-10 h-10 border border-white rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors">
-                <Instagram className="w-5 h-5 fill-white" />
+              <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
+                <Instagram className="w-6 h-6 fill-white" />
               </a>
-              <a href="#" className="w-10 h-10 border border-white rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors">
-                <Youtube className="w-5 h-5 fill-white" />
+              <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
+                <Youtube className="w-6 h-6 fill-white" />
               </a>
             </div>
-            <div className="inline-block border border-white rounded-full px-4 py-2 text-white font-sans text-sm">
+            <div className="inline-block border-2 border-white rounded-full px-6 py-3 text-white font-sans text-sm">
               Tag us in your photos!
             </div>
           </div>

@@ -79,7 +79,6 @@ export default function Homepage() {
   return (
     <div className="min-h-screen">
       <Header />
-      <div className="pt-20">
       
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center">
@@ -292,7 +291,6 @@ export default function Homepage() {
       </section>
 
       <Footer />
-      </div>
     </div>
   );
 }
