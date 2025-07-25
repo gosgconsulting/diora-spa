@@ -21,6 +21,7 @@ export default {
 			fontFamily: {
 				'serif': ['Playfair Display', 'serif'],
 				'sans': ['Inter', 'sans-serif'],
+				'heading': ['Elsie Swash Caps', 'cursive'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
