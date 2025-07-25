@@ -246,7 +246,7 @@ export default function Homepage() {
       </section>
 
       {/* Reviews Section */}
-      <section className="relative py-16">
+      <section className="relative py-24">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${teamImage})` }}
@@ -254,33 +254,33 @@ export default function Homepage() {
         <div className="absolute inset-0" style={{ backgroundColor: 'rgba(75, 48, 34, 0.8)' }}></div>
         
         <div className="relative container mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-bold text-white mb-4">Reviews</h2>
           </div>
           
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto relative">
             <Carousel className="w-full">
               <CarouselContent>
                 {testimonials.map((testimonial, index) => (
                   <CarouselItem key={index} className="md:basis-1/3">
-                    <div className="p-6 text-center">
-                      <div className="flex justify-center mb-4">
+                    <div className="p-8 text-center mx-4">
+                      <div className="flex justify-center mb-6">
                         {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-white text-white" />
+                          <Star key={i} className="w-6 h-6 fill-white text-white" />
                         ))}
                       </div>
-                      <p className="font-sans text-white mb-4 italic text-lg">
+                      <p className="font-sans text-white mb-6 italic text-lg leading-relaxed">
                         "{testimonial.text}"
                       </p>
-                      <p className="font-serif font-semibold text-white">
+                      <p className="font-serif font-semibold text-white text-lg">
                         — {testimonial.author}
                       </p>
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="left-4 bg-white/20 border-white text-white hover:bg-white/30 w-12 h-12" />
-              <CarouselNext className="right-4 bg-white/20 border-white text-white hover:bg-white/30 w-12 h-12" />
+              <CarouselPrevious className="-left-16 bg-white/20 border-white text-white hover:bg-white/30 w-14 h-14" />
+              <CarouselNext className="-right-16 bg-white/20 border-white text-white hover:bg-white/30 w-14 h-14" />
             </Carousel>
           </div>
         </div>
