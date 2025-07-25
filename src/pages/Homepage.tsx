@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Star, Sparkles, Heart, Shield, Leaf, Droplets, Clock, Users } from "lucide-react";
+import { Star, Sparkles, Heart, Shield, Leaf, Droplets, Clock, Users, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube, ChevronLeft, ChevronRight } from "lucide-react";
 import heroImage from "@/assets/hero-spa.jpg";
 import hairWashImage from "@/assets/hair-wash.jpg";
 import waxingImage from "@/assets/waxing.jpg";
@@ -279,8 +279,12 @@ export default function Homepage() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="-left-16 bg-white/20 border-white text-white hover:bg-white/30 w-14 h-14" />
-              <CarouselNext className="-right-16 bg-white/20 border-white text-white hover:bg-white/30 w-14 h-14" />
+              <button className="-left-20 absolute top-1/2 -translate-y-1/2 z-10 text-white hover:text-white/70 transition-colors">
+                <ChevronLeft size={48} strokeWidth={3} />
+              </button>
+              <button className="-right-20 absolute top-1/2 -translate-y-1/2 z-10 text-white hover:text-white/70 transition-colors">
+                <ChevronRight size={48} strokeWidth={3} />
+              </button>
             </Carousel>
           </div>
         </div>
