@@ -145,7 +145,7 @@ export default function Homepage() {
            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
              {features.map((feature, index) => {
                const images = [
-                 "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
+                 "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400&h=300&fit=crop",
                  "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop", 
                  "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&h=300&fit=crop"
                ];
@@ -188,12 +188,12 @@ export default function Homepage() {
                  "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=150&h=96&fit=crop",
                  "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=96&fit=crop",
                  "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=150&h=96&fit=crop",
-                 "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=96&fit=crop",
-                 "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=150&h=96&fit=crop",
-                 "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=150&h=96&fit=crop",
-                 "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=150&h=96&fit=crop",
-                 "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=96&fit=crop",
-                 "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=150&h=96&fit=crop"
+                 "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=96&fit=crop",
+                 "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=150&h=96&fit=crop",
+                 "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=150&h=96&fit=crop",
+                 "https://images.unsplash.com/photo-1552693673-1bf958298935?w=150&h=96&fit=crop",
+                 "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=150&h=96&fit=crop",
+                 "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=150&h=96&fit=crop"
                ];
                return (
                  <div key={index} className="text-center">
@@ -223,10 +223,10 @@ export default function Homepage() {
            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
              {teamMembers.map((member, index) => {
                const images = [
-                 "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=300&h=300&fit=crop",
-                 "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300&h=300&fit=crop",
-                 "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop",
-                 "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=300&h=300&fit=crop"
+                 "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop",
+                 "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop",
+                 "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop",
+                 "https://images.unsplash.com/photo-1594824375147-d0635a5ddf17?w=300&h=300&fit=crop"
                ];
                return (
                  <div key={index} className="text-center">
@@ -276,7 +276,7 @@ export default function Homepage() {
       <section className="relative py-24">
          <div 
            className="absolute inset-0 bg-cover bg-center"
-           style={{ backgroundImage: `url(https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=1920&h=1080&fit=crop)` }}
+           style={{ backgroundImage: `url(https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1920&h=1080&fit=crop)` }}
          />
         <div className="absolute inset-0" style={{ backgroundColor: 'rgba(75, 48, 34, 0.8)' }}></div>
         
