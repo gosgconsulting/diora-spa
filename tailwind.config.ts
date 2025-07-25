@@ -22,6 +22,10 @@ export default {
 				'serif': ['Playfair Display', 'serif'],
 				'sans': ['Inter', 'sans-serif'],
 				'heading': ['Elsie Swash Caps', 'cursive'],
+				'poppins': ['Poppins', 'sans-serif'],
+				'allura': ['Allura', 'cursive'],
+				'montserrat': ['Montserrat', 'sans-serif'],
+				'josefin': ['Josefin Sans', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

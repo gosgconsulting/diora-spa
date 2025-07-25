@@ -87,13 +87,11 @@ export default function Homepage() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="relative text-center text-white">
-          <h1 className="font-heading text-6xl md:text-7xl font-medium leading-tight">
-            Welcome to
-            <br />
-            Nail queen
-            <br />
-            by Michelle Tran
-          </h1>
+          <div className="space-y-2">
+            <p className="font-poppins text-2xl md:text-3xl font-light tracking-widest">Welcome to</p>
+            <h1 className="font-heading text-8xl md:text-9xl font-medium leading-tight">Nail Queen</h1>
+            <p className="font-allura text-2xl md:text-3xl">by Michelle Tran</p>
+          </div>
         </div>
       </section>
 
@@ -101,7 +99,7 @@ export default function Homepage() {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-5xl font-medium text-primary mb-4">Our Services</h2>
+            <h2 className="font-montserrat text-6xl font-medium text-primary mb-4">Our Services</h2>
             <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
               Experience our signature treatments crafted with care and expertise
             </p>

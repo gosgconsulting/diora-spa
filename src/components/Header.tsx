@@ -24,7 +24,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className={`text-2xl font-serif font-bold transition-colors ${
+          <Link to="/" className={`text-2xl font-montserrat font-bold transition-colors ${
             isScrolled ? 'text-white' : 'text-white'
           }`}>
             Serenity Spa
@@ -34,7 +34,7 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
               to="/" 
-              className={`font-sans font-medium transition-colors ${
+              className={`font-montserrat font-medium transition-colors ${
                 isScrolled 
                   ? (isActive('/') ? 'text-white' : 'text-white/80 hover:text-white')
                   : (isActive('/') ? 'text-white' : 'text-white/80 hover:text-white')
@@ -44,7 +44,7 @@ export default function Header() {
             </Link>
             <Link 
               to="/services" 
-              className={`font-sans font-medium transition-colors ${
+              className={`font-montserrat font-medium transition-colors ${
                 isScrolled 
                   ? (isActive('/services') ? 'text-white' : 'text-white/80 hover:text-white')
                   : (isActive('/services') ? 'text-white' : 'text-white/80 hover:text-white')
@@ -54,7 +54,7 @@ export default function Header() {
             </Link>
             <Link 
               to="/pricing" 
-              className={`font-sans font-medium transition-colors ${
+              className={`font-montserrat font-medium transition-colors ${
                 isScrolled 
                   ? (isActive('/pricing') ? 'text-white' : 'text-white/80 hover:text-white')
                   : (isActive('/pricing') ? 'text-white' : 'text-white/80 hover:text-white')
@@ -64,7 +64,7 @@ export default function Header() {
             </Link>
             <Link 
               to="/find-us" 
-              className={`font-sans font-medium transition-colors ${
+              className={`font-montserrat font-medium transition-colors ${
                 isScrolled 
                   ? (isActive('/find-us') ? 'text-white' : 'text-white/80 hover:text-white')
                   : (isActive('/find-us') ? 'text-white' : 'text-white/80 hover:text-white')
@@ -74,7 +74,7 @@ export default function Header() {
             </Link>
             <Link 
               to="/gallery" 
-              className={`font-sans font-medium transition-colors ${
+              className={`font-montserrat font-medium transition-colors ${
                 isScrolled 
                   ? (isActive('/gallery') ? 'text-white' : 'text-white/80 hover:text-white')
                   : (isActive('/gallery') ? 'text-white' : 'text-white/80 hover:text-white')
@@ -84,7 +84,7 @@ export default function Header() {
             </Link>
             <Link 
               to="/about" 
-              className={`font-sans font-medium transition-colors ${
+              className={`font-montserrat font-medium transition-colors ${
                 isScrolled 
                   ? (isActive('/about') ? 'text-white' : 'text-white/80 hover:text-white')
                   : (isActive('/about') ? 'text-white' : 'text-white/80 hover:text-white')
@@ -94,7 +94,7 @@ export default function Header() {
             </Link>
             <Link 
               to="/blog" 
-              className={`font-sans font-medium transition-colors ${
+              className={`font-montserrat font-medium transition-colors ${
                 isScrolled 
                   ? (isActive('/blog') ? 'text-white' : 'text-white/80 hover:text-white')
                   : (isActive('/blog') ? 'text-white' : 'text-white/80 hover:text-white')
@@ -105,7 +105,7 @@ export default function Header() {
           </nav>
 
           {/* Book Now Button */}
-          <Button className={`font-sans font-medium transition-colors ${
+          <Button className={`font-montserrat font-medium transition-colors ${
             isScrolled ? 'bg-white text-[#4B3022] hover:bg-white/90' : 'bg-white/20 text-white border border-white/30 hover:bg-white/30'
           }`}>
             Book Now
