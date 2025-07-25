@@ -27,7 +27,7 @@ export default function Header() {
           <Link to="/" className={`text-2xl font-montserrat font-bold transition-colors ${
             isScrolled ? 'text-white' : 'text-white'
           }`}>
-            Serenity Spa
+            Nail Queen
           </Link>
 
           {/* Navigation */}

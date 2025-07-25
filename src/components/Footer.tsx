@@ -6,7 +6,8 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         {/* First Row - Site Name */}
         <div className="mb-8">
-          <h1 className="font-josefin text-2xl font-bold text-left">Nail Queen by Michelle Tran</h1>
+          <h1 className="font-elsie text-4xl font-bold text-left text-white">Nail Queen</h1>
+          <p className="font-allura text-2xl text-left text-white">by Michelle Tran</p>
         </div>
 
         {/* Second Row - Three Columns */}
