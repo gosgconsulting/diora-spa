@@ -279,10 +279,10 @@ export default function Homepage() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <button className="-left-20 absolute top-1/2 -translate-y-1/2 z-10 text-white hover:text-white/70 transition-colors">
+              <button className="-left-20 absolute top-1/2 -translate-y-1/2 z-10 hover:opacity-70 transition-opacity" style={{ color: '#D6C8BB' }}>
                 <ChevronLeft size={48} strokeWidth={3} />
               </button>
-              <button className="-right-20 absolute top-1/2 -translate-y-1/2 z-10 text-white hover:text-white/70 transition-colors">
+              <button className="-right-20 absolute top-1/2 -translate-y-1/2 z-10 hover:opacity-70 transition-opacity" style={{ color: '#D6C8BB' }}>
                 <ChevronRight size={48} strokeWidth={3} />
               </button>
             </Carousel>
