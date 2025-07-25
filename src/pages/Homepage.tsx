@@ -88,7 +88,7 @@ export default function Homepage() {
         />
         <div className="relative text-center text-white">
           <div className="space-y-2">
-            <p className="font-poppins text-2xl md:text-3xl font-light tracking-widest uppercase">Welcome to</p>
+            <p className="font-poppins text-2xl md:text-3xl font-medium tracking-widest uppercase">Welcome to</p>
             <h1 className="font-heading text-8xl md:text-9xl font-medium leading-tight">Nail Queen</h1>
             <p className="font-allura text-2xl md:text-3xl">by Michelle Tran</p>
           </div>
@@ -99,7 +99,7 @@ export default function Homepage() {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-montserrat text-6xl font-medium text-primary mb-4">Our Services</h2>
+            <h2 className="font-montserrat text-4xl font-medium text-black mb-4">Our Services</h2>
             <p className="font-montserrat text-lg text-muted-foreground max-w-2xl mx-auto">
               Experience our signature treatments crafted with care and expertise
             </p>
@@ -116,10 +116,10 @@ export default function Homepage() {
                   />
                   <div className="absolute inset-0 bg-black/30"></div>
                   <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6">
-                    <h3 className="font-serif text-2xl font-semibold mb-3">{service.title}</h3>
+                    <h3 className="font-montserrat text-2xl font-semibold mb-3">{service.title}</h3>
                     <p className="font-montserrat text-sm leading-relaxed">{service.description}</p>
                   </div>
-                  <div className="absolute bottom-4 left-4 text-white font-serif text-xl font-bold">
+                  <div className="absolute bottom-4 left-4 text-white font-montserrat text-xl font-bold">
                     {service.price}
                   </div>
                 </div>
