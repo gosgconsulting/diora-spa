@@ -27,7 +27,7 @@ export default {
 				'montserrat': ['Montserrat', 'sans-serif'],
 				'josefin': ['Josefin Sans', 'sans-serif'],
 				'elsie': ['Elsie Swash Caps', 'cursive'],
-				'dream': ['Dream Avenue', 'cursive'],
+				'dream': ['Dream Avenue', 'sans-serif'],
 				'signature': ['Signature', 'cursive'],
 				'coco': ['Coco Gothic', 'sans-serif'],
 			},

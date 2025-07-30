@@ -88,7 +88,7 @@ export default function Homepage() {
         />
         <div className="relative text-center text-white">
           <div className="space-y-2">
-            <p className="font-coco text-2xl md:text-3xl font-medium tracking-widest uppercase">Welcome to</p>
+            <p className="font-coco text-2xl md:text-xl font-bold tracking-[0.55em] uppercase">Welcome to</p>
             <h1 className="font-dream text-8xl md:text-9xl font-medium leading-tight">Diora spa</h1>
             <p className="font-signature text-2xl md:text-3xl">by Michelle Tran</p>
           </div>

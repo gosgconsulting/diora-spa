@@ -5,6 +5,16 @@
 /* Spa Design System - Warm earth tones with elegant typography
 All colors MUST be HSL for proper theming.
 */
+@font-face {
+  font-family: 'Dream Avenue';
+  src: url('../src/assets/fonts/Dream-Avenue.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Coco Gothic";
+  src: url('../src/assets/fonts/CocoGothic_trial.ttf') format('truetype');
+}
+
 
 @layer base {
   :root {
