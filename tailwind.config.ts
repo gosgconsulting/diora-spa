@@ -21,12 +21,15 @@ export default {
 			fontFamily: {
 				'serif': ['Playfair Display', 'serif'],
 				'sans': ['Inter', 'sans-serif'],
-				'heading': ['Elsie Swash Caps', 'cursive'],
+				'heading': ['Dream Avenue', 'cursive'],
 				'poppins': ['Poppins', 'sans-serif'],
 				'allura': ['Allura', 'cursive'],
 				'montserrat': ['Montserrat', 'sans-serif'],
 				'josefin': ['Josefin Sans', 'sans-serif'],
 				'elsie': ['Elsie Swash Caps', 'cursive'],
+				'dream': ['Dream Avenue', 'cursive'],
+				'signature': ['Signature', 'cursive'],
+				'coco': ['Coco Gothic', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
