@@ -15,6 +15,10 @@ All colors MUST be HSL for proper theming.
   src: url('../src/assets/fonts/CocoGothic_trial.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: "Shamson Signature";
+  src: url('../src/assets/fonts/Shamson\ Signature\ Regular.otf') format('truetype');
+}
 
 @layer base {
   :root {

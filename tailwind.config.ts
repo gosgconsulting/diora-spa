@@ -28,7 +28,7 @@ export default {
 				'josefin': ['Josefin Sans', 'sans-serif'],
 				'elsie': ['Elsie Swash Caps', 'cursive'],
 				'dream': ['Dream Avenue', 'sans-serif'],
-				'signature': ['Signature', 'cursive'],
+				'signature': ['Shamson Signature', 'cursive'],
 				'coco': ['Coco Gothic', 'sans-serif'],
 			},
 			colors: {

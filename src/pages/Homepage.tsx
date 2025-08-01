@@ -90,7 +90,7 @@ export default function Homepage() {
           <div className="space-y-2">
             <p className="font-coco text-2xl md:text-xl font-bold tracking-[0.55em] uppercase">Welcome to</p>
             <h1 className="font-dream text-8xl md:text-9xl font-medium leading-tight">Diora spa</h1>
-            <p className="font-signature text-2xl md:text-3xl">by Michelle Tran</p>
+            <p className="font-signature text-xl md:text-5xl italic">by Michelle Tran</p>
           </div>
         </div>
       </section>
@@ -226,7 +226,7 @@ export default function Homepage() {
                  "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop",
                  "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop",
                  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop",
-                 "https://images.unsplash.com/photo-1594824375147-d0635a5ddf17?w=300&h=300&fit=crop"
+                 "https://images.unsplash.com/photo-1655249493799-9cee4fe983bb?w=300&h=300&fit=crop"
                ];
                return (
                  <div key={index} className="text-center">
