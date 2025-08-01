@@ -17,7 +17,7 @@ All colors MUST be HSL for proper theming.
 
 @font-face {
   font-family: "Shamson Signature";
-  src: url('../src/assets/fonts/Shamson\ Signature\ Regular.otf') format('truetype');
+  src: url('../src/assets/fonts/Shamson-Signature-Regular.otf') format('truetype');
 }
 
 @layer base {
