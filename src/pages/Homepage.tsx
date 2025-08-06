@@ -3,172 +3,28 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Star, Sparkles, Heart, Shield, Leaf, Droplets, Clock, Users, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube, ChevronLeft, ChevronRight } from "lucide-react";
-import heroImage from "@/assets/hero-spa.jpg";
-import hairWashImage from "@/assets/hair-wash.jpg";
-import waxingImage from "@/assets/waxing.jpg";
+import { Star, Sparkles, Heart, Shield, ChevronLeft, ChevronRight } from "lucide-react";
 import teamImage from "@/assets/team.jpg";
 import ingredientsImage from "@/assets/ingredients.jpg";
+import { services, features, ingredients, teamMembers, testimonials } from "@/data";
+import HeroSection from "@/components/sections/HeroSection";
+import ServicesSection from "@/components/sections/ServicesSection";
+import FeaturesSection from "@/components/sections/FeaturesSection";
 
 export default function Homepage() {
-  const services = [
-    {
-      title: "Hair Wash",
-      description: "Luxurious hair cleansing and scalp massage with premium organic products",
-      image: hairWashImage,
-      price: "from $25"
-    },
-    {
-      title: "Waxing", 
-      description: "Professional waxing services using gentle, skin-friendly formulations",
-      image: waxingImage,
-      price: "from $35"
-    }
-  ];
-
-  const features = [
-    {
-      icon: <Sparkles className="w-8 h-8 text-accent" />,
-      title: "Premium Products",
-      description: "We use only the finest organic and natural beauty products for all treatments."
-    },
-    {
-      icon: <Heart className="w-8 h-8 text-accent" />,
-      title: "Caring Approach",
-      description: "Our experienced therapists provide personalized care tailored to your needs."
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-accent" />,
-      title: "Safe & Hygienic",
-      description: "Maintaining the highest standards of cleanliness and safety protocols."
-    }
-  ];
-
-  const ingredients = [
-    { name: "Lavender Oil", benefit: "Calming and relaxing properties" },
-    { name: "Argan Oil", benefit: "Deep nourishment and hydration" },
-    { name: "Tea Tree", benefit: "Natural antibacterial benefits" },
-    { name: "Chamomile", benefit: "Soothing and anti-inflammatory" }
-  ];
-
-  const teamMembers = [
-    { name: "Sarah Johnson", role: "Senior Spa Director", experience: "12 years experience" },
-    { name: "Maria Rodriguez", role: "Hair Specialist", experience: "8 years experience" },
-    { name: "Emily Chen", role: "Waxing Expert", experience: "6 years experience" },
-    { name: "Anna Williams", role: "Wellness Therapist", experience: "10 years experience" }
-  ];
-
-  const testimonials = [
-    {
-      text: "Absolutely amazing experience! The hair wash was so relaxing and my hair feels incredible.",
-      author: "Jennifer L.",
-      rating: 5
-    },
-    {
-      text: "Professional waxing service with minimal discomfort. The staff is so caring and skilled.",
-      author: "Rachel M.",
-      rating: 5
-    },
-    {
-      text: "This spa is my sanctuary. The atmosphere is perfect and the treatments are world-class.",
-      author: "Lisa K.",
-      rating: 5
-    }
-  ];
 
   return (
     <div className="min-h-screen">
       <Header />
       
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        />
-        <div className="relative text-center text-white">
-          <div className="space-y-2">
-            <p className="font-coco text-2xl md:text-xl font-bold tracking-[0.55em] uppercase">Welcome to</p>
-            <h1 className="font-dream text-8xl md:text-9xl font-medium leading-tight">Diora spa</h1>
-            <p className="font-signature text-xl md:text-5xl italic">by Michelle Tran</p>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Services Preview */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-montserrat text-4xl font-medium text-black mb-4">Our Services</h2>
-            <p className="font-montserrat text-lg text-muted-foreground max-w-2xl mx-auto">
-              Experience our signature treatments crafted with care and expertise
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {services.map((service, index) => (
-              <div key={index} className="space-y-4">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/30"></div>
-                  <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6">
-                    <h3 className="font-montserrat text-2xl font-semibold mb-3">{service.title}</h3>
-                    <p className="font-montserrat text-sm leading-relaxed">{service.description}</p>
-                  </div>
-                  <div className="absolute bottom-4 left-4 text-white font-montserrat text-xl font-bold">
-                    {service.price}
-                  </div>
-                </div>
-                <div className="flex justify-center">
-                  <Button className="font-montserrat px-6 py-2 rounded-full w-fit">Explore More</Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServicesSection />
 
       {/* Why Choose Us */}
-      <section className="py-16" style={{ backgroundColor: '#4B3022' }}>
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-dream text-5xl font-medium text-white mb-4">Why Choose Diora spa</h2>
-            <p className="font-coco text-lg text-white/90 max-w-2xl mx-auto">
-              Discover what makes our spa experience truly exceptional
-            </p>
-          </div>
-          
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-             {features.map((feature, index) => {
-               const images = [
-                 "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400&h=300&fit=crop",
-                 "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop", 
-                 "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&h=300&fit=crop"
-               ];
-               return (
-                 <div key={index} className="text-center">
-                   <div className="mb-6">
-                     <img 
-                       src={images[index]} 
-                       alt={feature.title}
-                       className="w-full h-48 object-cover rounded-lg shadow-lg"
-                     />
-                   </div>
-                   <h3 className="font-serif text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                    <p className="font-montserrat text-white/90 mb-6 leading-relaxed">{feature.description}</p>
-                     <Button size="lg" className="font-montserrat font-medium bg-transparent text-white border border-white hover:bg-white/10">
-                      Learn More
-                    </Button>
-                 </div>
-               );
-             })}
-           </div>
-        </div>
-      </section>
+      <FeaturesSection />
 
       {/* Ingredients Section */}
       <section className="py-16" style={{ backgroundColor: '#4B3022' }}>
