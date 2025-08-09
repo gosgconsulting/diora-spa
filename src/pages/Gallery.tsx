@@ -26,25 +26,25 @@ export default function Gallery() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ backgroundColor: '#FAF8F4' }}>
       <Header />
       
       {/* Page Title */}
-      <section className="pt-24 pb-16" style={{ backgroundColor: '#4B3022' }}>
+      <section className="pt-24 pb-16" style={{ backgroundColor: '#3a2c1b' }}>
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-elsie text-8xl font-medium text-white mb-4">Gallery</h1>
-          <p className="font-montserrat text-xl text-white/90 max-w-2xl mx-auto">
+          <h1 className="font-dream text-8xl font-medium text-white mb-4">Gallery</h1>
+          <p className="font-garet text-xl text-white/90 max-w-2xl mx-auto">
             Take a visual journey through our serene spa environment and professional treatments
           </p>
         </div>
       </section>
 
       {/* Hair Wash Gallery */}
-      <section className="py-16 bg-background">
+      <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-montserrat text-4xl font-bold text-primary mb-4">Hair Washing Treatments</h2>
-            <p className="font-montserrat text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="font-dream text-4xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Hair Washing Treatments</h2>
+            <p className="font-garet text-lg max-w-2xl mx-auto" style={{ color: '#3a2c1b' }}>
               Experience our luxurious hair cleansing and scalp massage treatments
             </p>
           </div>
@@ -64,11 +64,11 @@ export default function Gallery() {
       </section>
 
       {/* Waxing Gallery */}
-      <section className="py-16 bg-secondary">
+      <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-montserrat text-4xl font-bold text-primary mb-4">Waxing Treatments</h2>
-            <p className="font-montserrat text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="font-dream text-4xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Waxing Treatments</h2>
+            <p className="font-garet text-lg max-w-2xl mx-auto" style={{ color: '#3a2c1b' }}>
               Professional waxing services in our comfortable and hygienic environment
             </p>
           </div>

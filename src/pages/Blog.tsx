@@ -61,21 +61,21 @@ export default function Blog() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ backgroundColor: '#FAF8F4' }}>
       <Header />
       
       {/* Page Title */}
-      <section className="pt-24 pb-16" style={{ backgroundColor: '#4B3022' }}>
+      <section className="pt-24 pb-16" style={{ backgroundColor: '#3a2c1b' }}>
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-elsie text-8xl font-medium text-white mb-4">Our Blog</h1>
-          <p className="font-montserrat text-xl text-white/90 max-w-2xl mx-auto">
+          <h1 className="font-dream text-8xl font-medium text-white mb-4">Our Blog</h1>
+          <p className="font-garet text-xl text-white/90 max-w-2xl mx-auto">
             Stay updated with the latest beauty tips, treatment insights, and wellness advice from our expert team
           </p>
         </div>
       </section>
 
       {/* Blog Posts */}
-      <section className="py-16 bg-background">
+      <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>
         <div className="container mx-auto px-4">
           <div className="space-y-8">
             {blogPosts.map((post, index) => (
@@ -96,30 +96,30 @@ export default function Blog() {
                   <div className="md:col-span-2">
                     <CardContent className="p-6 h-full flex flex-col justify-between">
                       <div>
-                        <div className="flex items-center space-x-4 text-sm text-muted-foreground mb-3">
+                        <div className="flex items-center space-x-4 text-sm mb-3" style={{ color: '#3a2c1b' }}>
                           <div className="flex items-center space-x-1">
                             <Calendar className="w-4 h-4" />
-                            <span className="font-montserrat">{post.date}</span>
+                            <span className="font-garet">{post.date}</span>
                           </div>
                           <div className="flex items-center space-x-1">
                             <User className="w-4 h-4" />
-                            <span className="font-montserrat">{post.author}</span>
+                            <span className="font-garet">{post.author}</span>
                           </div>
-                          <span className="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs font-montserrat">
+                          <span className="px-2 py-1 rounded-full text-xs font-garet" style={{ backgroundColor: 'rgba(58, 44, 27, 0.1)', color: '#3a2c1b' }}>
                             {post.category}
                           </span>
                         </div>
                         
-                        <h3 className="font-montserrat text-2xl font-bold text-primary mb-4 leading-tight">
+                        <h3 className="font-garet text-2xl font-bold mb-4 leading-tight" style={{ color: '#3a2c1b' }}>
                           {post.title}
                         </h3>
                         
-                        <p className="font-montserrat text-muted-foreground mb-6 leading-relaxed">
+                        <p className="font-garet mb-6 leading-relaxed" style={{ color: '#3a2c1b' }}>
                           {post.excerpt}
                         </p>
                       </div>
                       
-                      <Button variant="outline" className="self-start font-montserrat group">
+                      <Button variant="outline" className="self-start font-garet group" style={{ borderColor: '#3a2c1b', color: '#3a2c1b' }}>
                         Read More
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                       </Button>
@@ -132,7 +132,7 @@ export default function Blog() {
           
           {/* Load More Button */}
           <div className="text-center mt-12">
-            <Button size="lg" className="font-montserrat font-medium">
+            <Button size="lg" className="font-garet font-medium" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>
               Load More Articles
             </Button>
           </div>

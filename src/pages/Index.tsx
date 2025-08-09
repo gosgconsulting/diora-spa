@@ -10,7 +10,7 @@ import NotFound from "./NotFound";
 
 export default function Index() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ backgroundColor: '#FAF8F4' }}>
       <Header />
       <main>
         <Routes>

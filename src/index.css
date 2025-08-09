@@ -20,6 +20,10 @@ All colors MUST be HSL for proper theming.
   src: url('../src/assets/fonts/Shamson-Signature-Regular.otf') format('truetype');
 }
 
+@font-face {
+  font-family: "Garet";
+  src: url('../src/assets/fonts/Garet-Book.ttf') format('truetype');
+}
 @layer base {
   :root {
     /* Backgrounds - warm cream and earth tones */

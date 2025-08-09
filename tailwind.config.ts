@@ -19,17 +19,11 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'serif': ['Playfair Display', 'serif'],
-				'sans': ['Inter', 'sans-serif'],
-				'heading': ['Dream Avenue', 'cursive'],
-				'poppins': ['Poppins', 'sans-serif'],
-				'allura': ['Allura', 'cursive'],
-				'montserrat': ['Montserrat', 'sans-serif'],
-				'josefin': ['Josefin Sans', 'sans-serif'],
-				'elsie': ['Elsie Swash Caps', 'cursive'],
-				'dream': ['Dream Avenue', 'sans-serif'],
-				'signature': ['Shamson Signature', 'cursive'],
+				'garet': ['Garet', 'sans-serif'],
 				'coco': ['Coco Gothic', 'sans-serif'],
+				'dream': ['Dream Avenue', 'sans-serif'],
+				'signature': ['Shamson Signature', 'sans-serif'],
+				'montserrat': ['Montserrat', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
