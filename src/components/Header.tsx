@@ -1,9 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
+import { usePageContent } from '@/cms/usePageContent'
+import { headerDefaults, type HeaderContent } from '@/cms/content/schemas/layout'
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 export default function Header() {
   const location = useLocation();
+  const { data } = usePageContent<HeaderContent>('header', headerDefaults)
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -28,76 +31,16 @@ export default function Header() {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/" 
-              className={`font-garet font-medium transition-colors ${
-                isScrolled 
-                  ? (isActive('/') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/') ? 'text-white' : 'text-white/80 hover:text-white')
-              }`}
-            >
-              Home
-            </Link>
-            <Link 
-              to="/services" 
-              className={`font-garet font-medium transition-colors ${
-                isScrolled 
-                  ? (isActive('/services') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/services') ? 'text-white' : 'text-white/80 hover:text-white')
-              }`}
-            >
-              Services
-            </Link>
-            <Link 
-              to="/pricing" 
-              className={`font-garet font-medium transition-colors ${
-                isScrolled 
-                  ? (isActive('/pricing') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/pricing') ? 'text-white' : 'text-white/80 hover:text-white')
-              }`}
-            >
-              Pricing
-            </Link>
-            <Link 
-              to="/find-us" 
-              className={`font-garet font-medium transition-colors ${
-                isScrolled 
-                  ? (isActive('/find-us') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/find-us') ? 'text-white' : 'text-white/80 hover:text-white')
-              }`}
-            >
-              Find Us
-            </Link>
-            <Link 
-              to="/gallery" 
-              className={`font-garet font-medium transition-colors ${
-                isScrolled 
-                  ? (isActive('/gallery') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/gallery') ? 'text-white' : 'text-white/80 hover:text-white')
-              }`}
-            >
-              Gallery
-            </Link>
-            <Link 
-              to="/about" 
-              className={`font-garet font-medium transition-colors ${
-                isScrolled 
-                  ? (isActive('/about') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/about') ? 'text-white' : 'text-white/80 hover:text-white')
-              }`}
-            >
-              About
-            </Link>
-            <Link 
-              to="/blog" 
-              className={`font-garet font-medium transition-colors ${
-                isScrolled 
-                  ? (isActive('/blog') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/blog') ? 'text-white' : 'text-white/80 hover:text-white')
-              }`}
-            >
-              Blog
-            </Link>
+            {data.menu.map((item, idx) => (
+              <Link key={idx}
+                to={item.href}
+                className={`font-garet font-medium transition-colors ${
+                  isScrolled ? (isActive(item.href) ? 'text-white' : 'text-white/80 hover:text-white') : (isActive(item.href) ? 'text-white' : 'text-white/80 hover:text-white')
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
           {/* Book Now Button */}
