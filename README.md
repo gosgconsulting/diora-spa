@@ -60,46 +60,6 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## Environment variables
-
-Create a `.env` file at the project root with:
-
-```
-VITE_SUPABASE_URL=your-supabase-url
-VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
-VITE_CMS_TOKEN=dev-token
-```
-
-## Supabase schema
-
-Run this SQL in Supabase:
-
-```sql
-create table if not exists pages (
-  slug text primary key,
-  data jsonb not null,
-  updated_at timestamptz not null default now()
-);
-
-alter table pages enable row level security;
-
--- Read for all authenticated users (adjust as needed)
-create policy "Read pages for authed" on pages
-  for select using (auth.role() = 'authenticated')
-  to authenticated;
-
--- Upsert for authenticated users
-create policy "Insert pages for authed" on pages
-  for insert with check (auth.role() = 'authenticated')
-  to authenticated;
-
-create policy "Update pages for authed" on pages
-  for update using (auth.role() = 'authenticated')
-  to authenticated;
-```
-
-Alternatively, run the local migration file `db/001_pages.sql` in the SQL editor.
-
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/9de8f24f-9ace-49ec-9b56-cc3f85cae2a8) and click on Share -> Publish.

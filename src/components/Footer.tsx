@@ -1,16 +1,20 @@
 import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
-import { usePageContent } from '@/cms/usePageContent'
-import { footerDefaults, type FooterContent } from '@/cms/content/schemas/layout'
 import { FaCrown } from "react-icons/fa6";
 export default function Footer() {
-  const { data } = usePageContent<FooterContent>('footer', footerDefaults)
   return (
     <footer style={{ backgroundColor: '#3a2c1b' }} className="text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
         {/* First Row - Site Name */}
         <div className="mb-8">
-          <h1 className="font-dream text-4xl font-bold text-left text-white">{data.siteTitle}</h1>
-          <p className="font-signature text-2xl text-left text-white">{data.siteSubtitle}</p>
+        <h1 className="font-dream text-4xl font-bold text-left text-white">
+  D
+  <span className="relative inline-block">
+    <span>ı</span>
+    <FaCrown className="absolute left-1 -translate-x-1/2 top-0 w-2 h-2 md:w-3 md:h-3" />
+  </span>
+  ora spa
+</h1>
+          <p className="font-signature text-2xl text-left text-white">by Michelle Tran</p>
         </div>
 
         {/* Second Row - Three Columns */}
@@ -21,15 +25,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-white" />
-                <span className="font-garet text-white">{data.contact.address}</span>
+                <span className="font-garet text-white">123 Wellness Ave, Spa District</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-white" />
-                <span className="font-garet text-white">{data.contact.phone}</span>
+                <span className="font-garet text-white">(555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-white" />
-                <span className="font-garet text-white">{data.contact.email}</span>
+                <span className="font-garet text-white">hello@dioraspa.com</span>
               </div>
             </div>
           </div>
@@ -38,12 +42,14 @@ export default function Footer() {
           <div className="border border-white p-6">
             <h3 className="font-garet text-xl font-semibold mb-4 text-white">Working Hours</h3>
             <div className="space-y-3 font-garet text-white">
-              {data.hours.map((h, idx) => (
-                <div key={idx}>
-                  <div>{h.label}</div>
-                  <div>{h.value}</div>
-                </div>
-              ))}
+              <div>
+                <div>Monday to Friday</div>
+                <div>9:00 AM - 6:00 PM</div>
+              </div>
+              <div>
+                <div>Saturday, Sunday</div>
+                <div>9:00 AM - 12:00 noon</div>
+              </div>
             </div>
           </div>
 
@@ -51,14 +57,18 @@ export default function Footer() {
           <div className="border border-white p-6">
             <h3 className="font-garet text-xl font-semibold mb-4 text-white">Get Social</h3>
             <div className="flex space-x-4 mb-6">
-              {data.socials.map((s, idx) => (
-                <a key={idx} href={s.href} className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
-                  {s.icon === 'facebook' && <Facebook className="w-6 h-6" />}
-                  {s.icon === 'twitter' && <Twitter className="w-6 h-6" />}
-                  {s.icon === 'instagram' && <Instagram className="w-6 h-6" />}
-                  {s.icon === 'youtube' && <Youtube className="w-6 h-6" />}
-                </a>
-              ))}
+              <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
+                <Twitter className="w-6 h-6" />
+              </a>
+              <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
+                <Instagram className="w-6 h-6" />
+              </a>
+              <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
+                <Youtube className="w-6 h-6" />
+              </a>
             </div>
             <div className="inline-block border-2 border-white rounded-full px-6 py-3 text-white font-garet text-sm">
               Tag us in your photos!

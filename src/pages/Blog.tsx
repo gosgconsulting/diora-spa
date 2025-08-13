@@ -3,11 +3,62 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Calendar, User, ArrowRight } from "lucide-react";
-import { usePageContent } from '@/cms/usePageContent'
-import { blogDefaults, type BlogContent } from '@/cms/content/schemas/blog'
+import hairWashImage from "@/assets/hair-wash.jpg";
+import waxingImage from "@/assets/waxing.jpg";
+import ingredientsImage from "@/assets/ingredients.jpg";
+import heroImage from "@/assets/hero-spa.jpg";
 
 export default function Blog() {
-  const { data } = usePageContent<BlogContent>('blog', blogDefaults)
+  const blogPosts = [
+    {
+      title: "The Ultimate Guide to Hair Care: Why Professional Hair Washing Matters",
+      excerpt: "Discover the benefits of professional hair washing treatments and how they can transform your hair health. Learn about the techniques and products that make all the difference.",
+      image: hairWashImage,
+      date: "March 15, 2024",
+      author: "Sarah Johnson",
+      category: "Hair Care"
+    },
+    {
+      title: "Waxing vs. Shaving: Making the Right Choice for Your Skin",
+      excerpt: "Compare the long-term benefits of professional waxing over traditional shaving methods. Understand which option is best for different skin types and areas.",
+      image: waxingImage,
+      date: "March 12, 2024",
+      author: "Maria Rodriguez",
+      category: "Beauty Tips"
+    },
+    {
+      title: "Natural Ingredients in Spa Treatments: What Makes Them Special",
+      excerpt: "Explore the power of natural ingredients in spa treatments. From lavender to argan oil, learn how these elements enhance your beauty routine naturally.",
+      image: ingredientsImage,
+      date: "March 8, 2024",
+      author: "Emily Chen",
+      category: "Natural Beauty"
+    },
+    {
+      title: "Creating Your Perfect Spa Day: A Complete Wellness Guide",
+      excerpt: "Plan the ultimate spa experience with our comprehensive guide. Learn how to combine treatments for maximum relaxation and rejuvenation benefits.",
+      image: heroImage,
+      date: "March 5, 2024",
+      author: "Anna Williams",
+      category: "Wellness"
+    },
+    {
+      title: "Post-Treatment Care: Maintaining Your Results at Home",
+      excerpt: "Extend the benefits of your spa treatments with proper at-home care. Get expert tips on maintaining healthy hair and smooth skin between visits.",
+      image: hairWashImage,
+      date: "March 1, 2024",
+      author: "Sarah Johnson",
+      category: "Aftercare"
+    },
+    {
+      title: "Seasonal Beauty: Adapting Your Treatments Throughout the Year",
+      excerpt: "Learn how to adjust your beauty routine according to the seasons. Discover which treatments work best for different weather conditions and skin needs.",
+      image: waxingImage,
+      date: "February 28, 2024",
+      author: "Maria Rodriguez",
+      category: "Seasonal Care"
+    }
+  ];
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FAF8F4' }}>
@@ -16,10 +67,10 @@ export default function Blog() {
       {/* Page Title */}
       <section className="pt-24 pb-16" style={{ backgroundColor: '#3a2c1b' }}>
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-dream text-8xl font-medium text-white mb-4">{data.title}</h1>
-          {data.intro && (
-            <p className="font-garet text-xl text-white/90 max-w-2xl mx-auto">{data.intro}</p>
-          )}
+          <h1 className="font-dream text-8xl font-medium text-white mb-4">Our Blog</h1>
+          <p className="font-garet text-xl text-white/90 max-w-2xl mx-auto">
+            Stay updated with the latest beauty tips, treatment insights, and wellness advice from our expert team
+          </p>
         </div>
       </section>
 
@@ -27,14 +78,14 @@ export default function Blog() {
       <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>
         <div className="container mx-auto px-4">
           <div className="space-y-8">
-            {data.posts.map((post, index) => (
+            {blogPosts.map((post, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
                   {/* Image */}
                   <div className="md:col-span-1">
                     <div className="aspect-[4/3] md:aspect-square overflow-hidden">
                       <img 
-                        src={post.image.src} 
+                        src={post.image} 
                         alt={post.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />

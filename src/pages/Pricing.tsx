@@ -2,11 +2,57 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { usePageContent } from '@/cms/usePageContent'
-import { pricingDefaults, type PricingContent } from '@/cms/content/schemas/pricing'
+import hairWashImage from "@/assets/hair-wash.jpg";
+import waxingImage from "@/assets/waxing.jpg";
 
 export default function Pricing() {
-  const { data } = usePageContent<PricingContent>('pricing', pricingDefaults)
+  const hairServices = [
+    {
+      name: "Signature Hair Wash",
+      description: "Deep cleansing shampoo with scalp massage and conditioning treatment",
+      image: hairWashImage,
+      duration: "45 min"
+    },
+    {
+      name: "Therapeutic Hair Treatment",
+      description: "Intensive nourishing treatment with premium oils and proteins",
+      image: hairWashImage,
+      duration: "60 min"
+    },
+    {
+      name: "Luxury Hair Spa",
+      description: "Complete hair rejuvenation package with wash, mask, and styling",
+      image: hairWashImage,
+      duration: "90 min"
+    }
+  ];
+
+  const waxingServices = [
+    {
+      name: "Eyebrow Shaping",
+      description: "Professional eyebrow waxing and shaping for perfect definition",
+      image: waxingImage,
+      duration: "20 min"
+    },
+    {
+      name: "Full Leg Waxing",
+      description: "Complete leg waxing service using gentle, skin-friendly wax",
+      image: waxingImage,
+      duration: "45 min"
+    },
+    {
+      name: "Brazilian Waxing",
+      description: "Professional Brazilian wax with aftercare treatment",
+      image: waxingImage,
+      duration: "30 min"
+    },
+    {
+      name: "Full Body Waxing",
+      description: "Comprehensive body waxing package for silky smooth skin",
+      image: waxingImage,
+      duration: "120 min"
+    }
+  ];
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#3a2c1b' }}>
@@ -30,17 +76,17 @@ export default function Pricing() {
               <div className="text-center mb-12">
                 <div className="aspect-[4/3] overflow-hidden rounded-lg mb-6">
                   <img 
-                    src={data.left.image.src} 
-                    alt={data.left.image.alt || data.left.title}
+                    src={hairWashImage} 
+                    alt="Hair Wash Services"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h2 className="font-dream text-4xl font-bold" style={{ color: '#3a2c1b' }}>{data.left.title}</h2>
+                <h2 className="font-dream text-4xl font-bold" style={{ color: '#3a2c1b' }}>Hair Wash Services</h2>
               </div>
               
               {/* Zig-zag Layout */}
               <div className="space-y-12">
-                {data.left.items.map((service, index) => (
+                {hairServices.map((service, index) => (
                   <div key={index} className={`flex items-center gap-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                     <div className="flex-1">
                       <h3 className="font-coco text-xl font-semibold mb-3" style={{ color: '#3a2c1b' }}>{service.name}</h3>
@@ -53,7 +99,7 @@ export default function Pricing() {
                     <div className="flex-1">
                       <div className="aspect-[4/3] overflow-hidden rounded-lg">
                         <img 
-                          src={service.image.src} 
+                          src={service.image} 
                           alt={service.name}
                           className="w-full h-full object-cover"
                         />
@@ -70,17 +116,17 @@ export default function Pricing() {
               <div className="text-center mb-12">
                 <div className="aspect-[4/3] overflow-hidden rounded-lg mb-6">
                   <img 
-                    src={data.right.image.src} 
-                    alt={data.right.image.alt || data.right.title}
+                    src={waxingImage} 
+                    alt="Waxing Services"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h2 className="font-dream text-4xl font-bold" style={{ color: '#3a2c1b' }}>{data.right.title}</h2>
+                <h2 className="font-dream text-4xl font-bold" style={{ color: '#3a2c1b' }}>Waxing Services</h2>
               </div>
               
               {/* Zig-zag Layout */}
               <div className="space-y-12">
-                {data.right.items.map((service, index) => (
+                {waxingServices.map((service, index) => (
                   <div key={index} className={`flex items-center gap-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                     <div className="flex-1">
                       <h3 className="font-coco text-xl font-semibold mb-3" style={{ color: '#3a2c1b' }}>{service.name}</h3>
@@ -93,7 +139,7 @@ export default function Pricing() {
                     <div className="flex-1">
                       <div className="aspect-[4/3] overflow-hidden rounded-lg">
                         <img 
-                          src={service.image.src} 
+                          src={service.image} 
                           alt={service.name}
                           className="w-full h-full object-cover"
                         />
