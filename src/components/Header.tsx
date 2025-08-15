@@ -39,16 +39,6 @@ export default function Header() {
               Home
             </Link>
             <Link 
-              to="/services" 
-              className={`font-garet font-medium transition-colors ${
-                isScrolled 
-                  ? (isActive('/services') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/services') ? 'text-white' : 'text-white/80 hover:text-white')
-              }`}
-            >
-              Services
-            </Link>
-            <Link 
               to="/pricing" 
               className={`font-garet font-medium transition-colors ${
                 isScrolled 
@@ -59,16 +49,6 @@ export default function Header() {
               Pricing
             </Link>
             <Link 
-              to="/find-us" 
-              className={`font-garet font-medium transition-colors ${
-                isScrolled 
-                  ? (isActive('/find-us') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/find-us') ? 'text-white' : 'text-white/80 hover:text-white')
-              }`}
-            >
-              Find Us
-            </Link>
-            <Link 
               to="/gallery" 
               className={`font-garet font-medium transition-colors ${
                 isScrolled 
@@ -77,16 +57,6 @@ export default function Header() {
               }`}
             >
               Gallery
-            </Link>
-            <Link 
-              to="/about" 
-              className={`font-garet font-medium transition-colors ${
-                isScrolled 
-                  ? (isActive('/about') ? 'text-white' : 'text-white/80 hover:text-white')
-                  : (isActive('/about') ? 'text-white' : 'text-white/80 hover:text-white')
-              }`}
-            >
-              About
             </Link>
             <Link 
               to="/blog" 
