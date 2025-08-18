@@ -1,30 +1,42 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { FaCrown } from "react-icons/fa6";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Star, Sparkles, Heart, Shield, Leaf, Droplets, Clock, Users, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-spa.jpg";
-import hairWashImage from "@/assets/hair-wash.jpg";
+import { Star, Sparkles, Heart, Shield, ChevronLeft, ChevronRight } from "lucide-react";
+import heroImage from "@/assets/home.png";
+import hairWashImage from "@/assets/our service head spa.jpg";
 import waxingImage from "@/assets/waxing.jpg";
-import teamImage from "@/assets/team.jpg";
-import ingredientsImage from "@/assets/ingredients.jpg";
+import aboutUsImage from "@/assets/about-us.jpg";
+import reviewImage from "@/assets/review.jpg";
+import lashImage from "@/assets/our service lash.png";
+import laserRemovalImage from "@/assets/our service laser hair removal.jpg";
 import logo from "@/assets/3.png";
 
 export default function Homepage() {
   const services = [
     {
-      title: "Hair Wash",
-      description: "Luxurious hair cleansing and scalp massage with premium organic products",
+      title: "Hair Spa",
+      description: "Curated rituals to deeply relax, detoxify, and revive your scalp, skin, and senses — like a holiday for your whole being.",
       image: hairWashImage,
       price: "from $25"
     },
     {
       title: "Waxing", 
-      description: "Professional waxing services using gentle, skin-friendly formulations",
+      description: "Instant smoothness with professional waxing for both men and women. Removes hair from the root, leaving skin clean, soft, and refreshed.",
       image: waxingImage,
       price: "from $35"
+    },
+    {
+      title: "Laser Hair Removal",
+      description: "Advanced laser technology for long-lasting hair reduction. Safe, effective, and visibly smoother skin from the very first session.",
+      image: lashImage,
+      price: "from $25"
+    },
+    {
+      title: "Eyelash Extension Menu",
+      description: "nhance your eyes with custom lash styles crafted to flatter your unique beauty. All lashes are applied by certified lash artists using premium materials and gentle adhesive.",
+      image: laserRemovalImage,
+      price: "from $25"
     }
   ];
 
@@ -47,11 +59,18 @@ export default function Homepage() {
   ];
 
   const ingredients = [
-    { name: "Lavender Oil", benefit: "Calming and relaxing properties" },
-    { name: "Argan Oil", benefit: "Deep nourishment and hydration" },
-    { name: "Tea Tree", benefit: "Natural antibacterial benefits" },
-    { name: "Chamomile", benefit: "Soothing and anti-inflammatory" }
+    { name: "White Truffle Extract", benefit: "Rich in fatty acids and vitamins, it deeply restores damaged hair and enhances unparalleled shine." },
+    { name: "Caviar Extract", benefit: "Packed with Omega-3, proteins, and minerals; regenerates hair from within and combats scalp aging." },
+    { name: "Pearl Powder", benefit: "Infuses hair with minerals, purifies the scalp, and imparts a luminous, silky gloss." },
+    { name: "24K Gold Infusion", benefit: "Boosts circulation, delivers powerful antioxidants, and leaves hair and scalp with a radiant glow." },
+    { name: "Saffron", benefit: "Known as 'red gold,' it soothes sensitive scalps while nourishing hair with potent antioxidants." },
+    { name: "Camellia Oil", benefit: "Japan’s beauty secret, rich in oleic acid; absorbs quickly to soften and smooth hair like silk." },
+    { name: "Premium Seaweed Complex (Kombu, Wakame)", benefit: "Provides marine minerals, restores hydration balance, and revitalizes weakened strands." },
+    { name: "Royal Jelly", benefit: "A superfood for the scalp, abundant in proteins and B vitamins; strengthens and reduces breakage." },
+    { name: "Japanese Hinoki Essential Oil", benefit: "Distilled from sacred cypress wood; deeply cleanses, purifies, and offers a calming, spa-like aroma." },
+    { name: "Placenta Extract (Botanical / Biotech)", benefit: "Supports cell regeneration, revitalizes follicles, and promotes denser, healthier hair growth." }
   ];
+  
 
   const teamMembers = [
     { name: "Sarah Johnson", role: "Senior Spa Director", experience: "12 years experience" },
@@ -88,7 +107,7 @@ export default function Homepage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
-        <div className="relative text-center text-white">
+        <div className="relative text-center text-white -mt-16">
           <div className="space-y-4">
             <p className="font-coco text-lg md:text-xl font-bold tracking-[0.55em] uppercase">Welcome to</p>
             <img 
@@ -276,7 +295,7 @@ export default function Homepage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img 
-                src={teamImage} 
+                src={aboutUsImage} 
                 alt="Spa team"
                 className="w-full h-[500px] object-cover rounded-lg shadow-lg"
               />
@@ -285,22 +304,19 @@ export default function Homepage() {
             <div>
               <h2 className="font-dream text-5xl font-medium mb-6" style={{ color: '#3a2c1b' }}>About Diora spa</h2>
               <p className="font-garet text-lg mb-6 leading-relaxed" style={{ color: '#3a2c1b' }}>
-                For over a decade, Diora spa has been a sanctuary of wellness and beauty in our community. We believe that true beauty comes from within, and our treatments are designed to nurture both your physical and emotional well-being.
-              </p>
-              <p className="font-garet text-lg leading-relaxed" style={{ color: '#3a2c1b' }}>
-                Our commitment to excellence means using only the finest natural products and maintaining the highest standards of service. Every visit to Diora spa is an opportunity to escape, rejuvenate, and rediscover your inner glow.
+              At Diora Spa, beauty is more than appearance—it’s the harmony of confidence and inner calm. As the sister brand of Nail Queen, we bring over a decade of trusted expertise into luxurious head spa rituals, facials, and holistic treatments. With premium products, skilled therapists, and a serene escape in the heart of Singapore, Diora Spa offers an experience where professionalism meets indulgence, leaving you refreshed, radiant, and renewed.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Reviews Section */}
-      <section className="relative py-24">
-         <div 
-           className="absolute inset-0 bg-cover bg-center"
-           style={{ backgroundImage: `url(https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1920&h=1080&fit=crop)` }}
-         />
+             {/* Reviews Section */}
+       <section className="relative py-24">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${reviewImage})` }}
+          />
         <div className="absolute inset-0" style={{ backgroundColor: 'rgba(58, 44, 27, 0.8)' }}></div>
         
         <div className="relative container mx-auto px-4">
