@@ -1,6 +1,6 @@
 import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import { FaCrown } from "react-icons/fa6";
-import logo from "../assets/diora logo.png"
+import logo from "../assets/3.png"
 export default function Footer() {
   return (
     <footer style={{ backgroundColor: '#3a2c1b' }} className="text-primary-foreground">
