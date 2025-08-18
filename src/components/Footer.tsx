@@ -1,20 +1,17 @@
 import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import { FaCrown } from "react-icons/fa6";
+import logo from "../assets/diora logo.png"
 export default function Footer() {
   return (
     <footer style={{ backgroundColor: '#3a2c1b' }} className="text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
         {/* First Row - Site Name */}
         <div className="mb-8">
-        <h1 className="font-dream text-4xl font-bold text-left text-white">
-  D
-  <span className="relative inline-block">
-    <span>ı</span>
-    <FaCrown className="absolute left-1 -translate-x-1/2 top-0 w-2 h-2 md:w-3 md:h-3" />
-  </span>
-  ora spa
-</h1>
-          <p className="font-signature text-2xl text-left text-white">by Michelle Tran</p>
+          <img 
+            src={logo} 
+            alt="Diora spa by Michelle Tran" 
+            className="h-8 md:h-14 w-auto"
+          />
         </div>
 
         {/* Second Row - Three Columns */}

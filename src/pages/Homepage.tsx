@@ -10,6 +10,7 @@ import hairWashImage from "@/assets/hair-wash.jpg";
 import waxingImage from "@/assets/waxing.jpg";
 import teamImage from "@/assets/team.jpg";
 import ingredientsImage from "@/assets/ingredients.jpg";
+import logo from "@/assets/3.png";
 
 export default function Homepage() {
   const services = [
@@ -88,17 +89,13 @@ export default function Homepage() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="relative text-center text-white">
-          <div className="space-y-2">
-            <p className="font-coco text-lg md:text-md font-bold tracking-[0.55em] uppercase">Welcome to</p>
-            <h1 className="font-dream text-8xl md:text-9xl font-medium leading-tight">
-  D
-  <span className="relative inline-block">
-    <span>ı</span>
-    <FaCrown className="absolute left-1/2 -translate-x-1/2 -top-1 w-8 h-8 md:w-10 md:h-10" />
-  </span>
-  ora spa
-</h1>
-            <p className="font-signature text-3xl md:text-4xl italic">by Michelle Tran</p>
+          <div className="space-y-4">
+            <p className="font-coco text-lg md:text-xl font-bold tracking-[0.55em] uppercase">Welcome to</p>
+            <img 
+              src={logo} 
+              alt="Diora spa by Michelle Tran" 
+              className="h-24 md:h-32 lg:h-40 w-auto mx-auto"
+            />
           </div>
         </div>
       </section>
@@ -107,7 +104,7 @@ export default function Homepage() {
       <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-montserrat text-4xl font-medium" style={{ color: '#3a2c1b' }}>Our Services</h2>
+            <h2 className="font-dream text-4xl font-medium" style={{ color: '#3a2c1b' }}>Our Services</h2>
             <p className="font-garet text-lg text-muted-foreground mt-2 max-w-2xl mx-auto" style={{ color: '#3a2c1b' }}>
               Experience our signature treatments crafted with care and expertise
             </p>
@@ -256,8 +253,18 @@ export default function Homepage() {
                   )
                 })}
               </CarouselContent>
-              <CarouselPrevious className="-left-20 h-12 w-12 bg-[#3a2c1b] text-white border-none shadow-lg hover:opacity-90 [&>svg]:h-6 [&>svg]:w-6" />
-              <CarouselNext className="-right-20 h-12 w-12 bg-[#3a2c1b] text-white border-none shadow-lg hover:opacity-90 [&>svg]:h-6 [&>svg]:w-6" />
+              <button
+                aria-label="Previous team members"
+                className="-left-20 absolute top-1/2 -translate-y-1/2 z-10 transition-opacity bg-[#3a2c1b] text-white rounded-full p-3 shadow-lg hover:opacity-90"
+              >
+                <ChevronLeft size={26} strokeWidth={3} />
+              </button>
+              <button
+                aria-label="Next team members"
+                className="-right-20 absolute top-1/2 -translate-y-1/2 z-10 transition-opacity bg-[#3a2c1b] text-white rounded-full p-3 shadow-lg hover:opacity-90"
+              >
+                <ChevronRight size={26} strokeWidth={3} />
+              </button>
             </Carousel>
           </div>
         </div>
