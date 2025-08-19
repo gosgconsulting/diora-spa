@@ -5,24 +5,29 @@ import waxingImage from "@/assets/waxing.jpg";
 import heroImage from "@/assets/hero-spa.jpg";
 import teamImage from "@/assets/team.jpg";
 import ingredientsImage from "@/assets/ingredients.jpg";
+import headSpaImage from "@/assets/our service head spa.jpg";
+import laserHairRemovalImage from "@/assets/our service laser hair removal.jpg";
+import lashImage from "@/assets/our service lash.png";
+import aboutUsImage from "@/assets/about-us.jpg";
+import reviewImage from "@/assets/review.jpg";
 
 export default function Gallery() {
   const hairWashGallery = [
-    { image: hairWashImage, alt: "Hair washing treatment" },
-    { image: heroImage, alt: "Spa ambiance" },
-    { image: ingredientsImage, alt: "Natural hair products" },
-    { image: teamImage, alt: "Hair specialist at work" },
-    { image: hairWashImage, alt: "Scalp massage therapy" },
-    { image: heroImage, alt: "Relaxing hair treatment" }
+    { image: hairWashImage, alt: "Professional hair washing treatment" },
+    { image: headSpaImage, alt: "Head spa and scalp massage service" },
+    { image: "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGFpciUyMHdhc2hpbmd8ZW58MHx8MHx8fDA%3D", alt: "Professional hair washing treatment" },
+    { image: heroImage, alt: "Luxurious spa ambiance for hair treatments" },
+    { image: "https://images.unsplash.com/photo-1634449571017-5fecfd26ad76?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aGFpciUyMHdhc2hpbmd8ZW58MHx8MHx8fDA%3D", alt: "Expert hair specialist providing professional treatment" },
+    { image: aboutUsImage, alt: "Premium hair washing facilities" }
   ];
 
   const waxingGallery = [
     { image: waxingImage, alt: "Professional waxing service" },
-    { image: heroImage, alt: "Waxing treatment room" },
-    { image: ingredientsImage, alt: "Waxing products" },
-    { image: teamImage, alt: "Waxing specialist" },
-    { image: waxingImage, alt: "Eyebrow waxing" },
-    { image: heroImage, alt: "Post-treatment care" }
+    { image: "https://plus.unsplash.com/premium_photo-1661431392914-e3fc8ff0e51a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2F4aW5nfGVufDB8fDB8fHww", alt: "Professional eyebrow waxing treatment" },
+    { image: "https://plus.unsplash.com/premium_photo-1726804940914-2cd542e5d7e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHdheGluZ3xlbnwwfHwwfHx8MA%3D%3D", alt: "Expert waxing specialist providing treatment" },
+    { image: "https://plus.unsplash.com/premium_photo-1664375246487-a55c9946c25b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fHdheGluZ3xlbnwwfHwwfHx8MA%3D%3D", alt: "Precision waxing for smooth skin results" },
+    { image: "https://plus.unsplash.com/premium_photo-1664187387394-2708bd7e0419?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODV8fHdheGluZ3xlbnwwfHwwfHx8MA%3D%3D", alt: "Clean and hygienic waxing environment" },
+    { image: "https://plus.unsplash.com/premium_photo-1664187387097-3bc0d6275fa1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTI1fHx3YXhpbmd8ZW58MHx8MHx8fDA%3D", alt: "Professional waxing tools and equipment" }
   ];
 
   return (

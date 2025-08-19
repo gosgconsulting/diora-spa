@@ -22,15 +22,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-white" />
-                <span className="font-garet text-white">123 Wellness Ave, Spa District</span>
+                <span className="font-garet text-white">Far East Plaza #05-80 (228213)</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-white" />
-                <span className="font-garet text-white">(555) 123-4567</span>
+                <span className="font-garet text-white">+65 92246789</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-white" />
-                <span className="font-garet text-white">hello@dioraspa.com</span>
+                <span className="font-garet text-white">Dioraspabymichelletran@gmail.com</span>
               </div>
             </div>
           </div>
@@ -40,12 +40,8 @@ export default function Footer() {
             <h3 className="font-garet text-xl font-semibold mb-4 text-white">Working Hours</h3>
             <div className="space-y-3 font-garet text-white">
               <div>
-                <div>Monday to Friday</div>
-                <div>9:00 AM - 6:00 PM</div>
-              </div>
-              <div>
-                <div>Saturday, Sunday</div>
-                <div>9:00 AM - 12:00 noon</div>
+                <div>Monday to Sunday</div>
+                <div>10:00 AM - 9:00 PM</div>
               </div>
             </div>
           </div>

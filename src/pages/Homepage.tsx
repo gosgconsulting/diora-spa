@@ -29,13 +29,13 @@ export default function Homepage() {
     {
       title: "Laser Hair Removal",
       description: "Advanced laser technology for long-lasting hair reduction. Safe, effective, and visibly smoother skin from the very first session.",
-      image: lashImage,
+      image: laserRemovalImage,
       price: "from $25"
     },
     {
       title: "Eyelash Extension Menu",
       description: "nhance your eyes with custom lash styles crafted to flatter your unique beauty. All lashes are applied by certified lash artists using premium materials and gentle adhesive.",
-      image: laserRemovalImage,
+      image: lashImage,
       price: "from $25"
     }
   ];
