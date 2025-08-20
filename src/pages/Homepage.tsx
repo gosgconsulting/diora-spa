@@ -11,6 +11,16 @@ import reviewImage from "@/assets/review.jpg";
 import lashImage from "@/assets/our service lash.png";
 import laserRemovalImage from "@/assets/our service laser hair removal.jpg";
 import logo from "@/assets/3.png";
+import whiteTruffleImg from "@/assets/ingredients/White Truffle Extract.png";
+import caviarExtractImg from "@/assets/ingredients/Caviar Extract.png";
+import pearlPowderImg from "@/assets/ingredients/Pearl Powder.png";
+import gold24kImg from "@/assets/ingredients/24K Gold Infusio.png";
+import saffronImg from "@/assets/ingredients/Saffron.png";
+import camelliaOilImg from "@/assets/ingredients/Camellia Oil.png";
+import seaweedComplexImg from "@/assets/ingredients/Seaweed Complex.png";
+import royalJellyImg from "@/assets/ingredients/royal jelly.png";
+import hinokiOilImg from "@/assets/ingredients/Japanese Hinoki Essential Oil.png";
+import placentaExtractImg from "@/assets/ingredients/placenta extrac.png";
 
 export default function Homepage() {
   const services = [
@@ -59,16 +69,16 @@ export default function Homepage() {
   ];
 
   const ingredients = [
-    { name: "White Truffle Extract", benefit: "Rich in fatty acids and vitamins, it deeply restores damaged hair and enhances unparalleled shine." },
-    { name: "Caviar Extract", benefit: "Packed with Omega-3, proteins, and minerals; regenerates hair from within and combats scalp aging." },
-    { name: "Pearl Powder", benefit: "Infuses hair with minerals, purifies the scalp, and imparts a luminous, silky gloss." },
-    { name: "24K Gold Infusion", benefit: "Boosts circulation, delivers powerful antioxidants, and leaves hair and scalp with a radiant glow." },
-    { name: "Saffron", benefit: "Known as 'red gold,' it soothes sensitive scalps while nourishing hair with potent antioxidants." },
-    { name: "Camellia Oil", benefit: "Japan’s beauty secret, rich in oleic acid; absorbs quickly to soften and smooth hair like silk." },
-    { name: "Premium Seaweed Complex (Kombu, Wakame)", benefit: "Provides marine minerals, restores hydration balance, and revitalizes weakened strands." },
-    { name: "Royal Jelly", benefit: "A superfood for the scalp, abundant in proteins and B vitamins; strengthens and reduces breakage." },
-    { name: "Japanese Hinoki Essential Oil", benefit: "Distilled from sacred cypress wood; deeply cleanses, purifies, and offers a calming, spa-like aroma." },
-    { name: "Placenta Extract (Botanical / Biotech)", benefit: "Supports cell regeneration, revitalizes follicles, and promotes denser, healthier hair growth." }
+    { name: "White Truffle Extract", benefit: "Rich in fatty acids and vitamins, it deeply restores damaged hair and enhances unparalleled shine.", image: whiteTruffleImg },
+    { name: "Caviar Extract", benefit: "Packed with Omega-3, proteins, and minerals; regenerates hair from within and combats scalp aging.", image: caviarExtractImg },
+    { name: "Pearl Powder", benefit: "Infuses hair with minerals, purifies the scalp, and imparts a luminous, silky gloss.", image: pearlPowderImg },
+    { name: "24K Gold Infusion", benefit: "Boosts circulation, delivers powerful antioxidants, and leaves hair and scalp with a radiant glow.", image: gold24kImg },
+    { name: "Saffron", benefit: "Known as 'red gold,' it soothes sensitive scalps while nourishing hair with potent antioxidants.", image: saffronImg },
+    { name: "Camellia Oil", benefit: "Japan’s beauty secret, rich in oleic acid; absorbs quickly to soften and smooth hair like silk.", image: camelliaOilImg },
+    { name: "Premium Seaweed Complex (Kombu, Wakame)", benefit: "Provides marine minerals, restores hydration balance, and revitalizes weakened strands.", image: seaweedComplexImg },
+    { name: "Royal Jelly", benefit: "A superfood for the scalp, abundant in proteins and B vitamins; strengthens and reduces breakage.", image: royalJellyImg },
+    { name: "Japanese Hinoki Essential Oil", benefit: "Distilled from sacred cypress wood; deeply cleanses, purifies, and offers a calming, spa-like aroma.", image: hinokiOilImg },
+    { name: "Placenta Extract (Botanical / Biotech)", benefit: "Supports cell regeneration, revitalizes follicles, and promotes denser, healthier hair growth.", image: placentaExtractImg }
   ];
   
 
@@ -205,34 +215,19 @@ export default function Homepage() {
           </div>
           
            <div className="grid grid-cols-5 gap-4">
-             {Array.from({ length: 10 }, (_, index) => {
-               const ingredient = ingredients[index % ingredients.length];
-               const images = [
-                 "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=150&h=96&fit=crop",
-                 "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=150&h=96&fit=crop",
-                 "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=96&fit=crop",
-                 "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=150&h=96&fit=crop",
-                 "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=96&fit=crop",
-                 "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=150&h=96&fit=crop",
-                 "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=150&h=96&fit=crop",
-                 "https://images.unsplash.com/photo-1552693673-1bf958298935?w=150&h=96&fit=crop",
-                 "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=150&h=96&fit=crop",
-                 "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=150&h=96&fit=crop"
-               ];
-               return (
-                 <div key={index} className="text-center">
-                   <div className="mb-4">
-                      <img 
-                        src={images[index]} 
-                        alt={ingredient.name}
-                        className="w-full aspect-square object-cover rounded-lg shadow-lg"
-                      />
-                   </div>
-                   <h4 className="font-garet font-semibold text-white text-sm mb-2">{ingredient.name}</h4>
-                   <p className="font-garet text-xs text-white/90">{ingredient.benefit}</p>
+             {ingredients.map((ingredient, index) => (
+               <div key={index} className="text-center">
+                 <div className="mb-4">
+                    <img 
+                      src={ingredient.image}
+                      alt={ingredient.name}
+                      className="w-full aspect-square object-cover rounded-lg shadow-lg"
+                    />
                  </div>
-               );
-             })}
+                 <h4 className="font-garet font-semibold text-white text-sm mb-2">{ingredient.name}</h4>
+                 <p className="font-garet text-xs text-white/90">{ingredient.benefit}</p>
+               </div>
+             ))}
            </div>
         </div>
       </section>
