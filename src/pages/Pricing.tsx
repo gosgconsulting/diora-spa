@@ -333,7 +333,7 @@ export default function Pricing() {
                     className="w-full h-64 object-cover rounded-lg shadow-lg"
                   />
                 </div>
-                <h2 className="font-dream text-4xl font-bold" style={{ color: '#3a2c1b' }}>Hair Wash Services</h2>
+                <h2 className="font-dream text-4xl font-bold" style={{ color: '#3a2c1b' }}>Head Spa Services</h2>
               </div>
               
               {/* Hair Services List */}
@@ -341,7 +341,7 @@ export default function Pricing() {
                 {hairServices.map((service, index) => (
                   <div key={index} className="border-b border-gray-200 pb-6">
                     <div className="flex items-center justify-between mb-2">
-                      <h3 className="font-coco text-xl font-semibold" style={{ color: '#3a2c1b' }}>{service.name}</h3>
+                    <h3 className="font-garet text-xl font-black" style={{ color: '#3a2c1b' }}>{service.name}</h3>
                       <div className="text-right">
                         <span className="font-dream text-2xl font-bold" style={{ color: '#3a2c1b' }}>{service.price}</span>
                       </div>
@@ -457,7 +457,7 @@ export default function Pricing() {
               
               {/* Ladies Waxing Section */}
               <div className="mb-12">
-                <h3 className="font-coco text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>Ladies Waxing</h3>
+                <h3 className="font-garet text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>Ladies Waxing</h3>
                 <div className="space-y-4">
                   {ladiesWaxingServices.map((service, index) => (
                     <div key={index} className="flex items-center justify-between py-3 border-b border-gray-200">
@@ -476,7 +476,7 @@ export default function Pricing() {
 
               {/* Gentlemen's Waxing Section */}
               <div className="mb-8">
-                <h3 className="font-coco text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>Gentlemen's Waxing</h3>
+                <h3 className="font-garet text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>Gentlemen's Waxing</h3>
                 <div className="space-y-4">
                   {gentlemensWaxingServices.map((service, index) => (
                     <div key={index} className="flex items-center justify-between py-3 border-b border-gray-200">
@@ -528,7 +528,7 @@ export default function Pricing() {
               
               {/* Ladies Laser Hair Removal Section */}
               <div className="mb-12">
-                <h3 className="font-coco text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>For Ladies</h3>
+                <h3 className="font-garet text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>For Ladies</h3>
                 <p className="font-garet text-sm text-gray-600 mb-4 italic">Enjoy hair-free, silky-smooth skin that keeps you confident, comfortable, and effortlessly beautiful in every moment of your daily life.</p>
                 
                 {/* Pricing Header */}
@@ -561,7 +561,7 @@ export default function Pricing() {
 
               {/* Gentlemen's Laser Hair Removal Section */}
               <div className="mb-8">
-                <h3 className="font-coco text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>For Gentlemen</h3>
+                <h3 className="font-garet text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>For Gentlemen</h3>
                 <p className="font-garet text-sm text-gray-600 mb-4 italic">Long-lasting smoothness, less regrowth, and a clean, confident look without daily shaving.</p>
                 
                 {/* Pricing Header */}
@@ -622,7 +622,7 @@ export default function Pricing() {
               
               {/* Full Set Styles Section */}
               <div className="mb-12">
-                <h3 className="font-coco text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>Full Set Styles</h3>
+                <h3 className="font-garet text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>Full Set Styles</h3>
                 <p className="font-garet text-sm text-gray-600 mb-6 italic">Custom lash styles by certified artists, using premium gentle materials.</p>
                 
                 <div className="space-y-4">
@@ -643,7 +643,7 @@ export default function Pricing() {
 
               {/* Lash Removal Section */}
               <div className="mb-12">
-                <h3 className="font-coco text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>Lash Removal</h3>
+                <h3 className="font-garet text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>Lash Removal</h3>
                 <p className="font-garet text-sm text-gray-600 mb-6 italic">Gentle removal of lash extensions without damaging natural lashes.</p>
                 
                 <div className="space-y-4">
@@ -663,7 +663,7 @@ export default function Pricing() {
 
               {/* Lash Touch-Ups Section */}
               <div className="mb-8">
-                <h3 className="font-coco text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>Lash Touch-Ups</h3>
+                <h3 className="font-garet text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>Lash Touch-Ups</h3>
                 <p className="font-garet text-sm text-gray-600 mb-6 italic">{eyelashExtensionServices.lashTouchUps.description}</p>
                 
                 <div className="space-y-6">

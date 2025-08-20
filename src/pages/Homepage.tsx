@@ -34,7 +34,7 @@ export default function Homepage() {
     },
     {
       title: "Eyelash Extension Menu",
-      description: "nhance your eyes with custom lash styles crafted to flatter your unique beauty. All lashes are applied by certified lash artists using premium materials and gentle adhesive.",
+      description: "Enhance your eyes with custom lash styles crafted to flatter your unique beauty. All lashes are applied by certified lash artists using premium materials and gentle adhesive.",
       image: lashImage,
       price: "from $25"
     }
