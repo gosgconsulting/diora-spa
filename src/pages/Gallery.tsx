@@ -70,7 +70,7 @@ export default function Gallery() {
                 const imgTitle = formatFileName(src)
                 return (
                   <CarouselItem key={idx} className="basis-full md:basis-1/2 lg:basis-1/3">
-                    <div className="aspect-[1] md:aspect-[4/3] lg:aspect-[3/2] overflow-hidden rounded-lg relative group">
+                    <div className="aspect-[1] md:aspect-[4/3] lg:aspect-[3/2] overflow-hidden relative group">
                       <img
                         src={src}
                         alt={imgTitle}
