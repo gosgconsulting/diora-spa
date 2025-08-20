@@ -437,7 +437,7 @@ export default function Pricing() {
               </div>
 
               <div className="text-center mt-8">
-                <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>Book Hair Service</Button>
+                <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>Book Head Spa Service</Button>
               </div>
             </div>
 
@@ -603,7 +603,7 @@ export default function Pricing() {
               </div>
 
               <div className="text-center mt-8">
-                <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>Book Laser Hair Removal</Button>
+                <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>Book Laser Hair Removal Service</Button>
               </div>
             </div>
             {/* Eyelash Extension Services Column */}
@@ -727,7 +727,7 @@ export default function Pricing() {
               </div>
 
               <div className="text-center mt-8">
-                <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>Book Eyelash Extension</Button>
+                <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>Book Eyelash Extension Service</Button>
               </div>
             </div>
             

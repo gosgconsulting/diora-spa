@@ -25,7 +25,7 @@ import placentaExtractImg from "@/assets/ingredients/placenta extrac.png";
 export default function Homepage() {
   const services = [
     {
-      title: "Hair Spa",
+      title: "Head Spa",
       description: "Curated rituals to deeply relax, detoxify, and revive your scalp, skin, and senses — like a holiday for your whole being.",
       image: hairWashImage,
       price: "from $25"
@@ -233,7 +233,7 @@ export default function Homepage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>
+      {/* <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-dream text-6xl font-medium mb-4" style={{ color: '#3a2c1b' }}>Meet Our Team</h2>
@@ -282,7 +282,7 @@ export default function Homepage() {
             </Carousel>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Section */}
       <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>
