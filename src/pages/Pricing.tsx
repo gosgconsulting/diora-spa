@@ -398,7 +398,7 @@ export default function Pricing() {
                       <Dialog>
                         <DialogTrigger asChild>
                           <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>
-                            Acquire now
+                            Enquire now
                           </Button>
                         </DialogTrigger>
                         <DialogContent className="max-w-xl p-0 overflow-hidden">
@@ -509,7 +509,7 @@ export default function Pricing() {
                     <Dialog>
                       <DialogTrigger asChild>
                         <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>
-                          Acquire now
+                          Enquire now
                         </Button>
                       </DialogTrigger>
                       <DialogContent className="max-w-xl p-0 overflow-hidden">
