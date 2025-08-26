@@ -1,12 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 export default function Gallery() {
   // Helper to load all images in a directory as URLs (vite will resolve to URLs)
@@ -63,39 +56,26 @@ export default function Gallery() {
           </p>
         </div>
 
-        <div className="relative">
-          <Carousel opts={{ align: "start", loop: true }} className="w-full">
-            <CarouselContent>
-              {images.map((src, idx) => {
-                const imgTitle = formatFileName(src)
-                return (
-                  <CarouselItem key={idx} className="basis-full md:basis-1/2 lg:basis-1/3">
-                    <div className="aspect-[1] md:aspect-[4/3] lg:aspect-[3/2] overflow-hidden relative group">
-                      <img
-                        src={src}
-                        alt={imgTitle}
-                        className="w-full h-full object-contain transition duration-300 group-hover:brightness-75"
-                        loading="lazy"
-                      />
-                      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                        <h3 className="text-white drop-shadow font-garet text-lg font-medium text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          {imgTitle}
-                        </h3>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                )
-              })}
-            </CarouselContent>
-            <CarouselPrevious
-              variant="ghost"
-              className="-left-4 md:-left-8 h-10 w-10 md:h-12 md:w-12 rounded-full bg-[#3a2c1b] text-white hover:bg-[#2e2316] shadow-[0_8px_24px_rgba(0,0,0,0.15)] border-0"
-            />
-            <CarouselNext
-              variant="ghost"
-              className="-right-4 md:-right-8 h-10 w-10 md:h-12 md:w-12 rounded-full bg-[#3a2c1b] text-white hover:bg-[#2e2316] shadow-[0_8px_24px_rgba(0,0,0,0.15)] border-0"
-            />
-          </Carousel>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+          {images.map((src, idx) => {
+            const imgTitle = formatFileName(src)
+            return (
+              <div key={idx} className="aspect-[4/3] overflow-hidden rounded-2xl relative group shadow-lg">
+                <img
+                  src={src}
+                  alt={imgTitle}
+                  className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <h3 className="text-white drop-shadow font-garet text-lg font-medium text-center px-4">
+                    {imgTitle}
+                  </h3>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

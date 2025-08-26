@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Star, Sparkles, Heart, Shield, ChevronLeft, ChevronRight } from "lucide-react";
@@ -21,6 +21,11 @@ import seaweedComplexImg from "@/assets/ingredients/Seaweed Complex.png";
 import royalJellyImg from "@/assets/ingredients/royal jelly.png";
 import hinokiOilImg from "@/assets/ingredients/Japanese Hinoki Essential Oil.png";
 import placentaExtractImg from "@/assets/ingredients/placenta extrac.png";
+import krisImg from "@/assets/team-members/kris.jpg";
+import roseImg from "@/assets/team-members/Rose.jpg";
+import shinaImg from "@/assets/team-members/Shina.jpg";
+import linaImg from "@/assets/team-members/Lina.jpg";
+import meiLingImg from "@/assets/team-members/Mei ling.jpg";
 
 export default function Homepage() {
   const services = [
@@ -83,10 +88,41 @@ export default function Homepage() {
   
 
   const teamMembers = [
-    { name: "Sarah Johnson", role: "Senior Spa Director", experience: "12 years experience" },
-    { name: "Maria Rodriguez", role: "Hair Specialist", experience: "8 years experience" },
-    { name: "Emily Chen", role: "Waxing Expert", experience: "6 years experience" },
-    { name: "Anna Williams", role: "Wellness Therapist", experience: "10 years experience" }
+    {
+      name: "Kris",
+      role: "Lash & Head Spa Specialist",
+      description:
+        "Trained in advanced lash artistry and Japanese scalp therapy, Kris delivers flawless lash designs and deeply restorative head spa treatments. Her expertise ensures every guest enjoys both beauty and true relaxation.",
+      image: krisImg,
+    },
+    {
+      name: "Rose",
+      role: "Head Spa & Laser Specialist",
+      description:
+        "Specialized in scalp therapy and advanced laser hair removal, Rose combines technical expertise with a caring touch. She helps clients achieve both deep relaxation and long-lasting smoothness with confidence.",
+      image: roseImg,
+    },
+    {
+      name: "Shina",
+      role: "Head Spa, Laser, Waxing & Massage Therapist",
+      description:
+        "With multi-disciplinary training in spa wellness, Shina offers everything from rejuvenating head spa rituals to precise waxing and soothing massage. Her versatility makes every treatment tailored and complete.",
+      image: shinaImg,
+    },
+    {
+      name: "Lina",
+      role: "Head Spa, Laser & Waxing Therapist",
+      description:
+        "Lina is skilled in combining effective hair removal with scalp relaxation therapies. Detail-oriented and gentle, she ensures clients leave with both refreshed skin and a calm mind.",
+      image: linaImg,
+    },
+    {
+      name: "Mei Ling",
+      role: "Spa Manager",
+      description:
+        "With years of hands-on experience across all beauty and wellness services, Mei Ling now leads Diora Spa as Manager. Her deep expertise, professionalism, and passion for client care ensure the highest standards across every treatment.",
+      image: meiLingImg,
+    },
   ];
 
   const testimonials = [
@@ -147,6 +183,8 @@ export default function Homepage() {
                     src={service.image} 
                     alt={service.title}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-black/30"></div>
                   <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6">
@@ -190,6 +228,8 @@ export default function Homepage() {
                        src={images[index]} 
                        alt={feature.title}
                        className="w-full h-48 object-cover rounded-lg shadow-lg"
+                       loading="lazy"
+                       decoding="async"
                      />
                    </div>
                    <h3 className="font-garet text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -222,6 +262,8 @@ export default function Homepage() {
                       src={ingredient.image}
                       alt={ingredient.name}
                       className="w-full aspect-square object-cover rounded-lg shadow-lg"
+                      loading="lazy"
+                      decoding="async"
                     />
                  </div>
                  <h4 className="font-garet font-semibold text-white text-sm mb-2">{ingredient.name}</h4>
@@ -233,56 +275,49 @@ export default function Homepage() {
       </section>
 
       {/* Team Section */}
-      {/* <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>
+      <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-dream text-6xl font-medium mb-4" style={{ color: '#3a2c1b' }}>Meet Our Team</h2>
           </div>
 
           <div className="max-w-6xl mx-auto relative">
-            <Carousel className="w-full">
+            <Carousel
+              className="w-full"
+              opts={{ align: "start", containScroll: "trimSnaps", dragFree: false, loop: false, slidesToScroll: 1 }}
+            >
               <CarouselContent>
-                {teamMembers.map((member, index) => {
-                  const images = [
-                    "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop",
-                    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop",
-                    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop",
-                    "https://images.unsplash.com/photo-1655249493799-9cee4fe983bb?w=300&h=300&fit=crop",
-                  ]
-                  return (
-                    <CarouselItem key={index} className="md:basis-1/4">
-                      <div className="p-6 text-center mx-2">
-                        <div className="mb-4">
-                          <img
-                            src={images[index]}
-                            alt={member.name}
-                            className="w-full aspect-square object-cover rounded-lg shadow-lg"
-                          />
-                        </div>
-                        <h3 className="font-garet text-lg font-semibold mb-2" style={{ color: '#3a2c1b' }}>{member.name}</h3>
-                        <p className="font-garet text-sm text-muted-foreground mb-1" style={{ color: '#3a2c1b' }}>{member.role}</p>
-                        <p className="font-garet text-xs" style={{ color: '#3a2c1b' }}>{member.experience}</p>
+                {teamMembers.map((member, index) => (
+                  <CarouselItem key={index} className="md:basis-1/4">
+                    <div className="p-6 text-center">
+                      <div className="mb-4">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full aspect-square object-cover rounded-lg shadow-lg"
+                          loading="lazy"
+                          decoding="async"
+                        />
                       </div>
-                    </CarouselItem>
-                  )
-                })}
+                      <h3 className="font-garet text-lg font-semibold mb-2" style={{ color: '#3a2c1b' }}>{member.name}</h3>
+                      <p className="font-garet text-sm text-muted-foreground mb-2" style={{ color: '#3a2c1b' }}>{member.role}</p>
+                      <p className="font-garet text-xs" style={{ color: '#3a2c1b' }}>{member.description}</p>
+                    </div>
+                  </CarouselItem>
+                ))}
               </CarouselContent>
-              <button
+              <CarouselPrevious
+                className="-left-20 bg-[#3a2c1b] text-white hover:opacity-90 h-12 w-12 p-0"
                 aria-label="Previous team members"
-                className="-left-20 absolute top-1/2 -translate-y-1/2 z-10 transition-opacity bg-[#3a2c1b] text-white rounded-full p-3 shadow-lg hover:opacity-90"
-              >
-                <ChevronLeft size={26} strokeWidth={3} />
-              </button>
-              <button
+              />
+              <CarouselNext
+                className="-right-20 bg-[#3a2c1b] text-white hover:opacity-90 h-12 w-12 p-0"
                 aria-label="Next team members"
-                className="-right-20 absolute top-1/2 -translate-y-1/2 z-10 transition-opacity bg-[#3a2c1b] text-white rounded-full p-3 shadow-lg hover:opacity-90"
-              >
-                <ChevronRight size={26} strokeWidth={3} />
-              </button>
+              />
             </Carousel>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* About Section */}
       <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>
@@ -293,6 +328,8 @@ export default function Homepage() {
                 src={aboutUsImage} 
                 alt="Spa team"
                 className="w-full h-[500px] object-cover rounded-lg shadow-lg"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             

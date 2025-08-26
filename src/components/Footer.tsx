@@ -11,6 +11,8 @@ export default function Footer() {
             src={logo} 
             alt="Diora spa by Michelle Tran" 
             className="h-8 md:h-14 w-auto"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
