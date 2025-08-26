@@ -1,0 +1,13 @@
+{
+  "name": "Kris",
+  "slug": "kris",
+  "role": "Lash & Head Spa Specialist",
+  "description": "Trained in advanced lash artistry and Japanese scalp therapy, Kris delivers flawless lash designs and deeply restorative head spa treatments. Her expertise ensures every guest enjoys both beauty and true relaxation.",
+  "image": "/src/assets/team-members/kris.jpg",
+  "socialLinks": [
+    {
+      "platform": "Instagram",
+      "url": "https://instagram.com/dioraspa"
+    }
+  ]
+}

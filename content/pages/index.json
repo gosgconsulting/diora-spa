@@ -1,0 +1,61 @@
+{
+  "title": "Diora Spa | Luxury Spa Experience",
+  "heroTitle": "Welcome to",
+  "heroSubtitle": "Experience true relaxation and rejuvenation",
+  "heroImage": "/src/assets/home.png",
+  "servicesTitle": "Our Services",
+  "servicesSubtitle": "Experience our signature treatments crafted with care and expertise",
+  "services": [
+    {
+      "type": "reference",
+      "refType": "Service",
+      "refId": "head-spa"
+    },
+    {
+      "type": "reference",
+      "refType": "Service",
+      "refId": "waxing"
+    },
+    {
+      "type": "reference",
+      "refType": "Service",
+      "refId": "laser-hair-removal"
+    },
+    {
+      "type": "reference",
+      "refType": "Service",
+      "refId": "eyelash-extension"
+    }
+  ],
+  "featuresTitle": "Why Choose Diora spa",
+  "featuresSubtitle": "Discover what makes our spa experience truly exceptional",
+  "features": [
+    {
+      "type": "reference",
+      "refType": "Feature",
+      "refId": "premium-products"
+    },
+    {
+      "type": "reference",
+      "refType": "Feature",
+      "refId": "caring-approach"
+    },
+    {
+      "type": "reference",
+      "refType": "Feature",
+      "refId": "safe-hygienic"
+    }
+  ],
+  "ingredientsTitle": "Our Ingredients",
+  "ingredientsSubtitle": "We carefully select premium natural ingredients known for their therapeutic properties and gentle effectiveness",
+  "teamTitle": "Meet Our Team",
+  "aboutTitle": "About Diora spa",
+  "aboutContent": "At Diora Spa, beauty is more than appearance—it's the harmony of confidence and inner calm. As the sister brand of Nail Queen, we bring over a decade of trusted expertise into luxurious head spa rituals, facials, and holistic treatments. With premium products, skilled therapists, and a serene escape in the heart of Singapore, Diora Spa offers an experience where professionalism meets indulgence, leaving you refreshed, radiant, and renewed.",
+  "aboutImage": "/src/assets/about-us.jpg",
+  "reviewsTitle": "Reviews",
+  "seo": {
+    "title": "Diora Spa | Luxury Spa Experience in Singapore",
+    "description": "Experience premium spa treatments at Diora Spa. Our services include head spa, waxing, laser hair removal, and eyelash extensions.",
+    "keywords": ["spa", "luxury spa", "head spa", "waxing", "laser hair removal", "eyelash extensions", "Singapore spa"]
+  }
+}
