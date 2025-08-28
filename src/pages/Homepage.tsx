@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -148,7 +149,7 @@ export default function Homepage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center">
+      <section className="relative h-[900px] flex items-center justify-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -196,7 +197,9 @@ export default function Homepage() {
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <Button className="font-garet px-6 py-2 rounded-full w-fit" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>Explore More</Button>
+                  <Link to="/pricing">
+                    <Button className="font-garet px-6 py-2 rounded-full w-fit" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>Explore More</Button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -234,9 +237,6 @@ export default function Homepage() {
                    </div>
                    <h3 className="font-garet text-xl font-semibold text-white mb-4">{feature.title}</h3>
                     <p className="font-garet text-white/90 mb-6 leading-relaxed">{feature.description}</p>
-                     <Button size="lg" className="font-garet font-medium bg-transparent text-white border border-white hover:bg-white/10">
-                      Learn More
-                    </Button>
                  </div>
                );
              })}

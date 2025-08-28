@@ -70,16 +70,17 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Book Now Button */}
-          <Button className={`font-garet font-medium transition-colors ${
+          {/* WhatsApp Link */}
+          <Button asChild className={`font-garet font-medium transition-colors ${
             isScrolled ? 'hover:bg-white/90' : 'hover:bg-white/30'
           }`} style={{ 
             backgroundColor: isScrolled ? '#FAF8F4' : 'rgba(250, 248, 244, 0.2)', 
             color: isScrolled ? '#3a2c1b' : '#FAF8F4',
             border: isScrolled ? 'none' : '1px solid rgba(250, 248, 244, 0.3)'
           }}>
-            Book Now
+            <a href="https://wa.me/6592246789" target="_blank" rel="noopener noreferrer">Book Now</a>
           </Button>
+
         </div>
       </div>
     </header>

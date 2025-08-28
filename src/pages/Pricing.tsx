@@ -326,7 +326,7 @@ export default function Pricing() {
     duration?: string;
     children: React.ReactNode;
   }) => (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start mb-10">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start mb-12">
       <div className={reverse ? "lg:order-2" : ""}>
         <div className="flex items-baseline justify-between mb-2">
           <h3 className="font-garet text-2xl font-bold mb-0" style={{ color: '#3a2c1b' }}>{title}</h3>
@@ -348,13 +348,13 @@ export default function Pricing() {
       </div>
     </div>
   );
-
+  
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#3a2c1b' }}>
+    <div>
       <Header />
-      
-      {/* Page Title */}
-      <section className="pt-24 pb-16">
+
+  {/* Page Title */}
+      <section className="pt-24 pb-16" style={{ backgroundColor: '#3a2c1b' }}>
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-dream text-8xl font-medium text-white mb-4">Pricing</h1>
         </div>
@@ -364,7 +364,7 @@ export default function Pricing() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           {/* First Row - Hair Wash and Waxing */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             
             {/* Hair Wash Services Column */}
             <div className="bg-white rounded-2xl p-8">
@@ -383,17 +383,19 @@ export default function Pricing() {
               </div>
               
               {/* Hair Services Alternating Rows */}
-              <div className="space-y-2">
+              <div className="space-y-12">
                 {hairServices.map((service, index) => (
                   <ServiceRow
                     key={index}
                     reverse={index % 2 === 1}
                     image={service.image}
                     title={service.name}
-                    price={index === 0 ? undefined : service.price}
-                    duration={index === 0 ? undefined : service.duration}
+                    price={index === 0 ? undefined : undefined}
+                    duration={index === 0 ? undefined : undefined}
                   >
-                    <p className="mb-3">{service.description}</p>
+                    <div className="min-h-[120px] mb-6">
+                      <p className="mb-0">{service.description}</p>
+                    </div>
                     {index === 0 ? (
                       <Dialog>
                         <DialogTrigger asChild>
@@ -406,79 +408,22 @@ export default function Pricing() {
                         </DialogContent>
                       </Dialog>
                     ) : (
-                      <>
-                        <div className="mb-4">
-                          <h4 className="font-garet font-semibold text-base mb-2" style={{ color: '#3a2c1b' }}>Includes:</h4>
-                          <div className="space-y-1">
-                            {service.includes.map((item, idx) => {
-                              if (item === "") return <div key={idx} className="h-2"></div>;
-                              if (item.endsWith(":")) {
-                                return (
-                                  <div key={idx} className="font-garet text-sm font-semibold mt-3 mb-1" style={{ color: '#3a2c1b' }}>
-                                    {item}
-                                  </div>
-                                );
-                              }
-                              return (
-                                <div key={idx} className="font-garet text-sm text-gray-600 flex items-center">
-                                  {!item.startsWith("•") && <span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span>}
-                                  {item}
-                                </div>
-                              );
-                            })}
-                          </div>
-                        </div>
-                        {service.addOnRituals && (
-                          <div className="mb-4">
-                            <h4 className="font-garet font-semibold text-base mb-2" style={{ color: '#3a2c1b' }}>ADD-ON RITUALS</h4>
-                            <div className="grid grid-cols-2 gap-4 mb-3">
-                              <div>
-                                <h5 className="font-garet font-medium text-sm mb-1 min-h-10">Hand / Foot / Shoulder Massage</h5>
-                                <ul className="space-y-1">
-                                  {Object.entries(service.addOnRituals.handFootShoulder).map(([d, p]) => (
-                                    <li key={d} className="font-garet text-sm text-gray-600 flex items-center">
-                                      <span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span>
-                                      {d} - {p}
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                              <div>
-                                <h5 className="font-garet font-medium text-sm mb-1 min-h-10">Facial Massage</h5>
-                                <ul className="space-y-1">
-                                  {Object.entries(service.addOnRituals.facialMassage).map(([d, p]) => (
-                                    <li key={d} className="font-garet text-sm text-gray-600 flex items-center">
-                                      <span className="w-1 h-1 bg-gray-400 rounded-full mr-2"></span>
-                                      {d} - {p}
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            </div>
-                            <div className="space-y-1">
-                              <div className="font-garet text-sm text-gray-600">Scratching {service.addOnRituals.scratching}</div>
-                              <div className="font-garet text-sm text-gray-600">Hair Styling {service.addOnRituals.hairStyling}</div>
-                            </div>
-                          </div>
-                        )}
-                        {service.notes && (
-                          <div className="mb-2">
-                            <ul className="space-y-1">
-                              {service.notes.map((note, idx) => (
-                                <li key={idx} className="font-garet text-sm text-gray-500 italic">• {note}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                      </>
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>
+                            Enquire now
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-xl p-0 overflow-hidden">
+                          <img src="/placeholder.svg" alt={`${service.name} Menu`} className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
+                        </DialogContent>
+                      </Dialog>
                     )}
                   </ServiceRow>
                 ))}
               </div>
 
-              <div className="text-center mt-8">
-                <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>Book Head Spa Service</Button>
-              </div>
+              
             </div>
 
             {/* Waxing Services Column */}
@@ -503,9 +448,11 @@ export default function Pricing() {
                   {/* Left: Title + description + Acquire now */}
                   <div>
                     <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Ladies Waxing</h3>
-                    <p className="font-garet text-sm text-gray-700 mb-4">
-                      Experience gentle, precise hair removal tailored for women. We use premium hard wax and a hygienic, skin‑calming technique to deliver smooth, long‑lasting results with minimal discomfort.
-                    </p>
+                    <div className="min-h-[120px] mb-6">
+                      <p className="font-garet text-sm text-gray-700">
+                        Experience gentle, precise hair removal tailored for women. We use premium hard wax and a hygienic, skin‑calming technique to deliver smooth, long‑lasting results with minimal discomfort.
+                      </p>
+                    </div>
                     <Dialog>
                       <DialogTrigger asChild>
                         <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>
@@ -519,33 +466,34 @@ export default function Pricing() {
                   </div>
                   {/* Right: Single image */}
                   <div>
-                    <img src={waxingLadiesImage} alt="Ladies Waxing" className="w-full h-64 lg:h-full object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
+                    <img src={waxingLadiesImage} alt="Ladies Waxing" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
 
               {/* Gentlemen's Waxing Section */}
-              <div className="mb-8">
+              <div className="mb-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
                   {/* Left: Single image */}
                   <div className="lg:order-1">
-                    <img src={waxingImage} alt="Gentlemen's Waxing" className="w-full h-64 lg:h-full object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
+                    <img src={waxingImage} alt="Gentlemen's Waxing" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
                   </div>
-                  {/* Right: Title + all services list */}
+                  {/* Right: Title + brief description + dialog */}
                   <div className="lg:order-2">
-                    <h3 className="font-garet text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>Gentlemen's Waxing</h3>
-                    <div className="space-y-6">
-                      {gentlemensWaxingServices.map((service, index) => (
-                        <div key={index} className="border-b pb-4 last:border-b-0">
-                          <h4 className="font-garet text-xl font-bold mb-2" style={{ color: '#3a2c1b' }}>{service.name}</h4>
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className="font-dream text-xl font-bold" style={{ color: '#3a2c1b' }}>{service.price}</span>
-                            <span className="font-garet text-sm text-gray-600">Duration: {service.duration}</span>
-                          </div>
-                          <p className="font-garet text-sm text-gray-700">{service.description}</p>
-                        </div>
-                      ))}
+                    <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Gentlemen's Waxing</h3>
+                    <div className="min-h-[120px] mb-6">
+                      <p className="font-garet text-sm text-gray-700">Professional waxing tailored for men—efficient, hygienic, and skin-conscious for a clean, confident finish.</p>
                     </div>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>
+                          Enquire now
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-xl p-0 overflow-hidden">
+                        <img src="/placeholder.svg" alt="Gentlemen's Waxing Menu" className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
+                      </DialogContent>
+                    </Dialog>
                   </div>
                 </div>
               </div>
@@ -559,10 +507,7 @@ export default function Pricing() {
                 </ul>
               </div>
 
-              <div className="text-center mt-8">
-                <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>Book Waxing Service</Button>
               </div>
-            </div>
             
           </div>
 
@@ -587,56 +532,54 @@ export default function Pricing() {
               
               {/* Ladies Laser Hair Removal Section */}
               <div className="mb-12">
-                <h3 className="font-garet text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>For Ladies</h3>
-                <p className="font-garet text-sm text-gray-600 mb-6 italic">Enjoy hair-free, silky-smooth skin that keeps you confident, comfortable, and effortlessly beautiful in every moment of your daily life.</p>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
-                  {/* Left: Title already above + full list */}
+                  {/* Left: Title + description + dialog (match Eyelash layout) */}
                   <div>
-                    <div className="space-y-6">
-                      {laserHairRemovalServices.ladies.map((service, index) => (
-                        <div key={index} className="border-b pb-4 last:border-b-0">
-                          <h4 className="font-garet text-xl font-bold mb-2" style={{ color: '#3a2c1b' }}>{service.name}</h4>
-                          <div className="grid grid-cols-1 gap-2 max-w-xs">
-                            <div>
-                              <div className="font-garet text-xs text-gray-600">1st Trial</div>
-                              <div className="font-dream text-base font-bold" style={{ color: '#3a2c1b' }}>{service.trialPrice}</div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
+                    <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>For Ladies</h3>
+                    <div className="min-h-[120px] mb-6">
+                      <p className="font-garet text-sm text-gray-600 italic">Enjoy hair-free, silky-smooth skin that keeps you confident, comfortable, and effortlessly beautiful in every moment of your daily life.</p>
                     </div>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>
+                          Enquire now
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-xl p-0 overflow-hidden">
+                        <img src="/placeholder.svg" alt="Laser Hair Removal For Ladies Menu" className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
+                      </DialogContent>
+                    </Dialog>
                   </div>
                   {/* Right: Single image */}
                   <div>
-                    <img src={laserHairRemovalImage} alt="Laser Hair Removal For Ladies" className="w-full h-64 lg:h-full object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
+                    <img src={laserHairRemovalImage} alt="Laser Hair Removal For Ladies" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
 
               {/* Gentlemen's Laser Hair Removal Section */}
-              <div className="mb-8">
-                <h3 className="font-garet text-2xl font-bold mb-6" style={{ color: '#3a2c1b' }}>For Gentlemen</h3>
-                <p className="font-garet text-sm text-gray-600 mb-4 italic">Long-lasting smoothness, less regrowth, and a clean, confident look without daily shaving.</p>
+              <div className="mb-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
                   {/* Left: Single image */}
                   <div className="lg:order-1">
-                    <img src={laserHairRemovalGentImage} alt="Laser Hair Removal For Gentlemen" className="w-full h-64 lg:h-full object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
+                    <img src={laserHairRemovalGentImage} alt="Laser Hair Removal For Gentlemen" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
                   </div>
-                  {/* Right: Full list */}
+                  {/* Right: description + dialog */}
                   <div className="lg:order-2">
-                    <div className="space-y-6">
-                      {laserHairRemovalServices.gentlemen.map((service, index) => (
-                        <div key={index} className="border-b pb-4 last:border-b-0">
-                          <h4 className="font-garet text-xl font-bold mb-2" style={{ color: '#3a2c1b' }}>{service.name}</h4>
-                          <div className="grid grid-cols-1 gap-2 max-w-xs">
-                            <div>
-                              <div className="font-garet text-xs text-gray-600">1st Trial</div>
-                              <div className="font-dream text-base font-bold" style={{ color: '#3a2c1b' }}>{service.trialPrice}</div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
+                    <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>For Gentlemen</h3>
+                    <div className="min-h-[120px] mb-6">
+                      <p className="font-garet text-sm text-gray-600 italic">Long-lasting smoothness, less regrowth, and a clean, confident look without daily shaving.</p>
                     </div>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>
+                          Enquire now
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-xl p-0 overflow-hidden">
+                        <img src="/placeholder.svg" alt="Laser Hair Removal For Gentlemen Menu" className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
+                      </DialogContent>
+                    </Dialog>
                   </div>
                 </div>
               </div>
@@ -651,9 +594,6 @@ export default function Pricing() {
                 </ul>
               </div>
 
-              <div className="text-center mt-8">
-                <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>Book Laser Hair Removal Service</Button>
-              </div>
             </div>
             {/* Eyelash Extension Services Column */}
             <div className="bg-white rounded-2xl p-8">
@@ -674,29 +614,26 @@ export default function Pricing() {
               {/* Full Set Styles Section */}
               <div className="mb-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
-                  {/* Left: Title + list */}
+                  {/* Left: Title + brief description + dialog */}
                   <div>
                     <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Full Set Styles</h3>
-                    <p className="font-garet text-sm text-gray-600 mb-6 italic">Custom lash styles by certified artists, using premium gentle materials.</p>
-                    <div className="space-y-6">
-                      {eyelashExtensionServices.fullSetStyles.map((service, index) => (
-                        <div key={index} className="border-b pb-4 last:border-b-0">
-                          <div className="flex items-baseline justify-between gap-4 mb-1">
-                            <h4 className="font-garet text-xl font-bold" style={{ color: '#3a2c1b' }}>{service.name}</h4>
-                            <div className="font-dream text-xl font-bold" style={{ color: '#3a2c1b' }}>{service.price}
-                              {service.originalPrice && (
-                                <span className="font-garet text-sm text-gray-500 ml-2 line-through">{service.originalPrice}</span>
-                              )}
-                            </div>
-                          </div>
-                          <p className="font-garet text-sm text-gray-700">{service.description}</p>
-                        </div>
-                      ))}
+                    <div className="min-h-[120px] mb-6">
+                      <p className="font-garet text-sm text-gray-600 italic">Custom lash styles by certified artists, using premium gentle materials.</p>
                     </div>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>
+                          Enquire now
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-xl p-0 overflow-hidden">
+                        <img src="/placeholder.svg" alt="Eyelash Full Set Styles Menu" className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
+                      </DialogContent>
+                    </Dialog>
                   </div>
                   {/* Right: Single image */}
                   <div>
-                    <img src={lashImage} alt="Eyelash Full Set Styles" className="w-full h-64 lg:h-full object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
+                    <img src={lashImage} alt="Eyelash Full Set Styles" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -706,73 +643,51 @@ export default function Pricing() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
                   {/* Left: Single image */}
                   <div className="lg:order-1">
-                    <img src={lashImage} alt="Lash Removal" className="w-full h-64 lg:h-full object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
+                    <img src={lashImage} alt="Lash Removal" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
                   </div>
-                  {/* Right: Title + list */}
+                  {/* Right: Title + brief description + dialog */}
                   <div className="lg:order-2">
                     <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Lash Removal</h3>
-                    <p className="font-garet text-sm text-gray-600 mb-6 italic">Gentle removal of lash extensions without damaging natural lashes.</p>
-                    <div className="space-y-6">
-                      {eyelashExtensionServices.lashRemoval.map((service, index) => (
-                        <div key={index} className="border-b pb-4 last:border-b-0">
-                          <div className="flex items-baseline justify-between gap-4 mb-1">
-                            <h4 className="font-garet text-xl font-bold" style={{ color: '#3a2c1b' }}>{service.name}</h4>
-                            <div className="font-dream text-xl font-bold" style={{ color: '#3a2c1b' }}>{service.price}</div>
-                          </div>
-                          <p className="font-garet text-sm text-gray-700">{service.description}</p>
-                        </div>
-                      ))}
+                    <div className="min-h-[120px] mb-6">
+                      <p className="font-garet text-sm text-gray-600 italic">Gentle removal of lash extensions without damaging natural lashes.</p>
                     </div>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>
+                          Enquire now
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-xl p-0 overflow-hidden">
+                        <img src="/placeholder.svg" alt="Lash Removal Menu" className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
+                      </DialogContent>
+                    </Dialog>
                   </div>
                 </div>
               </div>
 
               {/* Lash Touch-Ups Section */}
-              <div className="mb-8">
+              <div className="mb-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
-                  {/* Left: Title + grouped lists */}
+                  {/* Left: Title + brief description + dialog */}
                   <div>
                     <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Lash Touch-Ups</h3>
-                    <p className="font-garet text-sm text-gray-600 mb-6 italic">{eyelashExtensionServices.lashTouchUps.description}</p>
-                    <div className="space-y-6">
-                      <div>
-                        <h4 className="font-garet text-lg font-semibold mb-2" style={{ color: '#3a2c1b' }}>Classic & Light Volume Styles (1D, 2D, 3D)</h4>
-                        <div className="space-y-1">
-                          {eyelashExtensionServices.lashTouchUps.classicAndLight.map((item, index) => (
-                            <div key={index} className="flex justify-between max-w-sm">
-                              <span className="font-garet text-sm">• {item.duration}:</span>
-                              <span className="font-garet text-sm font-semibold">{item.price}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="font-garet text-lg font-semibold mb-2" style={{ color: '#3a2c1b' }}>Medium to Full Volume Styles (4D, 5D, 6D, Camellia)</h4>
-                        <div className="space-y-1">
-                          {eyelashExtensionServices.lashTouchUps.mediumToFull.map((item, index) => (
-                            <div key={index} className="flex justify-between max-w-sm">
-                              <span className="font-garet text-sm">• {item.duration}:</span>
-                              <span className="font-garet text-sm font-semibold">{item.price}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="font-garet text-lg font-semibold mb-2" style={{ color: '#3a2c1b' }}>Signature Styles (KaTun, KimK)</h4>
-                        <div className="space-y-1">
-                          {eyelashExtensionServices.lashTouchUps.signature.map((item, index) => (
-                            <div key={index} className="flex justify-between max-w-sm">
-                              <span className="font-garet text-sm">• {item.duration}:</span>
-                              <span className="font-garet text-sm font-semibold">{item.price}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+                    <div className="min-h-[120px] mb-6">
+                      <p className="font-garet text-sm text-gray-600 italic">{eyelashExtensionServices.lashTouchUps.description}</p>
                     </div>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>
+                          Enquire now
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-xl p-0 overflow-hidden">
+                        <img src="/placeholder.svg" alt="Lash Touch-Ups Menu" className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
+                      </DialogContent>
+                    </Dialog>
                   </div>
                   {/* Right: Single image */}
                   <div>
-                    <img src={lashImage} alt="Lash Touch-Ups" className="w-full h-64 lg:h-full object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
+                    <img src={lashImage} alt="Lash Touch-Ups" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -786,9 +701,6 @@ export default function Pricing() {
                 </ul>
               </div>
 
-              <div className="text-center mt-8">
-                <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>Book Eyelash Extension Service</Button>
-              </div>
             </div>
             
           </div>

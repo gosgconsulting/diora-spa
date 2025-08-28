@@ -12,7 +12,7 @@ const WhatsAppIcon = ({ size = 24 }: { size?: number }) => (
 );
 
 export default function WhatsAppButton() {
-  const phoneNumber = "+1234567890"; // Replace with actual WhatsApp number
+  const phoneNumber = "6592246789"; // Replace with actual WhatsApp number
   const message = "Hello! I'd like to book an appointment at Diora Spa.";
   
   const handleWhatsAppClick = () => {
