@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, CarouselApi } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Star, Sparkles, Heart, Shield, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { useGoogleReviews } from "@/hooks/useGoogleReviews";
 import heroImage from "@/assets/home.png";
 import hairWashImage from "@/assets/our service head spa.jpg";
 import waxingImage from "@/assets/waxing.jpg";
@@ -126,23 +128,76 @@ export default function Homepage() {
     },
   ];
 
-  const testimonials = [
+  const [activeReviewTab, setActiveReviewTab] = useState('google');
+  const { reviews: googleReviewsData, loading: googleLoading } = useGoogleReviews();
+  const [api, setApi] = useState<CarouselApi>();
+  const [expandedReviews, setExpandedReviews] = useState<Set<number>>(new Set());
+
+  // Transform Google API reviews to match our component structure
+  const googleReviews = googleReviewsData.map(review => ({
+    text: review.text,
+    author: review.author_name,
+    rating: review.rating,
+    source: "Google",
+    time: review.relative_time_description
+  }));
+
+  const tripadvisorReviews = [
     {
-      text: "Absolutely amazing experience! The hair wash was so relaxing and my hair feels incredible.",
-      author: "Jennifer L.",
-      rating: 5
+      text: "Hidden gem in Far East Plaza! The head spa treatment was incredibly relaxing and rejuvenating. Staff are friendly and professional. Definitely worth a visit!",
+      author: "TravelLover_SG",
+      rating: 5,
+      source: "TripAdvisor"
     },
     {
-      text: "Professional waxing service with minimal discomfort. The staff is so caring and skilled.",
-      author: "Rachel M.",
-      rating: 5
+      text: "Excellent spa experience! Clean facilities, skilled therapists, and great value. The scalp massage was the highlight of my Singapore trip.",
+      author: "WellnessSeeker",
+      rating: 5,
+      source: "TripAdvisor"
     },
     {
-      text: "This spa is my sanctuary. The atmosphere is perfect and the treatments are world-class.",
-      author: "Lisa K.",
-      rating: 5
+      text: "Professional and hygienic spa services. Michelle and her team provide personalized care and attention. Highly recommend for anyone looking for quality spa treatments.",
+      author: "SpaEnthusiast_2024",
+      rating: 5,
+      source: "TripAdvisor"
+    },
+    {
+      text: "Amazing experience! The lash extension service was perfect and lasted for weeks. Great location and reasonable prices. Will definitely return!",
+      author: "BeautyLover_Asia",
+      rating: 5,
+      source: "TripAdvisor"
     }
   ];
+
+  const currentReviews = activeReviewTab === 'google' ? googleReviews : tripadvisorReviews;
+
+
+  const scrollToPrevious = () => {
+    if (api) {
+      api.scrollPrev();
+    }
+  };
+
+  const scrollToNext = () => {
+    if (api) {
+      api.scrollNext();
+    }
+  };
+
+  const toggleReviewExpansion = (index: number) => {
+    const newExpanded = new Set(expandedReviews);
+    if (newExpanded.has(index)) {
+      newExpanded.delete(index);
+    } else {
+      newExpanded.add(index);
+    }
+    setExpandedReviews(newExpanded);
+  };
+
+  const truncateText = (text: string, maxLength: number = 150) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength) + '...';
+  };
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FAF8F4' }}>
@@ -354,38 +409,87 @@ export default function Homepage() {
         <div className="relative container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-dream text-5xl font-medium text-white mb-4">Reviews</h2>
+            
+            {/* Tab Navigation */}
+            <div className="flex justify-center mb-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-full p-1 inline-flex">
+                <button
+                  onClick={() => setActiveReviewTab('google')}
+                  className={`px-6 py-3 rounded-full font-garet font-medium transition-all duration-300 ${
+                    activeReviewTab === 'google'
+                      ? 'bg-white text-[#3a2c1b] shadow-lg'
+                      : 'text-white hover:bg-white/20'
+                  }`}
+                >
+                  Google Reviews
+                </button>
+                <button
+                  onClick={() => setActiveReviewTab('tripadvisor')}
+                  className={`px-6 py-3 rounded-full font-garet font-medium transition-all duration-300 ${
+                    activeReviewTab === 'tripadvisor'
+                      ? 'bg-white text-[#3a2c1b] shadow-lg'
+                      : 'text-white hover:bg-white/20'
+                  }`}
+                >
+                  TripAdvisor Reviews
+                </button>
+              </div>
+            </div>
           </div>
           
           <div className="max-w-6xl mx-auto relative">
-            <Carousel className="w-full">
+            <Carousel className="w-full" key={activeReviewTab} setApi={setApi} opts={{ align: "start", loop: true }}>
               <CarouselContent>
-                {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index} className="md:basis-1/3">
-                    <div className="p-8 text-center mx-4">
-                      <div className="flex justify-center mb-6">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-6 h-6 fill-white text-white" />
-                        ))}
+                {currentReviews.map((review, index) => {
+                  const isExpanded = expandedReviews.has(index);
+                  const shouldTruncate = review.text.length > 150;
+                  const displayText = isExpanded ? review.text : truncateText(review.text);
+                  
+                  return (
+                    <CarouselItem key={index} className="md:basis-1/3">
+                      <div className="p-8 text-center mx-4 h-full flex flex-col">
+                        <div className="flex justify-center mb-6">
+                          {[...Array(review.rating)].map((_, i) => (
+                            <Star key={i} className="w-6 h-6 fill-white text-white" />
+                          ))}
+                        </div>
+                        <div className="flex-grow mb-6">
+                          <p className="font-garet text-white italic">
+                            "{displayText}"
+                          </p>
+                          {shouldTruncate && (
+                            <button
+                              onClick={() => toggleReviewExpansion(index)}
+                              className="mt-2 text-white/70 hover:text-white text-sm underline transition-colors"
+                            >
+                              {isExpanded ? 'Read less' : 'Read more'}
+                            </button>
+                          )}
+                        </div>
+                        <div>
+                          <p className="font-garet font-semibold text-white">
+                            {review.author}
+                          </p>
+                          <p className="font-garet text-sm text-white/80">
+                            {review.source}
+                          </p>
+                        </div>
                       </div>
-                      <p className="font-garet text-white mb-6 italic text-lg leading-relaxed">
-                        "{testimonial.text}"
-                      </p>
-                      <p className="font-garet font-semibold text-white text-lg">
-                        — {testimonial.author}
-                      </p>
-                    </div>
-                  </CarouselItem>
-                ))}
+                    </CarouselItem>
+                  );
+                })}
               </CarouselContent>
               <button
+                onClick={scrollToPrevious}
                 aria-label="Previous reviews"
-                className="-left-20 absolute top-1/2 -translate-y-1/2 z-10 transition-opacity bg-[#3a2c1b] text-white rounded-full p-3 shadow-lg hover:opacity-90"
+                className="-left-20 absolute top-1/2 -translate-y-1/2 z-10 transition-all rounded-full p-3 shadow-lg bg-[#3a2c1b] text-white hover:opacity-90 cursor-pointer"
               >
                 <ChevronLeft size={56} strokeWidth={3} />
               </button>
               <button
+                onClick={scrollToNext}
                 aria-label="Next reviews"
-                className="-right-20 absolute top-1/2 -translate-y-1/2 z-10 transition-opacity bg-[#3a2c1b] text-white rounded-full p-3 shadow-lg hover:opacity-90"
+                className="-right-20 absolute top-1/2 -translate-y-1/2 z-10 transition-all rounded-full p-3 shadow-lg bg-[#3a2c1b] text-white hover:opacity-90 cursor-pointer"
               >
                 <ChevronRight size={56} strokeWidth={3} />
               </button>

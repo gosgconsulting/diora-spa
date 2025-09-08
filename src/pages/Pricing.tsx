@@ -10,8 +10,41 @@ import headSpaImage from "@/assets/our service head spa.jpg";
 import laserHairRemovalImage from "@/assets/our service laser hair removal.jpg";
 import laserHairRemovalGentImage from "@/assets/pricing-laser.jpg";
 import lashImage from "@/assets/our service lash.png";
+import lashLiftImg from "@/assets/eye-lash-pricing/01-lash lift.png";
+import japaneseLashImg from "@/assets/eye-lash-pricing/02-japanese lash.png";
+import angelLashImg from "@/assets/eye-lash-pricing/03-2d angel lash.png";
+import cameliteLashImg from "@/assets/eye-lash-pricing/04-camelite lash.png";
+import russianVolumeImg from "@/assets/eye-lash-pricing/05-russian volume.png";
+import designLashImg from "@/assets/eye-lash-pricing/06-design lash.png";
+import browThreadingImg from "@/assets/eye-lash-pricing/07-brow threading.png";
 import expressCleansingMenu from "@/assets/menu/express cleansing menu.png";
 import ladiesWaxingMenu from "@/assets/menu/ladies waxing menu.png";
+
+// Service popup images
+import expressCleansingPopup from "@/assets/head-spa-pricing/service-prices/01-Express Cleansing.png";
+import detoxBloomPopup from "@/assets/head-spa-pricing/service-prices/02-Detox & Bloom.png";
+import dioraSignaturePopup from "@/assets/head-spa-pricing/service-prices/03-Diora_s Signature.png";
+import fiveSensePopup from "@/assets/head-spa-pricing/service-prices/04-5 Sense Relaxation.png";
+import botanicalHealingPopup from "@/assets/head-spa-pricing/service-prices/05-Botanical Healing.png";
+import waxingPopup from "@/assets/waxing-pricing/service-prices/04-Waxing - popup.png";
+import laserHairRemovalPopup from "@/assets/laser-hair-removal-pricing/service-prices/03-Laser hair removal - popup.png";
+import eyelashPopup from "@/assets/eye-lash-pricing/service-prices/02-Eyelash extension - popup.png";
+
+// Head Spa Images
+import expressCleansingImg from "@/assets/head-spa-pricing/01-head spa/express cleansing.jpg";
+import detoxBloomImg from "@/assets/head-spa-pricing/01-head spa/detox & bloom.jpg";
+import dioraSignatureImg from "@/assets/head-spa-pricing/01-head spa/diora_s signature.jpg";
+import fiveSenseImg from "@/assets/head-spa-pricing/01-head spa/5 sense relaxation.jpg";
+import botanicalHealingImg from "@/assets/head-spa-pricing/01-head spa/diora_s botanical healing.jpg";
+
+// Laser Hair Removal Images
+import laserLadiesImg from "@/assets/laser-hair-removal-pricing/03-laser hair removal/buttocks.jpg";
+import laserGentImg from "@/assets/laser-hair-removal-pricing/03-laser hair removal/gentleman.jpg";
+
+// Waxing Images
+import waxingMainImg from "@/assets/waxing-pricing/04-waxing services/arm area.jpg";
+import waxingLadiesImg from "@/assets/waxing-pricing/04-waxing services/under arm.jpg";
+import waxingGentImg from "@/assets/waxing-pricing/04-waxing services/gentleman.jpg";
 
 export default function Pricing() {
   const hairServices = [
@@ -20,7 +53,7 @@ export default function Pricing() {
       description: "A short and effective refresh for scalp and hair",
       price: "$25",
       duration: "30 mins",
-      image: hairWashImage,
+      image: expressCleansingImg,
       includes: ["Double shampoo cleansing", "Nourishing hair mask", "Scalp massage", "Blow dry & serum finish"],
       addOnRituals: {
         handFootShoulder: {
@@ -48,7 +81,7 @@ export default function Pricing() {
       description: "A quick sensory detox to refresh both skin and soul",
       price: "$35",
       duration: "45 mins",
-      image: headSpaImage,
+      image: detoxBloomImg,
       includes: [
         "Phase 1 - Arrival & Grounding:",
         "• Herbal abdomen compress",
@@ -81,7 +114,7 @@ export default function Pricing() {
       description: "A luxurious blend of body, energy, and emotional balance",
       price: "$59",
       duration: "90 mins",
-      image: lashImage,
+      image: dioraSignatureImg,
       includes: [
         "Phase 1 - Arrival & Grounding:",
         "• Welcome ritual",
@@ -119,7 +152,7 @@ export default function Pricing() {
       description: "A full-body nervous system reset through rhythmic flow and deep touch",
       price: "$78",
       duration: "90 mins",
-      image: laserHairRemovalImage,
+      image: fiveSenseImg,
       includes: [
         "Phase 1 - Sensory Awakening:",
         "• Warm herbal abdomen compress",
@@ -163,7 +196,7 @@ export default function Pricing() {
       description: "A 2-hour ritual based on traditional Eastern healing designed to deeply cleanse, circulate energy and nourish body & mind",
       price: "$95", 
       duration: "120 mins",
-      image: hairWashImage,
+      image: botanicalHealingImg,
       includes: [
         "Phase 1 - Mind-Body Grounding:",
         "• Warm abdomen herbal compress",
@@ -273,16 +306,13 @@ export default function Pricing() {
 
   const eyelashExtensionServices = {
     fullSetStyles: [
-      { name: "Japanese Lash", price: "$56", originalPrice: "$70", description: "Soft, natural, weightless. Effect: Neat, defined, like your lashes but better." },
-      { name: "KaTun Style", price: "$96", originalPrice: "$120", description: "Thai celeb-inspired cat-eye lift. Effect: Sexy cat-eye + doll-like charm." },
-      { name: "2D Angel Lash", price: "$64", originalPrice: "$80", description: "Two lashes per natural lash. Fluttery look. Effect: Light, airy, romantic." },
-      { name: "Kim K Style", price: "$108", originalPrice: "$135", description: "Dark, spiky, wet lash effect. Effect: Intense, edgy, eye-catching." },
-      { name: "3D Russian Volume", price: "$72", originalPrice: "$90", description: "Triple fans, moderate volume. Effect: Fuller with a soft-focus finish." },
-      { name: "Lash Lift (Perm)", price: "$56", originalPrice: "$70", description: "Natural lash curl enhancement. Effect: Open, refreshed eyes." },
-      { name: "4D/5D Russian Volume", price: "$84", originalPrice: "$105", description: "Ultra-fine, bold volume. Effect: Fluffy, full, lightweight." },
-      { name: "6D Russian Volume", price: "$92", originalPrice: "$115", description: "Most Voluminous Russian set. Effect: Bold, dark, yet soft." },
-      { name: "3D/4D Camellia Lash", price: "$76", originalPrice: "$95", description: "Multi-length fans, wispy texture. Effect: Flirty, feminine, dimensional." },
-      { name: "5D/6D/7D Camellia Lash Set", price: "$84", originalPrice: "$105", description: "More volume & texture. Effect: Airy, elegant, full of movement." }
+      { name: "Lash Lift", price: "$56", originalPrice: "$70", description: "Natural lash curl enhancement. Effect: Open, refreshed eyes.", image: lashLiftImg },
+      { name: "Japanese Lash", price: "$56", originalPrice: "$70", description: "Soft, natural, weightless. Effect: Neat, defined, like your lashes but better.", image: japaneseLashImg },
+      { name: "2D Angel Lash", price: "$64", originalPrice: "$80", description: "Two lashes per natural lash. Fluttery look. Effect: Light, airy, romantic.", image: angelLashImg },
+      { name: "Camelite Lash", price: "$76", originalPrice: "$95", description: "Multi-length fans, wispy texture. Effect: Flirty, feminine, dimensional.", image: cameliteLashImg },
+      { name: "Russian Volume", price: "$72", originalPrice: "$90", description: "Triple fans, moderate volume. Effect: Fuller with a soft-focus finish.", image: russianVolumeImg },
+      { name: "Design Lash", price: "$84", originalPrice: "$105", description: "Ultra-fine, bold volume. Effect: Fluffy, full, lightweight.", image: designLashImg },
+      { name: "Brow Threading", price: "$25", originalPrice: "$30", description: "Precise eyebrow shaping using traditional threading technique. Effect: Clean, defined brows.", image: browThreadingImg }
     ],
     lashRemoval: [
       { name: "Removal", price: "$10", description: "Gentle removal of lash extensions without damaging natural lashes. Safe removal with oil-based solution. Gentle on your natural lashes." },
@@ -363,7 +393,7 @@ export default function Pricing() {
       {/* Services Layout */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          {/* First Row - Hair Wash and Waxing */}
+          {/* First Row - Hair Wash and Eyelash Extensions */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             
             {/* Hair Wash Services Column */}
@@ -373,7 +403,7 @@ export default function Pricing() {
                 <div className="mb-6">
                   <img 
                     src={headSpaImage} 
-                    alt="Hair Wash Services"
+                    alt="Head Spa Services"
                     className="w-full h-64 object-cover rounded-lg shadow-lg"
                     loading="lazy"
                     decoding="async"
@@ -403,8 +433,8 @@ export default function Pricing() {
                             Enquire now
                           </Button>
                         </DialogTrigger>
-                        <DialogContent className="max-w-xl p-0 overflow-hidden">
-                          <img src={expressCleansingMenu} alt="Express Cleansing Menu" className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
+                        <DialogContent className="max-w-4xl p-0 overflow-hidden">
+                          <img src={expressCleansingPopup} alt="Express Cleansing Menu" className="w-full h-auto max-h-[90vh] object-contain" loading="lazy" decoding="async" />
                         </DialogContent>
                       </Dialog>
                     ) : (
@@ -414,8 +444,8 @@ export default function Pricing() {
                             Enquire now
                           </Button>
                         </DialogTrigger>
-                        <DialogContent className="max-w-xl p-0 overflow-hidden">
-                          <img src="/placeholder.svg" alt={`${service.name} Menu`} className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
+                        <DialogContent className="max-w-4xl p-0 overflow-hidden">
+                          <img src={index === 1 ? detoxBloomPopup : index === 2 ? dioraSignaturePopup : index === 3 ? fiveSensePopup : botanicalHealingPopup} alt={`${service.name} Menu`} className="w-full h-auto max-h-[90vh] object-contain" loading="lazy" decoding="async" />
                         </DialogContent>
                       </Dialog>
                     )}
@@ -426,84 +456,56 @@ export default function Pricing() {
               
             </div>
 
-            {/* Waxing Services Column */}
+            {/* Eyelash Extension Services Column */}
             <div className="bg-white rounded-2xl p-8">
               {/* Header with Title and Image */}
               <div className="text-center mb-12">
                 <div className="mb-6">
                   <img 
-                    src={waxingImage} 
-                    alt="Waxing Services"
+                    src={lashImage} 
+                    alt="Eyelash Extension Services"
                     className="w-full h-64 object-cover rounded-lg shadow-lg"
                     loading="lazy"
                     decoding="async"
                   />
                 </div>
-                <h2 className="font-dream text-4xl font-bold" style={{ color: '#3a2c1b' }}>Waxing Services</h2>
+                <h2 className="font-dream text-4xl font-bold" style={{ color: '#3a2c1b' }}>Eyelash Extensions</h2>
               </div>
               
-              {/* Ladies Waxing Section */}
-              <div className="mb-12">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
-                  {/* Left: Title + description + Acquire now */}
-                  <div>
-                    <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Ladies Waxing</h3>
-                    <div className="min-h-[120px] mb-6">
-                      <p className="font-garet text-sm text-gray-700">
-                        Experience gentle, precise hair removal tailored for women. We use premium hard wax and a hygienic, skin‑calming technique to deliver smooth, long‑lasting results with minimal discomfort.
-                      </p>
+              {/* Eyelash Services Grid */}
+              <div className="grid grid-cols-1 mb-12">
+                {eyelashExtensionServices.fullSetStyles.map((service, index) => (
+                  <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-6 items-start ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} ${index > 0 ? 'mt-12' : ''}`}>
+                    <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
+                      <h3 className="font-garet text-2xl font-bold mb-2" style={{ color: '#3a2c1b' }}>{service.name}</h3>
+                      <div className="min-h-[120px] mb-6">
+                        <p className="font-garet text-sm text-gray-700">{service.description}</p>
+                      </div>
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>
+                            Enquire now
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-4xl p-0 overflow-hidden">
+                          <img src={eyelashPopup} alt={`${service.name} Menu`} className="w-full h-auto max-h-[90vh] object-contain" loading="lazy" decoding="async" />
+                        </DialogContent>
+                      </Dialog>
                     </div>
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>
-                          Enquire now
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-xl p-0 overflow-hidden">
-                        <img src={ladiesWaxingMenu} alt="Ladies Waxing Menu" className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
-                      </DialogContent>
-                    </Dialog>
+                    <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+                      <img src={service.image} alt={service.name} className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
+                    </div>
                   </div>
-                  {/* Right: Single image */}
-                  <div>
-                    <img src={waxingLadiesImage} alt="Ladies Waxing" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
-                  </div>
-                </div>
+                ))}
               </div>
 
-              {/* Gentlemen's Waxing Section */}
-              <div className="mb-12">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
-                  {/* Left: Single image */}
-                  <div className="lg:order-1">
-                    <img src={waxingImage} alt="Gentlemen's Waxing" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
-                  </div>
-                  {/* Right: Title + brief description + dialog */}
-                  <div className="lg:order-2">
-                    <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Gentlemen's Waxing</h3>
-                    <div className="min-h-[120px] mb-6">
-                      <p className="font-garet text-sm text-gray-700">Professional waxing tailored for men—efficient, hygienic, and skin-conscious for a clean, confident finish.</p>
-                    </div>
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>
-                          Enquire now
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-xl p-0 overflow-hidden">
-                        <img src="/placeholder.svg" alt="Gentlemen's Waxing Menu" className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
-                      </DialogContent>
-                    </Dialog>
-                  </div>
-                </div>
-              </div>
 
               {/* Notes Section */}
               <div className="bg-gray-50 p-4 rounded-lg">
                 <ul className="space-y-1 font-garet text-sm text-gray-600">
-                  <li>• All waxing is performed by trained professionals using premium hard wax for minimal pain</li>
-                  <li>• We use high-quality, hypoallergenic wax that's gentle on sensitive skin</li>
-                  <li>• Comfortable packages & membership perks available - inquire at front desk</li>
+                  {eyelashExtensionServices.notes.map((note, index) => (
+                    <li key={index}>• {note}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -511,7 +513,7 @@ export default function Pricing() {
             
           </div>
 
-          {/* Second Row - Laser Hair Removal and Eyelash Extensions */}
+          {/* Second Row - Laser Hair Removal and Waxing */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
             {/* Laser Hair Removal Services Column */}
@@ -545,14 +547,14 @@ export default function Pricing() {
                           Enquire now
                         </Button>
                       </DialogTrigger>
-                      <DialogContent className="max-w-xl p-0 overflow-hidden">
-                        <img src="/placeholder.svg" alt="Laser Hair Removal For Ladies Menu" className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
+                      <DialogContent className="max-w-4xl p-0 overflow-hidden">
+                        <img src={laserHairRemovalPopup} alt="Laser Hair Removal For Ladies Menu" className="w-full h-auto max-h-[90vh] object-contain" loading="lazy" decoding="async" />
                       </DialogContent>
                     </Dialog>
                   </div>
                   {/* Right: Single image */}
                   <div>
-                    <img src={laserHairRemovalImage} alt="Laser Hair Removal For Ladies" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
+                    <img src={laserLadiesImg} alt="Laser Hair Removal For Ladies" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -562,7 +564,7 @@ export default function Pricing() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
                   {/* Left: Single image */}
                   <div className="lg:order-1">
-                    <img src={laserHairRemovalGentImage} alt="Laser Hair Removal For Gentlemen" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
+                    <img src={laserGentImg} alt="Laser Hair Removal For Gentlemen" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
                   </div>
                   {/* Right: description + dialog */}
                   <div className="lg:order-2">
@@ -576,8 +578,8 @@ export default function Pricing() {
                           Enquire now
                         </Button>
                       </DialogTrigger>
-                      <DialogContent className="max-w-xl p-0 overflow-hidden">
-                        <img src="/placeholder.svg" alt="Laser Hair Removal For Gentlemen Menu" className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
+                      <DialogContent className="max-w-4xl p-0 overflow-hidden">
+                        <img src={laserHairRemovalPopup} alt="Laser Hair Removal For Gentlemen Menu" className="w-full h-auto max-h-[90vh] object-contain" loading="lazy" decoding="async" />
                       </DialogContent>
                     </Dialog>
                   </div>
@@ -595,30 +597,32 @@ export default function Pricing() {
               </div>
 
             </div>
-            {/* Eyelash Extension Services Column */}
+            {/* Waxing Services Column */}
             <div className="bg-white rounded-2xl p-8">
               {/* Header with Title and Image */}
               <div className="text-center mb-12">
                 <div className="mb-6">
                   <img 
-                    src={lashImage} 
-                    alt="Eyelash Extension Services"
+                    src={waxingMainImg} 
+                    alt="Waxing Services"
                     className="w-full h-64 object-cover rounded-lg shadow-lg"
                     loading="lazy"
                     decoding="async"
                   />
                 </div>
-                <h2 className="font-dream text-4xl font-bold" style={{ color: '#3a2c1b' }}>Eyelash Extensions</h2>
+                <h2 className="font-dream text-4xl font-bold" style={{ color: '#3a2c1b' }}>Waxing Services</h2>
               </div>
               
-              {/* Full Set Styles Section */}
+              {/* Ladies Waxing Section */}
               <div className="mb-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
-                  {/* Left: Title + brief description + dialog */}
+                  {/* Left: Title + description + Acquire now */}
                   <div>
-                    <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Full Set Styles</h3>
+                    <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Ladies Waxing</h3>
                     <div className="min-h-[120px] mb-6">
-                      <p className="font-garet text-sm text-gray-600 italic">Custom lash styles by certified artists, using premium gentle materials.</p>
+                      <p className="font-garet text-sm text-gray-700">
+                        Experience gentle, precise hair removal tailored for women. We use premium hard wax and a hygienic, skin‑calming technique to deliver smooth, long‑lasting results with minimal discomfort.
+                      </p>
                     </div>
                     <Dialog>
                       <DialogTrigger asChild>
@@ -626,30 +630,30 @@ export default function Pricing() {
                           Enquire now
                         </Button>
                       </DialogTrigger>
-                      <DialogContent className="max-w-xl p-0 overflow-hidden">
-                        <img src="/placeholder.svg" alt="Eyelash Full Set Styles Menu" className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
+                      <DialogContent className="max-w-4xl p-0 overflow-hidden">
+                        <img src={waxingPopup} alt="Ladies Waxing Menu" className="w-full h-auto max-h-[90vh] object-contain" loading="lazy" decoding="async" />
                       </DialogContent>
                     </Dialog>
                   </div>
                   {/* Right: Single image */}
                   <div>
-                    <img src={lashImage} alt="Eyelash Full Set Styles" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
+                    <img src={waxingLadiesImg} alt="Ladies Waxing" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
 
-              {/* Lash Removal Section */}
+              {/* Gentlemen's Waxing Section */}
               <div className="mb-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
                   {/* Left: Single image */}
                   <div className="lg:order-1">
-                    <img src={lashImage} alt="Lash Removal" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
+                    <img src={waxingGentImg} alt="Gentlemen's Waxing" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
                   </div>
                   {/* Right: Title + brief description + dialog */}
                   <div className="lg:order-2">
-                    <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Lash Removal</h3>
+                    <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Gentlemen's Waxing</h3>
                     <div className="min-h-[120px] mb-6">
-                      <p className="font-garet text-sm text-gray-600 italic">Gentle removal of lash extensions without damaging natural lashes.</p>
+                      <p className="font-garet text-sm text-gray-700">Professional waxing tailored for men—efficient, hygienic, and skin-conscious for a clean, confident finish.</p>
                     </div>
                     <Dialog>
                       <DialogTrigger asChild>
@@ -657,37 +661,10 @@ export default function Pricing() {
                           Enquire now
                         </Button>
                       </DialogTrigger>
-                      <DialogContent className="max-w-xl p-0 overflow-hidden">
-                        <img src="/placeholder.svg" alt="Lash Removal Menu" className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
+                      <DialogContent className="max-w-4xl p-0 overflow-hidden">
+                        <img src={waxingPopup} alt="Gentlemen's Waxing Menu" className="w-full h-auto max-h-[90vh] object-contain" loading="lazy" decoding="async" />
                       </DialogContent>
                     </Dialog>
-                  </div>
-                </div>
-              </div>
-
-              {/* Lash Touch-Ups Section */}
-              <div className="mb-12">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
-                  {/* Left: Title + brief description + dialog */}
-                  <div>
-                    <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Lash Touch-Ups</h3>
-                    <div className="min-h-[120px] mb-6">
-                      <p className="font-garet text-sm text-gray-600 italic">{eyelashExtensionServices.lashTouchUps.description}</p>
-                    </div>
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button className="font-garet rounded-full" style={{ backgroundColor: '#3a2c1b', color: '#FAF8F4' }}>
-                          Enquire now
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-xl p-0 overflow-hidden">
-                        <img src="/placeholder.svg" alt="Lash Touch-Ups Menu" className="w-full h-auto max-h-[80vh] object-contain" loading="lazy" decoding="async" />
-                      </DialogContent>
-                    </Dialog>
-                  </div>
-                  {/* Right: Single image */}
-                  <div>
-                    <img src={lashImage} alt="Lash Touch-Ups" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -695,9 +672,9 @@ export default function Pricing() {
               {/* Notes Section */}
               <div className="bg-gray-50 p-4 rounded-lg">
                 <ul className="space-y-1 font-garet text-sm text-gray-600">
-                  {eyelashExtensionServices.notes.map((note, index) => (
-                    <li key={index}>• {note}</li>
-                  ))}
+                  <li>• All waxing is performed by trained professionals using premium hard wax for minimal pain</li>
+                  <li>• We use high-quality, hypoallergenic wax that's gentle on sensitive skin</li>
+                  <li>• Comfortable packages & membership perks available - inquire at front desk</li>
                 </ul>
               </div>
 
