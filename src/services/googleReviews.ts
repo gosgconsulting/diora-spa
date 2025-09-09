@@ -1,4 +1,5 @@
 // Google Places API service for fetching reviews
+import axios from 'axios';
 
 export interface GoogleReview {
   author_name: string;
@@ -19,18 +20,28 @@ export interface GooglePlaceDetails {
 }
 
 export const fetchGoogleReviews = async (): Promise<GoogleReview[]> => {
-  // Try to fetch from backend API first
-  try {
-    const response = await fetch('http://localhost:3001/api/reviews');
-    
-    if (response.ok) {
-      const data = await response.json();
-      if (data.success && data.reviews) {
-        return data.reviews;
+  const googleApiKey = import.meta.env.VITE_GOOGLE_PLACES_API_KEY;
+  const placeId = 'ChIJH2tluTUZ2jERK4dBbislit0';
+  
+  if (googleApiKey) {
+    try {
+      // Try direct Google API call with CORS proxy using axios
+      const corsProxy = 'https://api.allorigins.win/raw?url=';
+      const googleUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,reviews,user_ratings_total&key=${googleApiKey}`;
+      
+      const response = await axios.get(`${corsProxy}${encodeURIComponent(googleUrl)}`, {
+        timeout: 10000, // 10 second timeout
+        headers: {
+          'Accept': 'application/json',
+        }
+      });
+      
+      if (response.data && response.data.status === 'OK' && response.data.result?.reviews) {
+        return response.data.result.reviews;
       }
+    } catch (error) {
+      console.log('Google API call failed, using fallback reviews:', error);
     }
-  } catch (error) {
-    // Backend not available, use fallback
   }
 
   // Use professional fallback reviews
