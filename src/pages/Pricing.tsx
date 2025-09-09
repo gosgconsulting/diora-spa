@@ -478,7 +478,7 @@ export default function Pricing() {
                   <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-6 items-start ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} ${index > 0 ? 'mt-12' : ''}`}>
                     <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                       <h3 className="font-garet text-2xl font-bold mb-2" style={{ color: '#3a2c1b' }}>{service.name}</h3>
-                      <div className="min-h-[120px] mb-6">
+                      <div className={`${service.name === 'Russian Volume' ? 'min-h-[152px]' : 'min-h-[120px]'} mb-6`}>
                         <p className="font-garet text-sm text-gray-700">{service.description}</p>
                       </div>
                       <Dialog>
