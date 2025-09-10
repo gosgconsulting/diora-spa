@@ -39,12 +39,12 @@ import botanicalHealingImg from "@/assets/head-spa-pricing/01-head spa/diora_s b
 
 // Laser Hair Removal Images
 import laserLadiesImg from "@/assets/laser-hair-removal-pricing/03-laser hair removal/buttocks.jpg";
-import laserGentImg from "@/assets/laser-hair-removal-pricing/03-laser hair removal/gentleman.jpg";
+import laserGentImg from "@/assets/laser-hair-removal-pricing/03-laser hair removal/Men Laser.png";
 
 // Waxing Images
 import waxingMainImg from "@/assets/waxing-pricing/04-waxing services/arm area.jpg";
 import waxingLadiesImg from "@/assets/waxing-pricing/04-waxing services/under arm.jpg";
-import waxingGentImg from "@/assets/waxing-pricing/04-waxing services/gentleman.jpg";
+import waxingGentImg from "@/assets/waxing-pricing/04-waxing services/Men wax.png";
 
 export default function Pricing() {
   const hairServices = [

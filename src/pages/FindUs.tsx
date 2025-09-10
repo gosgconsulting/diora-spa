@@ -86,7 +86,7 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7937851068216!2d
                     className="font-garet text-base hover:underline"
                     style={{ color: '#3a2c1b' }}
                   >
-                    example@gmail.com
+                    dioraspabymichelletran@gmail.com
                   </a>
                 </div>
               </div>
@@ -106,7 +106,7 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7937851068216!2d
               <div className="pt-4">
                 <div className="flex justify-center space-x-4">
                   <a 
-                    href="#" 
+                    href="https://www.instagram.com/dioraspa_bymichelletran/" 
                     className="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors duration-200"
                     aria-label="Instagram"
                   >
@@ -116,7 +116,7 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7937851068216!2d
                   </a>
                   
                   <a 
-                    href="#" 
+                    href="https://www.facebook.com/profile.php?id=61579251501889" 
                     className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
                     aria-label="Facebook"
                   >
@@ -126,7 +126,7 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7937851068216!2d
                   </a>
                   
                   <a 
-                    href="#" 
+                    href="https://www.tiktok.com/@dioraspa_bymichel" 
                     className="w-10 h-10 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
                     aria-label="TikTok"
                   >

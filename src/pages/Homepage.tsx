@@ -24,6 +24,9 @@ import seaweedComplexImg from "@/assets/ingredients/Seaweed Complex.png";
 import royalJellyImg from "@/assets/ingredients/royal jelly.png";
 import hinokiOilImg from "@/assets/ingredients/Japanese Hinoki Essential Oil.png";
 import placentaExtractImg from "@/assets/ingredients/placenta extrac.png";
+import premiumProductsImg from "@/assets/why-choose-us/Premium Products.jpg";
+import caringApproachImg from "@/assets/why-choose-us/Caring Approach.jpg";
+import safeHygienicImg from "@/assets/why-choose-us/Safe and Hygienic.jpg";
 import krisImg from "@/assets/team-members/kris.jpg";
 import roseImg from "@/assets/team-members/Rose.jpg";
 import shinaImg from "@/assets/team-members/Shina.jpg";
@@ -275,9 +278,9 @@ export default function Homepage() {
            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
              {features.map((feature, index) => {
                const images = [
-                 "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400&h=300&fit=crop",
-                 "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=400&h=300&fit=crop", 
-                 "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&h=300&fit=crop"
+                 premiumProductsImg,
+                 caringApproachImg,
+                 safeHygienicImg
                ];
                return (
                  <div key={index} className="text-center">
