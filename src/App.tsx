@@ -8,6 +8,7 @@ import Homepage from "./pages/Homepage";
 import Pricing from "./pages/Pricing";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import FindUs from "./pages/FindUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/find-us" element={<FindUs />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />

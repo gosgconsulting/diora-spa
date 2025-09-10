@@ -1,0 +1,77 @@
+.wp-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.wp-content h1, .wp-content h2, .wp-content h3, .wp-content h4, .wp-content h5, .wp-content h6 {
+  font-family: var(--font-dream);
+  color: #3a2c1b;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.wp-content h1 { font-size: 2.5rem; }
+.wp-content h2 { font-size: 2rem; }
+.wp-content h3 { font-size: 1.75rem; }
+.wp-content h4 { font-size: 1.5rem; }
+.wp-content h5 { font-size: 1.25rem; }
+.wp-content h6 { font-size: 1rem; }
+
+.wp-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.wp-content a {
+  color: #3a2c1b;
+  text-decoration: underline;
+  transition: opacity 0.2s;
+}
+
+.wp-content a:hover {
+  opacity: 0.8;
+}
+
+.wp-content ul, .wp-content ol {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.wp-content li {
+  margin-bottom: 0.5rem;
+}
+
+.wp-content blockquote {
+  border-left: 4px solid #3a2c1b;
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.wp-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.wp-content table th, .wp-content table td {
+  border: 1px solid rgba(58, 44, 27, 0.2);
+  padding: 0.75rem;
+}
+
+.wp-content table th {
+  background-color: rgba(58, 44, 27, 0.1);
+}
+
+.wp-content figure {
+  margin: 2rem 0;
+}
+
+.wp-content figcaption {
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: rgba(58, 44, 27, 0.7);
+}
