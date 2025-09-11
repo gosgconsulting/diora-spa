@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001; // Changed from 8080 to avoid conflicts with frontend
 
 // Enable CORS for your frontend
 app.use(cors({
