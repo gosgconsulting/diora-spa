@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { Star, Sparkles, Heart, Shield, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { useGoogleReviews } from "@/hooks/useGoogleReviews";
-import heroImage from "@/assets/home.png";
+import heroImage from "@/assets/hero-spa.jpg";
 import hairWashImage from "@/assets/our service head spa.jpg";
 import waxingImage from "@/assets/waxing.jpg";
 import aboutUsImage from "@/assets/about-us.jpg";
@@ -212,14 +212,11 @@ export default function Homepage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
-        <div className="relative text-center text-white -mt-16">
-          <div className="space-y-4">
-            <p className="font-coco text-lg md:text-xl font-bold tracking-[0.55em] uppercase">Welcome to</p>
-            <img 
-              src={logo} 
-              alt="Diora spa by Michelle Tran" 
-              className="h-24 md:h-32 lg:h-40 w-auto mx-auto"
-            />
+        <div className="relative text-center text-white">
+          <div className="space-y-6">
+            <p className="font-coco text-lg md:text-xl font-bold tracking-[0.35em] uppercase">WELCOME TO</p>
+            <h1 className="font-dream text-6xl md:text-7xl lg:text-8xl font-medium text-white">Diora spa</h1>
+            <p className="font-shamson text-2xl md:text-3xl lg:text-4xl text-white/90">by Michelle Tan</p>
           </div>
         </div>
       </section>
