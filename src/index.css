@@ -7,22 +7,26 @@ All colors MUST be HSL for proper theming.
 */
 @font-face {
   font-family: 'Dream Avenue';
-  src: url('../src/assets/fonts/Dream-Avenue.ttf') format('truetype');
+  src: url('./assets/fonts/Dream-Avenue.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Coco Gothic";
-  src: url('../src/assets/fonts/CocoGothic_trial.ttf') format('truetype');
+  src: url('./assets/fonts/CocoGothic_trial.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Shamson Signature";
-  src: url('../src/assets/fonts/Shamson-Signature-Regular.otf') format('truetype');
+  src: url('./assets/fonts/Shamson-Signature-Regular.otf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Garet";
-  src: url('../src/assets/fonts/Garet-Book.ttf') format('truetype');
+  src: url('./assets/fonts/Garet-Book.ttf') format('truetype');
+  font-display: swap;
 }
 @layer base {
   :root {
