@@ -4,13 +4,13 @@ const fetch = require('node-fetch');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3001; // Changed from 8080 to avoid conflicts with frontend
+const PORT = process.env.PORT || 3001;
 
 // Enable CORS for your frontend
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
     ? [process.env.FRONTEND_URL || 'https://your-frontend-domain.com']
-    : ['http://localhost:8080', 'http://localhost:5173', 'http://localhost:3000'],
+    : ['http://localhost:5173', 'http://localhost:3000'],
   credentials: true
 }));
 

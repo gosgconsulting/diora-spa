@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, ArrowLeft, Loader2 } from "lucide-react";
 import "@/styles/wordpress-content.css";
-import heroImage from "@/assets/home.png";
+import heroImage from "@/assets/hero-spa.jpg";
 
 export default function BlogPost() {
   const { id } = useParams<{ id: string }>();
