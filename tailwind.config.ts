@@ -21,9 +21,11 @@ export default {
 			fontFamily: {
 				'garet': ['Garet', 'sans-serif'],
 				'coco': ['Coco Gothic', 'sans-serif'],
-				'dream': ['Dream Avenue', 'sans-serif'],
-				'signature': ['Shamson Signature', 'sans-serif'],
+				'dream': ['Dream Avenue', 'serif'],
+				'shamson': ['Shamson Signature', 'cursive'],
 				'montserrat': ['Montserrat', 'sans-serif'],
+				'playfair': ['Playfair Display', 'serif'],
+				'allura': ['Allura', 'cursive'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

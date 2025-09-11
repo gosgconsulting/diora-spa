@@ -214,9 +214,9 @@ export default function Homepage() {
         />
         <div className="relative text-center text-white">
           <div className="space-y-6">
-            <p className="font-coco text-lg md:text-xl font-bold tracking-[0.35em] uppercase">WELCOME TO</p>
-            <h1 className="font-dream text-6xl md:text-7xl lg:text-8xl font-medium text-white">Diora spa</h1>
-            <p className="font-shamson text-2xl md:text-3xl lg:text-4xl text-white/90">by Michelle Tan</p>
+            <p className="font-montserrat text-lg md:text-xl font-bold tracking-[0.35em] uppercase">WELCOME TO</p>
+            <h1 className="font-playfair text-6xl md:text-7xl lg:text-8xl font-light text-white">Diora spa</h1>
+            <p className="font-allura text-3xl md:text-4xl lg:text-5xl text-white/90">by Michelle Tan</p>
           </div>
         </div>
       </section>
