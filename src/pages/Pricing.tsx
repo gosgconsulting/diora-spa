@@ -13,7 +13,7 @@ import lashImage from "@/assets/our service lash.png";
 import lashLiftImg from "@/assets/eye-lash-pricing/01-lash lift.png";
 import japaneseLashImg from "@/assets/eye-lash-pricing/02-japanese lash.png";
 import angelLashImg from "@/assets/eye-lash-pricing/03-2d angel lash.png";
-import cameliteLashImg from "@/assets/eye-lash-pricing/04-camelite lash.png";
+import camelliaLashImg from "@/assets/eye-lash-pricing/04-camelite lash.png";
 import russianVolumeImg from "@/assets/eye-lash-pricing/05-russian volume.png";
 import designLashImg from "@/assets/eye-lash-pricing/06-design lash.png";
 import browThreadingImg from "@/assets/eye-lash-pricing/07-brow threading.png";
@@ -28,7 +28,15 @@ import fiveSensePopup from "@/assets/head-spa-pricing/service-prices/04-5 Sense 
 import botanicalHealingPopup from "@/assets/head-spa-pricing/service-prices/05-Botanical Healing.png";
 import waxingPopup from "@/assets/waxing-pricing/service-prices/04-Waxing - popup.png";
 import laserHairRemovalPopup from "@/assets/laser-hair-removal-pricing/service-prices/03-Laser hair removal - popup.png";
-import eyelashPopup from "@/assets/eye-lash-pricing/service-prices/02-Eyelash extension - popup.png";
+
+// Eyelash pricing popup images
+import lashLiftPopup from "@/assets/eye-lash-pricing/service-prices/Lash lift.jpg";
+import japaneseLashPopup from "@/assets/eye-lash-pricing/service-prices/Japanese Lash.jpg";
+import angelLashPopup from "@/assets/eye-lash-pricing/service-prices/2D Angel Lash.jpg";
+import camelliaLashPopup from "@/assets/eye-lash-pricing/service-prices/Camellia Lash.jpg";
+import russianVolumePopup from "@/assets/eye-lash-pricing/service-prices/Russian Volume.jpg";
+import designLashPopup from "@/assets/eye-lash-pricing/service-prices/Design Lash.jpg";
+import browThreadingPopup from "@/assets/eye-lash-pricing/service-prices/Brow Threading.jpg";
 
 // Head Spa Images
 import expressCleansingImg from "@/assets/head-spa-pricing/01-head spa/express cleansing.jpg";
@@ -309,10 +317,10 @@ export default function Pricing() {
       { name: "Lash Lift", price: "$56", originalPrice: "$70", description: "Natural lash curl enhancement. Effect: Open, refreshed eyes.", image: lashLiftImg },
       { name: "Japanese Lash", price: "$56", originalPrice: "$70", description: "Soft, natural, weightless. Effect: Neat, defined, like your lashes but better.", image: japaneseLashImg },
       { name: "2D Angel Lash", price: "$64", originalPrice: "$80", description: "Two lashes per natural lash. Fluttery look. Effect: Light, airy, romantic.", image: angelLashImg },
-      { name: "Camelite Lash", price: "$76", originalPrice: "$95", description: "Multi-length fans, wispy texture. Effect: Flirty, feminine, dimensional.", image: cameliteLashImg },
+      { name: "Camellia Lash", price: "$76", originalPrice: "$95", description: "Multi-length fans, wispy texture. Effect: Flirty, feminine, dimensional.", image: camelliaLashImg },
       { name: "Russian Volume", price: "$72", originalPrice: "$90", description: "Triple fans, moderate volume. Effect: Fuller with a soft-focus finish.", image: russianVolumeImg },
       { name: "Design Lash", price: "$84", originalPrice: "$105", description: "Ultra-fine, bold volume. Effect: Fluffy, full, lightweight.", image: designLashImg },
-      { name: "Brow Threading", price: "$25", originalPrice: "$30", description: "Precise eyebrow shaping using traditional threading technique. Effect: Clean, defined brows.", image: browThreadingImg }
+      { name: "Brow Services", price: "$25", originalPrice: "$30", description: "Precise eyebrow shaping using traditional threading technique. Effect: Clean, defined brows.", image: browThreadingImg }
     ],
     lashRemoval: [
       { name: "Removal", price: "$10", description: "Gentle removal of lash extensions without damaging natural lashes. Safe removal with oil-based solution. Gentle on your natural lashes." },
@@ -479,7 +487,7 @@ export default function Pricing() {
                     <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                       <h3 className="font-garet text-2xl font-bold mb-2" style={{ color: '#3a2c1b' }}>{service.name}</h3>
                       <div className={`${service.name === 'Russian Volume' ? 'min-h-[152px]' : 'min-h-[120px]'} mb-6`}>
-                        <p className="font-garet text-sm text-gray-700">{service.description}</p>
+                        <p className="font-garet text-gray-700">{service.description}</p>
                       </div>
                       <Dialog>
                         <DialogTrigger asChild>
@@ -488,7 +496,21 @@ export default function Pricing() {
                           </Button>
                         </DialogTrigger>
                         <DialogContent className="max-w-4xl p-0 overflow-hidden">
-                          <img src={eyelashPopup} alt={`${service.name} Menu`} className="w-full h-auto max-h-[90vh] object-contain" loading="lazy" decoding="async" />
+                          <img 
+                            src={
+                              service.name === "Lash Lift" ? lashLiftPopup :
+                              service.name === "Japanese Lash" ? japaneseLashPopup :
+                              service.name === "2D Angel Lash" ? angelLashPopup :
+                              service.name === "Camellia Lash" ? camelliaLashPopup :
+                              service.name === "Russian Volume" ? russianVolumePopup :
+                              service.name === "Design Lash" ? designLashPopup :
+                              browThreadingPopup
+                            } 
+                            alt={`${service.name} Menu`} 
+                            className="w-full h-auto max-h-[90vh] object-contain" 
+                            loading="lazy" 
+                            decoding="async" 
+                          />
                         </DialogContent>
                       </Dialog>
                     </div>

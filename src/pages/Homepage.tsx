@@ -45,7 +45,7 @@ export default function Homepage() {
       title: "Waxing", 
       description: "Instant smoothness with professional waxing for both men and women. Removes hair from the root, leaving skin clean, soft, and refreshed.",
       image: waxingImage,
-      price: "from $35"
+      price: "from $12"
     },
     {
       title: "Laser Hair Removal",
