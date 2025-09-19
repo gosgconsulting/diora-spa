@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import SocialMediaSticky from "@/components/SocialMediaSticky";
 import Homepage from "./pages/Homepage";
 import Pricing from "./pages/Pricing";
 import Gallery from "./pages/Gallery";
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <WhatsAppButton />
+        <SocialMediaSticky />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
