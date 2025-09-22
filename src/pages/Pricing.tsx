@@ -560,8 +560,8 @@ export default function Pricing() {
                   {/* Left: Title + description + dialog (match Eyelash layout) */}
                   <div>
                     <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>For Ladies</h3>
-                    <div className="min-h-[120px] mb-6">
-                      <p className="font-garet text-sm text-gray-600 italic">Enjoy hair-free, silky-smooth skin that keeps you confident, comfortable, and effortlessly beautiful in every moment of your daily life.</p>
+                    <div className="min-h-[147px] mb-6">
+                      <p className="font-garet text-gray-600">Enjoy hair-free, silky-smooth skin that keeps you confident, comfortable, and effortlessly beautiful in every moment of your daily life.</p>
                     </div>
                     <Dialog>
                       <DialogTrigger asChild>
@@ -592,7 +592,7 @@ export default function Pricing() {
                   <div className="lg:order-2">
                     <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>For Gentlemen</h3>
                     <div className="min-h-[120px] mb-6">
-                      <p className="font-garet text-sm text-gray-600 italic">Long-lasting smoothness, less regrowth, and a clean, confident look without daily shaving.</p>
+                      <p className="font-garet text-gray-600">Long-lasting smoothness, less regrowth, and a clean, confident look without daily shaving.</p>
                     </div>
                     <Dialog>
                       <DialogTrigger asChild>
@@ -642,7 +642,7 @@ export default function Pricing() {
                   <div>
                     <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Ladies Waxing</h3>
                     <div className="min-h-[120px] mb-6">
-                      <p className="font-garet text-sm text-gray-700">
+                      <p className="font-garet text-gray-700">
                         Experience gentle, precise hair removal tailored for women. We use premium hard wax and a hygienic, skin‑calming technique to deliver smooth, long‑lasting results with minimal discomfort.
                       </p>
                     </div>
@@ -675,7 +675,7 @@ export default function Pricing() {
                   <div className="lg:order-2">
                     <h3 className="font-garet text-2xl font-bold mb-4" style={{ color: '#3a2c1b' }}>Gentlemen's Waxing</h3>
                     <div className="min-h-[120px] mb-6">
-                      <p className="font-garet text-sm text-gray-700">Professional waxing tailored for men—efficient, hygienic, and skin-conscious for a clean, confident finish.</p>
+                      <p className="font-garet text-gray-700">Professional waxing tailored for men—efficient, hygienic, and skin-conscious for a clean, confident finish.</p>
                     </div>
                     <Dialog>
                       <DialogTrigger asChild>
