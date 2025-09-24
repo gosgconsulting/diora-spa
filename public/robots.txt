@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://diora-spa.up.railway.app/sitemap.xml
+Sitemap: https://dioraspa.sg/sitemap.xml
