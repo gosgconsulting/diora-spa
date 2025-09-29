@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Star, Sparkles, Heart, Shield, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-import { useGoogleReviews } from "@/hooks/useGoogleReviews";
+import { useTrustIndexReviews } from "../hooks/useTrustIndexReviews";
 import heroImage from "@/assets/home.png";
 import hairWashImage from "@/assets/our service head spa.jpg";
 import waxingImage from "@/assets/waxing.jpg";
@@ -132,47 +132,28 @@ export default function Homepage() {
   ];
 
   const [activeReviewTab, setActiveReviewTab] = useState('google');
-  const { reviews: googleReviewsData, loading: googleLoading } = useGoogleReviews();
+  const { reviews: trustIndexReviewsData, loading: trustIndexLoading } = useTrustIndexReviews();
   const [api, setApi] = useState<CarouselApi>();
   const [expandedReviews, setExpandedReviews] = useState<Set<number>>(new Set());
 
-  // Transform Google API reviews to match our component structure
-  const googleReviews = googleReviewsData.map(review => ({
-    text: review.text,
-    author: review.author_name,
-    rating: review.rating,
-    source: "Google",
-    time: review.relative_time_description
-  }));
+  // Separate TrustIndex reviews by platform
+  const googleReviews = trustIndexReviewsData.filter(review => review.source === 'Google');
+  const tripadvisorReviews = trustIndexReviewsData.filter(review => review.source === 'TripAdvisor');
 
-  const tripadvisorReviews = [
-    {
-      text: "Hidden gem in Far East Plaza! The head spa treatment was incredibly relaxing and rejuvenating. Staff are friendly and professional. Definitely worth a visit!",
-      author: "TravelLover_SG",
-      rating: 5,
-      source: "TripAdvisor"
-    },
-    {
-      text: "Excellent spa experience! Clean facilities, skilled therapists, and great value. The scalp massage was the highlight of my Singapore trip.",
-      author: "WellnessSeeker",
-      rating: 5,
-      source: "TripAdvisor"
-    },
-    {
-      text: "Professional and hygienic spa services. Michelle and her team provide personalized care and attention. Highly recommend for anyone looking for quality spa treatments.",
-      author: "SpaEnthusiast_2024",
-      rating: 5,
-      source: "TripAdvisor"
-    },
-    {
-      text: "Amazing experience! The lash extension service was perfect and lasted for weeks. Great location and reasonable prices. Will definitely return!",
-      author: "BeautyLover_Asia",
-      rating: 5,
-      source: "TripAdvisor"
+
+
+  const getCurrentReviews = () => {
+    switch (activeReviewTab) {
+      case 'google':
+        return googleReviews;
+      case 'tripadvisor':
+        return tripadvisorReviews;
+      default:
+        return googleReviews;
     }
-  ];
+  };
 
-  const currentReviews = activeReviewTab === 'google' ? googleReviews : tripadvisorReviews;
+  const currentReviews = getCurrentReviews();
 
 
   const scrollToPrevious = () => {
@@ -426,16 +407,18 @@ export default function Homepage() {
                 >
                   Google Reviews
                 </button>
-                <button
-                  onClick={() => setActiveReviewTab('tripadvisor')}
-                  className={`px-6 py-3 rounded-full font-garet font-medium transition-all duration-300 ${
-                    activeReviewTab === 'tripadvisor'
-                      ? 'bg-white text-[#3a2c1b] shadow-lg'
-                      : 'text-white hover:bg-white/20'
-                  }`}
-                >
-                  TripAdvisor Reviews
-                </button>
+                {tripadvisorReviews.length > 0 && (
+                  <button
+                    onClick={() => setActiveReviewTab('tripadvisor')}
+                    className={`px-6 py-3 rounded-full font-garet font-medium transition-all duration-300 ${
+                      activeReviewTab === 'tripadvisor'
+                        ? 'bg-white text-[#3a2c1b] shadow-lg'
+                        : 'text-white hover:bg-white/20'
+                    }`}
+                  >
+                    TripAdvisor Reviews
+                  </button>
+                )}
               </div>
             </div>
           </div>
