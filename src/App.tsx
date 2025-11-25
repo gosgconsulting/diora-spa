@@ -15,6 +15,11 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import NotFound from "./pages/NotFound";
 
+// import DynamicPage from './pages/DynamicPage';
+// import AboutPage from './pages/AboutPage'; // Static page example
+// import ContactPage from './pages/ContactPage'; // Static page example
+
+
 const queryClient = new QueryClient();
 
 const App = () => (

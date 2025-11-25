@@ -1,6 +1,9 @@
 # envs
 .env
 
+# Assets - compressed for dev, use production CDN/sources instead
+src/assets/
+
 # Logs
 logs
 *.log
@@ -25,3 +28,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+

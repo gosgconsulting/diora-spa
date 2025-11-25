@@ -1,0 +1,450 @@
+[
+  {
+    "key": "HeroCarouselSection",
+    "name": "Hero",
+    "type": "HeroSection",
+    "items": [
+      {
+        "key": "slides",
+        "type": "array",
+        "items": [
+          {
+            "alt": "",
+            "key": "slide1",
+            "src": "https://cms.sparti.ai/uploads/file-1762771499925-353147918.jpg",
+            "type": "image",
+            "settings": {
+              "layout": "full"
+            }
+          },
+          {
+            "alt": "",
+            "key": "slide2",
+            "src": "https://cms.sparti.ai/uploads/file-1762771511005-717730757.jpg",
+            "type": "image",
+            "settings": {
+              "layout": "full"
+            }
+          }
+        ]
+      },
+      {
+        "key": "button",
+        "link": "/category/nouveautes",
+        "type": "button",
+        "content": "Découvrir la collection"
+      }
+    ]
+  },
+  {
+    "key": "CategoryShowcase",
+    "name": "Categories",
+    "type": "Showcase",
+    "items": [
+      {
+        "key": "categoryGrids",
+        "type": "array",
+        "items": [
+          {
+            "key": "knitwear",
+            "type": "array",
+            "items": [
+              {
+                "alt": "",
+                "key": "knitwearimage",
+                "src": "https://juliaparis.fr/wp-content/uploads/2025/06/Cardigan-Lisa-Gris-900x1260-1-731x1024.jpg",
+                "type": "image",
+                "settings": {
+                  "layout": "full"
+                }
+              },
+              {
+                "key": "knitwearheading",
+                "type": "heading",
+                "level": 2,
+                "content": "Maille"
+              },
+              {
+                "key": "button",
+                "link": "/category/maille",
+                "type": "button",
+                "content": "Découvrir"
+              }
+            ]
+          },
+          {
+            "key": "accessories",
+            "type": "array",
+            "items": [
+              {
+                "alt": "",
+                "key": "accessoriesimage",
+                "src": "https://juliaparis.fr/wp-content/uploads/2025/06/Julia-Paris-Accessoires-maille-900x1260-1-731x1024.jpg",
+                "type": "image",
+                "settings": {
+                  "layout": "full"
+                }
+              },
+              {
+                "key": "accessoriesheading",
+                "type": "heading",
+                "level": 2,
+                "content": "Accessoires"
+              },
+              {
+                "key": "button",
+                "link": "/category/accessoires",
+                "type": "button",
+                "content": "Découvrir"
+              }
+            ]
+          },
+          {
+            "key": "leather",
+            "type": "array",
+            "items": [
+              {
+                "alt": "",
+                "key": "leatherimage",
+                "src": "https://juliaparis.fr/wp-content/uploads/2025/06/Sac-Julia-Paris-900x1260-1-731x1024.jpg",
+                "type": "image",
+                "settings": {
+                  "layout": "full"
+                }
+              },
+              {
+                "key": "leatherheading",
+                "type": "heading",
+                "level": 2,
+                "content": "Maroquinerie"
+              },
+              {
+                "key": "button",
+                "link": "/category/accessoires?subcategory=divers-maroquinerie",
+                "type": "button",
+                "content": "Découvrir"
+              }
+            ]
+          },
+          {
+            "key": "belts",
+            "type": "array",
+            "items": [
+              {
+                "alt": "",
+                "key": "beltsimage",
+                "src": "https://juliaparis.fr/wp-content/uploads/2025/06/Julia-Paris-ceintures-900x1260-1-450x630.jpg",
+                "type": "image",
+                "settings": {
+                  "layout": "full"
+                }
+              },
+              {
+                "key": "beltsheading",
+                "type": "heading",
+                "level": 2,
+                "content": "Ceintures"
+              },
+              {
+                "key": "button",
+                "link": "/category/accessoires?subcategory=ceintures",
+                "type": "button",
+                "content": "Découvrir"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "ProductGridShowcase",
+    "name": "ProductGrid",
+    "type": "ProductGrid",
+    "items": [
+      {
+        "key": "title",
+        "type": "heading",
+        "level": 2,
+        "content": "Découvrez nos nouveautés"
+      },
+      {
+        "key": "buttons",
+        "type": "array",
+        "items": [
+          {
+            "key": "shopNow",
+            "link": "/shop",
+            "type": "button",
+            "content": "Acheter Maintenant"
+          },
+          {
+            "key": "newArrivals",
+            "link": "/category/nouveautes",
+            "type": "button",
+            "content": "Nouveautés"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "InstagramSection",
+    "name": "Instagram",
+    "type": "SocialMedia",
+    "items": [
+      {
+        "key": "title",
+        "type": "heading",
+        "level": 2,
+        "content": "SUIVEZ-NOUS SUR INSTAGRAM"
+      },
+      {
+        "key": "subtitle",
+        "type": "heading",
+        "level": 3,
+        "content": "Découvrez nos dernières créations et inspirations"
+      }
+    ]
+  },
+  {
+    "key": "BrandStorySection",
+    "name": "BrandStory",
+    "type": "ContentSection",
+    "items": [
+      {
+        "alt": "Julia Paris Brand Story",
+        "key": "backgroundImage",
+        "src": "https://juliaparis.fr/wp-content/uploads/2021/07/banner-a-propos-charlest-filter.jpg",
+        "type": "image",
+        "settings": {
+          "layout": "full"
+        }
+      },
+      {
+        "key": "title",
+        "type": "heading",
+        "level": 2,
+        "content": "L'Univers Julia Paris"
+      },
+      {
+        "key": "content",
+        "type": "array",
+        "items": [
+          {
+            "key": "paragraph1",
+            "type": "text",
+            "content": "Julia, c'est une histoire d'amour et de famille. Ce sont les souvenirs d'enfance au parfum de cuir et de coton qui ressurgissent. C'est la transmission du savoir-faire d'un père artisan du cuir et d'une mère créatrice de mode à leurs enfants."
+          },
+          {
+            "key": "paragraph2",
+            "type": "text",
+            "content": "Julia, c'est une marque de mode parisienne qui propose une mode intemporelle fondée sur la qualité et la recherche des belles matières."
+          },
+          {
+            "key": "paragraph3",
+            "type": "text",
+            "content": "Julia, c'est proposer des créations bien pensées qui vous accompagnent au quotidien."
+          }
+        ]
+      },
+      {
+        "key": "button",
+        "link": "/about",
+        "type": "button",
+        "content": "En savoir plus"
+      }
+    ]
+  },
+  {
+    "key": "ServicesSection",
+    "name": "Services",
+    "type": "ServicesGrid",
+    "items": [
+      {
+        "key": "title",
+        "type": "heading",
+        "level": 2,
+        "content": "Services Julia Paris"
+      },
+      {
+        "key": "subtitle",
+        "type": "heading",
+        "level": 3,
+        "content": "Une expérience d'achat exceptionnelle où chaque détail compte. Livraison rapide, conseil personnalisé et paiement sécurisé pour votre tranquillité d'esprit."
+      },
+      {
+        "key": "services",
+        "type": "array",
+        "items": [
+          {
+            "key": "shipping",
+            "type": "array",
+            "items": [
+              {
+                "key": "shippingimage",
+                "src": "https://juliaparis.fr/wp-content/uploads/2021/07/logo-livraison-charlest-2.png",
+                "type": "image",
+                "settings": {
+                  "layout": "full"
+                }
+              },
+              {
+                "key": "shippingheading",
+                "type": "heading",
+                "level": 2,
+                "content": "LIVRAISON GRATUITE"
+              },
+              {
+                "key": "shippingdescription",
+                "type": "text",
+                "content": "à partir de 150 EUR d'achats"
+              }
+            ]
+          },
+          {
+            "key": "returns",
+            "type": "array",
+            "items": [
+              {
+                "key": "returnsimage",
+                "src": "https://juliaparis.fr/wp-content/uploads/2021/07/logo-retour-charlest.png",
+                "type": "image",
+                "settings": {
+                  "layout": "full"
+                }
+              },
+              {
+                "key": "returnsheading",
+                "type": "heading",
+                "level": 2,
+                "content": "ÉCHANGES ET RETOURS"
+              },
+              {
+                "key": "returnsdescription",
+                "type": "text",
+                "content": "jusqu'à 14 jours"
+              }
+            ]
+          },
+          {
+            "key": "payment",
+            "type": "array",
+            "items": [
+              {
+                "key": "paymentimage",
+                "src": "https://juliaparis.fr/wp-content/uploads/2021/07/logo-paiement-charlest.png",
+                "type": "image",
+                "settings": {
+                  "layout": "full"
+                }
+              },
+              {
+                "key": "paymentheading",
+                "type": "heading",
+                "level": 2,
+                "content": "PAIEMENT SÉCURISÉ"
+              },
+              {
+                "key": "paymentdescription",
+                "type": "text",
+                "content": "via Stripe"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "ReviewsSection",
+    "name": "Reviews",
+    "type": "Reviews",
+    "items": [
+      {
+        "key": "title",
+        "type": "heading",
+        "level": 2,
+        "content": "Avis Clients"
+      },
+      {
+        "key": "reviews",
+        "type": "array",
+        "items": [
+          {
+            "id": "1761646428586",
+            "key": "review_1761646428586",
+            "type": "review",
+            "props": {
+              "name": "Marie L.",
+              "time": "Il y a 3 jours",
+              "title": "",
+              "rating": 5,
+              "content": "Magnifique collection, très belle qualité et un service client exceptionnel. Je recommande vivement !"
+            }
+          },
+          {
+            "id": "1761646428648",
+            "key": "review_1761646428648",
+            "type": "review",
+            "props": {
+              "name": "Sophie D.",
+              "time": "Il y a 1 semaine",
+              "title": "",
+              "rating": 4,
+              "content": "Très satisfaite de mon achat. Les matières sont de qualité et la livraison était rapide."
+            }
+          },
+          {
+            "id": "1761646428761",
+            "key": "review_1761646428761",
+            "type": "review",
+            "props": {
+              "name": "Claire M.",
+              "time": "Il y a 2 semaines",
+              "title": "",
+              "rating": 5,
+              "content": "Coup de cœur total ! L'univers Julia Paris correspond parfaitement à mes attentes."
+            }
+          },
+          {
+            "id": "1761646462385",
+            "key": "review_1761646462385",
+            "type": "review",
+            "props": {
+              "name": "Emma R.",
+              "time": "Il y a 3 semaines",
+              "title": "",
+              "rating": 5,
+              "content": "Service impeccable et produits de grande qualité. Une marque à découvrir absolument !"
+            }
+          },
+          {
+            "id": "1761646462486",
+            "key": "review_1761646462486",
+            "type": "review",
+            "props": {
+              "name": "Julie B.",
+              "time": "Il y a 1 mois",
+              "title": "",
+              "rating": 4,
+              "content": "Très beau travail artisanal, je suis ravie de mes achats. Livraison soignée."
+            }
+          },
+          {
+            "id": "1761646462587",
+            "key": "review_1761646462587",
+            "type": "review",
+            "props": {
+              "name": "Camille T.",
+              "time": "Il y a 1 mois",
+              "title": "",
+              "rating": 5,
+              "content": "Matières exceptionnelles et finitions parfaites. Julia Paris est devenue ma marque préférée !"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
