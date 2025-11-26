@@ -1,11 +1,14 @@
-interface Ingredient {
-  name: string;
-  benefit: string;
-  image: string;
+interface SchemaItem {
+  key: string;
+  type: string;
+  name?: string;
+  benefit?: string;
+  image?: string;
+  [key: string]: any;
 }
 
 interface IngredientCardProps {
-  ingredient: Ingredient;
+  ingredient: SchemaItem;
   index: number;
 }
 

@@ -1,11 +1,14 @@
-interface Feature {
-  title: string;
-  description: string;
-  image: string;
+interface SchemaItem {
+  key: string;
+  type: string;
+  title?: string;
+  description?: string;
+  image?: string;
+  [key: string]: any;
 }
 
 interface FeatureCardProps {
-  feature: Feature;
+  feature: SchemaItem;
   index: number;
 }
 

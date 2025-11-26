@@ -1,12 +1,15 @@
-interface TeamMember {
-  name: string;
-  role: string;
-  description: string;
-  image: string;
+interface SchemaItem {
+  key: string;
+  type: string;
+  name?: string;
+  role?: string;
+  description?: string;
+  image?: string;
+  [key: string]: any;
 }
 
 interface TeamMemberCardProps {
-  member: TeamMember;
+  member: SchemaItem;
   index: number;
 }
 

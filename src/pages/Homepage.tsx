@@ -11,114 +11,25 @@ import TeamSection from "@/components/sections/TeamSection";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useTrustIndexReviews } from "../hooks/useTrustIndexReviews";
-import heroImage from "@/assets/home.png";
-import hairWashImage from "@/assets/our service head spa.jpg";
-import waxingImage from "@/assets/waxing.jpg";
+
+// Images only needed for About section and Reviews
 import aboutUsImage from "@/assets/about-us.jpg";
 import reviewImage from "@/assets/review.jpg";
-import lashImage from "@/assets/our service lash.png";
-import laserRemovalImage from "@/assets/our service laser hair removal.jpg";
-import logo from "@/assets/3.png";
-import whiteTruffleImg from "@/assets/ingredients/White Truffle Extract.png";
-import caviarExtractImg from "@/assets/ingredients/Caviar Extract.png";
-import pearlPowderImg from "@/assets/ingredients/Pearl Powder.png";
-import gold24kImg from "@/assets/ingredients/24K Gold Infusio.png";
-import saffronImg from "@/assets/ingredients/Saffron.png";
-import camelliaOilImg from "@/assets/ingredients/Camellia Oil.png";
-import seaweedComplexImg from "@/assets/ingredients/Seaweed Complex.png";
-import royalJellyImg from "@/assets/ingredients/royal jelly.png";
-import hinokiOilImg from "@/assets/ingredients/Japanese Hinoki Essential Oil.png";
-import placentaExtractImg from "@/assets/ingredients/placenta extrac.png";
-import premiumProductsImg from "@/assets/why-choose-us/Premium Products.jpg";
-import caringApproachImg from "@/assets/why-choose-us/Caring Approach.jpg";
-import safeHygienicImg from "@/assets/why-choose-us/Safe and Hygienic.jpg";
-import krisImg from "@/assets/team-members/kris.jpg";
-import roseImg from "@/assets/team-members/Rose.jpg";
-import shinaImg from "@/assets/team-members/Shina.jpg";
-import linaImg from "@/assets/team-members/Lina.jpg";
-import meiLingImg from "@/assets/team-members/Mei ling.jpg";
-import servicesData from "../../schemas/services.json";
-import featuresData from "../../schemas/features.json";
-import ingredientsData from "../../schemas/ingredients.json";
-import teamMembersData from "../../schemas/team-members.json";
-import heroData from "../../schemas/hero.json";
 
-// Image mapping for hero
-const heroImageMap: Record<string, string> = {
-  "hero-image": heroImage,
-  "logo": logo,
-};
+import cmsSchema from "../../schemas/diora-home-cms-schema.json";
 
-// Image mapping for services
-const serviceImageMap: Record<string, string> = {
-  "hair-wash": hairWashImage,
-  "waxing": waxingImage,
-  "laser-removal": laserRemovalImage,
-  "lash": lashImage,
-};
-
-// Image mapping for features
-const featureImageMap: Record<string, string> = {
-  "premium-products": premiumProductsImg,
-  "caring-approach": caringApproachImg,
-  "safe-hygienic": safeHygienicImg,
-};
-
-// Image mapping for ingredients
-const ingredientImageMap: Record<string, string> = {
-  "white-truffle": whiteTruffleImg,
-  "caviar-extract": caviarExtractImg,
-  "pearl-powder": pearlPowderImg,
-  "gold-24k": gold24kImg,
-  "saffron": saffronImg,
-  "camellia-oil": camelliaOilImg,
-  "seaweed-complex": seaweedComplexImg,
-  "royal-jelly": royalJellyImg,
-  "hinoki-oil": hinokiOilImg,
-  "placenta-extract": placentaExtractImg,
-};
-
-// Image mapping for team members
-const teamImageMap: Record<string, string> = {
-  "kris": krisImg,
-  "rose": roseImg,
-  "shina": shinaImg,
-  "lina": linaImg,
-  "mei-ling": meiLingImg,
+// Helper function to find section by key
+const getSectionByKey = (sections: any[], key: string) => {
+  return sections.find(section => section.key === key);
 };
 
 export default function Homepage() {
-  // Load services with image mapping
-  const services = servicesData.map((service: any) => ({
-    ...service,
-    image: serviceImageMap[service.image] || ""
-  }));
-
-  // Load features with image mapping
-  const features = featuresData.map((feature: any) => ({
-    ...feature,
-    image: featureImageMap[feature.image] || ""
-  }));
-
-  // Load ingredients with image mapping
-  const ingredients = ingredientsData.map((ingredient: any) => ({
-    ...ingredient,
-    image: ingredientImageMap[ingredient.image] || ""
-  }));
-
-  // Load team members with image mapping
-  const teamMembers = teamMembersData.map((member: any) => ({
-    ...member,
-    image: teamImageMap[member.image] || ""
-  }));
-
-  // Load hero data with image mapping
-  const heroConfig = heroData[0];
-  const heroSlides = heroConfig.slides.map((slide: any) => ({
-    ...slide,
-    src: heroImageMap[slide.src] || slide.src,
-  }));
-  const heroLogo = heroImageMap[heroConfig.logo] || "";
+  // Load sections directly from CMS schema - no image mapping needed as paths are in schema
+  const heroSection = getSectionByKey(cmsSchema as any[], 'HeroSection');
+  const servicesSection = getSectionByKey(cmsSchema as any[], 'servicesSection');
+  const featuresSection = getSectionByKey(cmsSchema as any[], 'featuresSection');
+  const ingredientsSection = getSectionByKey(cmsSchema as any[], 'ingredientsSection');
+  const teamSection = getSectionByKey(cmsSchema as any[], 'teamSection');
 
   const [activeReviewTab, setActiveReviewTab] = useState('google');
   const { reviews: trustIndexReviewsData, loading: trustIndexLoading } = useTrustIndexReviews();
@@ -173,26 +84,20 @@ export default function Homepage() {
     <div className="min-h-screen" style={{ backgroundColor: '#FAF8F4' }}>
       <Header />
       
-      {/* Hero Section - Using HeroSection Component with Schema Data */}
-      <HeroSection
-        slides={heroSlides}
-        logo={heroLogo}
-        logoAlt={heroConfig.logoAlt}
-        welcomeText={heroConfig.welcomeText}
-        minHeight="h-screen md:h-[900px]"
-      />
+      {/* Hero Section - Using HeroSection Component with CMS Schema Data */}
+      <HeroSection items={heroSection?.items} />
 
-      {/* Services Section - Using ServicesSection Component */}
-      <ServicesSection services={services} />
+      {/* Services Section - Using ServicesSection Component with CMS Schema Data */}
+      <ServicesSection items={servicesSection?.items} />
 
-      {/* Features Section - Using FeaturesSection Component */}
-      <FeaturesSection features={features} />
+      {/* Features Section - Using FeaturesSection Component with CMS Schema Data */}
+      <FeaturesSection items={featuresSection?.items} />
 
-      {/* Ingredients Section - Using IngredientsSection Component */}
-      <IngredientsSection ingredients={ingredients} />
+      {/* Ingredients Section - Using IngredientsSection Component with CMS Schema Data */}
+      <IngredientsSection items={ingredientsSection?.items} />
 
-      {/* Team Section - Using TeamSection Component */}
-      <TeamSection teamMembers={teamMembers} />
+      {/* Team Section - Using TeamSection Component with CMS Schema Data */}
+      <TeamSection items={teamSection?.items} />
 
       {/* About Section */}
       <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>

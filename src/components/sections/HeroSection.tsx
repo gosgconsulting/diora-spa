@@ -4,43 +4,41 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-interface Slide {
-  src: string;
+interface SchemaItem {
+  key: string;
+  type: string;
+  content?: string;
+  src?: string;
   alt?: string;
-  type: "image";
   settings?: {
     layout?: "full";
   };
-}
-
-interface HeroButton {
-  content: string;
-  link: string;
-  type: "button";
+  items?: SchemaItem[];
+  [key: string]: any;
 }
 
 interface HeroSectionProps {
-  slides?: Slide[];
-  button?: HeroButton;
-  logo?: string;
-  logoAlt?: string;
-  welcomeText?: string;
-  minHeight?: string;
-  backgroundColor?: string;
+  items?: SchemaItem[];
 }
 
-export default function HeroSection({
-  slides = [],
-  button,
-  logo,
-  logoAlt = "Logo",
-  welcomeText = "Welcome to",
-  minHeight = "h-[900px]",
-  backgroundColor = "#FAF8F4",
-}: HeroSectionProps) {
+export default function HeroSection({ items = [] }: HeroSectionProps) {
   const [api, setApi] = useState<CarouselApi>();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
+
+  // Extract data from schema items
+  const getItemByKey = (key: string): SchemaItem | undefined => {
+    return items.find(item => item.key === key);
+  };
+
+  const slidesItem = getItemByKey('slides');
+  const logoItem = getItemByKey('logo');
+  const welcomeTextItem = getItemByKey('welcomeText');
+
+  const slides = slidesItem?.items || [];
+  const logo = logoItem?.src;
+  const logoAlt = logoItem?.alt || "Logo";
+  const welcomeText = welcomeTextItem?.content || "Welcome to";
 
   useEffect(() => {
     if (!api) return;
@@ -66,8 +64,8 @@ export default function HeroSection({
   if (!slides || slides.length === 0) {
     return (
       <section
-        className={`relative ${minHeight} flex items-center justify-center`}
-        style={{ backgroundColor }}
+        className="relative h-screen md:h-[900px] flex items-center justify-center"
+        style={{ backgroundColor: "#FAF8F4" }}
       >
         <div className="relative text-center text-white -mt-16">
           <div className="space-y-4">
@@ -93,7 +91,7 @@ export default function HeroSection({
 
   // Carousel-based hero with multiple slides
   return (
-    <section className={`relative ${minHeight} flex items-center justify-center overflow-hidden`}>
+    <section className="relative h-screen md:h-[900px] flex items-center justify-center overflow-hidden">
       <Carousel
         className="w-full h-full"
         setApi={setApi}
@@ -160,23 +158,6 @@ export default function HeroSection({
           </>
         )}
       </Carousel>
-
-      {/* CTA Button */}
-      {button && (
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
-          <Link to={button.link}>
-            <Button
-              className="font-garet px-8 py-3 rounded-full"
-              style={{
-                backgroundColor: "#3a2c1b",
-                color: "#FAF8F4",
-              }}
-            >
-              {button.content}
-            </Button>
-          </Link>
-        </div>
-      )}
     </section>
   );
 }

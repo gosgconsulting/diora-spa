@@ -1,29 +1,46 @@
 import FeatureCard from "./FeatureCard";
 
-interface Feature {
-  title: string;
-  description: string;
-  image: string;
+interface SchemaItem {
+  key: string;
+  type: string;
+  content?: string;
+  items?: SchemaItem[];
+  [key: string]: any;
 }
 
 interface FeaturesSectionProps {
-  features: Feature[];
+  items?: SchemaItem[];
 }
 
-export default function FeaturesSection({ features }: FeaturesSectionProps) {
+export default function FeaturesSection({ items = [] }: FeaturesSectionProps) {
+  // Extract data from schema items
+  const getItemByKey = (key: string): SchemaItem | undefined => {
+    return items.find(item => item.key === key);
+  };
+
+  const titleItem = getItemByKey('title');
+  const subtitleItem = getItemByKey('subtitle');
+  const featuresItem = getItemByKey('features');
+
+  const title = titleItem?.content || "Why Choose Diora spa";
+  const subtitle = subtitleItem?.content || "Discover what makes our spa experience truly exceptional";
+  const features = featuresItem?.items || [];
+
   return (
     <section className="py-16" style={{ backgroundColor: '#3a2c1b' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-dream text-5xl font-medium text-white mb-4">Why Choose Diora spa</h2>
-          <p className="font-coco text-lg text-white/90 max-w-2xl mx-auto">
-            Discover what makes our spa experience truly exceptional
-          </p>
+          <h2 className="font-dream text-5xl font-medium text-white mb-4">{title}</h2>
+          {subtitle && (
+            <p className="font-coco text-lg text-white/90 max-w-2xl mx-auto">
+              {subtitle}
+            </p>
+          )}
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <FeatureCard key={index} feature={feature} index={index} />
+            <FeatureCard key={feature.key || index} feature={feature} index={index} />
           ))}
         </div>
       </div>

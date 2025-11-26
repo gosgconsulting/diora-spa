@@ -1,15 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-interface Service {
-  title: string;
-  description: string;
-  image: string;
-  price: string;
+interface SchemaItem {
+  key: string;
+  type: string;
+  title?: string;
+  description?: string;
+  image?: string;
+  price?: string;
+  [key: string]: any;
 }
 
 interface ServiceCardProps {
-  service: Service;
+  service: SchemaItem;
   index: number;
 }
 
