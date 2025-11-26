@@ -3,7 +3,7 @@ interface SchemaItem {
   type: string;
   title?: string;
   description?: string;
-  image?: string;
+  src?: string;
   [key: string]: any;
 }
 
@@ -17,7 +17,7 @@ export default function FeatureCard({ feature, index }: FeatureCardProps) {
     <div key={index} className="text-center">
       <div className="mb-6">
         <img 
-          src={feature.image} 
+          src={feature.src} 
           alt={feature.title}
           className="w-full h-48 object-cover rounded-lg shadow-lg"
           loading="lazy"

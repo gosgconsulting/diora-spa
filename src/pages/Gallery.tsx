@@ -1,127 +1,40 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SimpleHeroBanner from "@/components/sections/SimpleHeroBanner";
+import GalleryImageGrid from "@/components/sections/GalleryImageGrid";
+import cmsSchema from "../../schemas/diora-gallery-cms-schema.json";
+
+// Helper function to find section by key
+const getSectionByKey = (sections: any[], key: string) => {
+  return sections.find(section => section.key === key);
+};
 
 export default function Gallery() {
-  // Helper to load all images in a directory as URLs (vite will resolve to URLs)
-  const loadImages = (glob: Record<string, { default: string }>) =>
-    Object.values(glob).map((m) => m.default)
+  // Load simple hero banner from CMS schema
+  const simpleHeroBanner = getSectionByKey(cmsSchema as any[], 'SimpleHeroBanner');
+  
+  // Get all gallery sections from schema
+  const galleryHeadSpa = getSectionByKey(cmsSchema as any[], 'GalleryHeadSpa');
+  const galleryWaxing = getSectionByKey(cmsSchema as any[], 'GalleryWaxing');
+  const galleryLashExtension = getSectionByKey(cmsSchema as any[], 'GalleryLashExtension');
+  const galleryLaser = getSectionByKey(cmsSchema as any[], 'GalleryLaser');
 
-  // Import images from each service folder
-  const headSpaImages = loadImages(
-    import.meta.glob("/src/assets/gallery/head-spa/*.{png,jpg,jpeg,svg,webp}", { eager: true }) as Record<string, { default: string }>
-  )
-  const waxImages = loadImages(
-    import.meta.glob("/src/assets/gallery/wax/*.{png,jpg,jpeg,svg,webp}", { eager: true }) as Record<string, { default: string }>
-  )
-  const laserImages = loadImages(
-    import.meta.glob("/src/assets/gallery/laser/*.{png,jpg,jpeg,svg,webp}", { eager: true }) as Record<string, { default: string }>
-  )
-  const lashImages = loadImages(
-    import.meta.glob("/src/assets/gallery/lash/*.{png,jpg,jpeg,svg,webp}", { eager: true }) as Record<string, { default: string }>
-  )
-
-  // Create a readable title from an image src URL
-  const formatFileName = (src: string) => {
-    try {
-      const path = src.split("?")[0]
-      const file = path.split("/").pop() || ""
-      // remove extension, then strip trailing Vite hash segment like ".abc123"
-      const noExt = file.replace(/\.[^.]+$/, "")
-      const nameClean = noExt.replace(/\.[a-f0-9]{6,}$/i, "")
-      return decodeURIComponent(nameClean)
-        .replace(/[\-_]+/g, " ")
-        .replace(/\s+/g, " ")
-        .trim()
-        .replace(/\b\w/g, (c) => c.toUpperCase())
-    } catch {
-      return "Image"
-    }
-  }
-
-  const Section = ({
-    title,
-    subtitle,
-    images,
-  }: {
-    title: string;
-    subtitle: string;
-    images: string[];
-  }) => (
-    <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-dream text-4xl font-bold mb-4" style={{ color: '#3a2c1b' }}>{title}</h2>
-          <p className="font-garet text-lg max-w-2xl mx-auto" style={{ color: '#3a2c1b' }}>
-            {subtitle}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-          {images.map((src, idx) => {
-            const imgTitle = formatFileName(src)
-            return (
-              <div key={idx} className="aspect-[4/3] overflow-hidden rounded-2xl relative group shadow-lg">
-                <img
-                  src={src}
-                  alt={imgTitle}
-                  className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <h3 className="text-white drop-shadow font-garet text-lg font-medium text-center px-4">
-                    {imgTitle}
-                  </h3>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </section>
-  )
+  const gallerySections = [galleryHeadSpa, galleryWaxing, galleryLashExtension, galleryLaser].filter(Boolean);
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FAF8F4' }}>
       <Header />
 
-      {/* Page Title */}
-      <section className="pt-24 pb-16" style={{ backgroundColor: '#3a2c1b' }}>
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="font-dream text-8xl font-medium text-white mb-4">Gallery</h1>
-          <p className="font-garet text-xl text-white/90 max-w-2xl mx-auto">
-            Take a visual journey through our serene spa environment and professional treatments
-          </p>
-        </div>
-      </section>
+      {/* Simple Hero Banner - Using SimpleHeroBanner Component with CMS Schema Data */}
+      <SimpleHeroBanner items={simpleHeroBanner?.items} />
 
-      {/* Head Spa */}
-      <Section
-        title="Head Spa"
-        subtitle="Experience our luxurious head spa and scalp massage treatments"
-        images={headSpaImages}
-      />
-
-      {/* Waxing */}
-      <Section
-        title="Waxing"
-        subtitle="Professional waxing services in our comfortable and hygienic environment"
-        images={waxImages}
-      />
-
-      {/* Laser Hair Removal */}
-      <Section
-        title="Laser Hair Removal"
-        subtitle="Advanced laser hair removal treatments for smooth, long-lasting results"
-        images={laserImages}
-      />
-
-      {/* Lash Extensions */}
-      <Section
-        title="Lash Extensions"
-        subtitle="Enhance your natural beauty with premium lash extension services"
-        images={lashImages}
-      />
+      {/* Gallery Sections - Using GalleryImageGrid Component with CMS Schema Data */}
+      {gallerySections.map((section: any, index: number) => (
+        <GalleryImageGrid
+          key={section?.key || index}
+          section={section}
+        />
+      ))}
 
       <Footer />
     </div>

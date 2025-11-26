@@ -1,0 +1,295 @@
+[
+  {
+    "key": "SimpleHeroBanner",
+    "name": "SimpleHeroBanner",
+    "type": "SimpleHeroBanner",
+    "items": [
+      {
+        "key": "title",
+        "type": "text",
+        "content": "Gallery"
+      },
+      {
+        "key": "subtitle",
+        "type": "text",
+        "content": "Take a visual journey through our serene spa environment and professional treatments"
+      }
+    ]
+  },
+  {
+    "key": "GalleryHeadSpa",
+    "name": "Gallery Section",
+    "type": "GallerySection",
+    "items": [
+        {
+            "key": "HeadSpa",
+            "type": "heading",
+            "level": 2,
+            "content": "Head Spa"
+        },
+        {
+            "key": "DescriptionSpa",
+            "type": "text",
+            "content": "Experience our luxurious head spa and scalp massage treatments"
+        },
+        {
+            "key": "GalleryImageGrid",
+            "type": "array",
+            "items": [
+                {
+                    "key": "gallery1",
+                    "type": "image",
+                    "src": "src/assets/gallery/head-spa/5 sense relaxation.jpg",
+                    "alt": "5 Sense Relaxation"
+                },
+                {
+                    "key": "gallery2",
+                    "type": "image",
+                    "src": "src/assets/gallery/head-spa/detox & bloom.jpg",
+                    "alt": "Detox & Bloom"
+                },
+                {
+                    "key": "gallery3",
+                    "type": "image",
+                    "src": "src/assets/gallery/head-spa/diora_s botanical healing.jpg",
+                    "alt": "Diora's Botanical Healing"
+                },
+                {
+                    "key": "gallery4",
+                    "type": "image",
+                    "src": "src/assets/gallery/head-spa/diora_s signature.jpg",
+                    "alt": "Diora's Signature"
+                },
+                {
+                    "key": "gallery5",
+                    "type": "image",
+                    "src": "src/assets/gallery/head-spa/express cleansing.jpg",
+                    "alt": "Express Cleansing"
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "key": "GalleryWaxing",
+    "name": "Gallery Section",
+    "type": "GallerySection",
+    "items": [
+        {
+            "key": "Waxing",
+            "type": "heading",
+            "level": 2,
+            "content": "Waxing"
+        },
+        {
+            "key": "DescriptionSpa",
+            "type": "text",
+            "content": "Professional waxing services in our comfortable and hygienic environment"
+        },
+        {
+            "key": "GalleryImageGrid",
+            "type": "array",
+            "items": [
+                {
+                    "key": "gallery1",
+                    "type": "image",
+                    "src": "src/assets/gallery/wax/arm area.jpg",
+                    "alt": "Arm Area"
+                },
+                {
+                    "key": "gallery2",
+                    "type": "image",
+                    "src": "src/assets/gallery/wax/back area.jpg",
+                    "alt": "Back Area"
+                },
+                {
+                    "key": "gallery3",
+                    "type": "image",
+                    "src": "src/assets/gallery/wax/brazillian area.jpg",
+                    "alt": "Brazilian Area"
+                },
+                {
+                    "key": "gallery4",
+                    "type": "image",
+                    "src": "src/assets/gallery/wax/buttocks.jpg",
+                    "alt": "Buttocks"
+                },
+                {
+                    "key": "gallery5",
+                    "type": "image",
+                    "src": "src/assets/gallery/wax/facial area.jpg",
+                    "alt": "Facial Area"
+                },
+                {
+                    "key": "gallery6",
+                    "type": "image",
+                    "src": "src/assets/gallery/wax/leg area.jpg",
+                    "alt": "Leg Area"
+                },
+                {
+                    "key": "gallery7",
+                    "type": "image",
+                    "src": "src/assets/gallery/wax/lip area.png",
+                    "alt": "Lip Area"
+                },
+                {
+                    "key": "gallery8",
+                    "type": "image",
+                    "src": "src/assets/gallery/wax/stomach_chest.jpg",
+                    "alt": "Stomach & Chest"
+                },
+                {
+                    "key": "gallery9",
+                    "type": "image",
+                    "src": "src/assets/gallery/wax/under arm.jpg",
+                    "alt": "Under Arm"
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "key": "GalleryLashExtension",
+    "name": "Gallery Section",
+    "type": "GallerySection",
+    "items": [
+        {
+            "key": "LashExtension",
+            "type": "heading",
+            "level": 2,
+            "content": "Lash Extensions"
+        },
+        {
+            "key": "DescriptionLash",
+            "type": "text",
+            "content": "Enhance your natural beauty with premium lash extension services"
+        },
+        {
+            "key": "GalleryImageGrid",
+            "type": "array",
+            "items": [
+                {
+                    "key": "gallery1",
+                    "type": "image",
+                    "src": "src/assets/gallery/lash/1.png",
+                    "alt": "Lash Extension 1"
+                },
+                {
+                    "key": "gallery2",
+                    "type": "image",
+                    "src": "src/assets/gallery/lash/2.png",
+                    "alt": "Lash Extension 2"
+                },
+                {
+                    "key": "gallery3",
+                    "type": "image",
+                    "src": "src/assets/gallery/lash/3.png",
+                    "alt": "Lash Extension 3"
+                },
+                {
+                    "key": "gallery4",
+                    "type": "image",
+                    "src": "src/assets/gallery/lash/4.png",
+                    "alt": "Lash Extension 4"
+                },
+                {
+                    "key": "gallery5",
+                    "type": "image",
+                    "src": "src/assets/gallery/lash/5.png",
+                    "alt": "Lash Extension 5"
+                },
+                {
+                    "key": "gallery6",
+                    "type": "image",
+                    "src": "src/assets/gallery/lash/6.png",
+                    "alt": "Lash Extension 6"
+                },
+                {
+                    "key": "gallery5",
+                    "type": "image",
+                    "src": "src/assets/gallery/lash/7.png",
+                    "alt": "Lash Extension 7"
+                }
+            ]
+        }
+    ]
+  },
+  {
+    "key": "GalleryLaser",
+    "name": "Gallery Section",
+    "type": "GallerySection",
+    "items": [
+        {
+            "key": "Laser",
+            "type": "heading",
+            "level": 2,
+            "content": "Laser Hair Removal"
+        },
+        {
+            "key": "DescriptionLaser",
+            "type": "text",
+            "content": "Advanced laser hair removal treatments for smooth, long-lasting results"
+        },
+        {
+            "key": "GalleryImageGrid",
+            "type": "array",
+            "items": [
+                {
+                    "key": "gallery1",
+                    "type": "image",
+                    "src": "src/assets/gallery/laser/arm area.jpg",
+                    "alt": "Arm Area"
+                },
+                {
+                    "key": "gallery2",
+                    "type": "image",
+                    "src": "src/assets/gallery/laser/back area.jpg",
+                    "alt": "Back Area"
+                },
+                {
+                    "key": "gallery3",
+                    "type": "image",
+                    "src": "src/assets/gallery/laser/brazillian area.jpg",
+                    "alt": "Brazilian Area"
+                },
+                {
+                    "key": "gallery4",
+                    "type": "image",
+                    "src": "src/assets/gallery/laser/buttocks.jpg",
+                    "alt": "Buttocks"
+                },
+                {
+                    "key": "gallery5",
+                    "type": "image",
+                    "src": "src/assets/gallery/laser/facial area.jpg",
+                    "alt": "Facial Area"
+                },
+                {
+                    "key": "gallery6",
+                    "type": "image",
+                    "src": "src/assets/gallery/laser/leg area.jpg",
+                    "alt": "Leg Area"
+                },
+                {
+                    "key": "gallery7",
+                    "type": "image",
+                    "src": "src/assets/gallery/laser/lip area.png",
+                    "alt": "Lip Area"
+                },
+                {
+                    "key": "gallery8",
+                    "type": "image",
+                    "src": "src/assets/gallery/laser/stomach_chest.jpg",
+                    "alt": "Stomach & Chest"
+                },
+                {
+                    "key": "gallery9",
+                    "type": "image",
+                    "src": "src/assets/gallery/laser/under arm.jpg",
+                    "alt": "Under Arm"
+                }
+            ]
+        }
+    ]
+  }
+]

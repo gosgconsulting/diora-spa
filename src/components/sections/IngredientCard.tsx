@@ -3,7 +3,7 @@ interface SchemaItem {
   type: string;
   name?: string;
   benefit?: string;
-  image?: string;
+  src?: string;
   [key: string]: any;
 }
 
@@ -17,7 +17,7 @@ export default function IngredientCard({ ingredient, index }: IngredientCardProp
     <div key={index} className="text-center">
       <div className="mb-4">
         <img 
-          src={ingredient.image}
+          src={ingredient.src}
           alt={ingredient.name}
           className="w-full aspect-square object-cover rounded-lg shadow-lg"
           loading="lazy"

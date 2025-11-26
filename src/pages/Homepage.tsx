@@ -8,12 +8,12 @@ import ServicesSection from "@/components/sections/ServicesSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import IngredientsSection from "@/components/sections/IngredientsSection";
 import TeamSection from "@/components/sections/TeamSection";
+import AboutSection from "@/components/sections/AboutSection";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useTrustIndexReviews } from "../hooks/useTrustIndexReviews";
 
-// Images only needed for About section and Reviews
-import aboutUsImage from "@/assets/about-us.jpg";
+// Images only needed for Reviews
 import reviewImage from "@/assets/review.jpg";
 
 import cmsSchema from "../../schemas/diora-home-cms-schema.json";
@@ -30,6 +30,7 @@ export default function Homepage() {
   const featuresSection = getSectionByKey(cmsSchema as any[], 'featuresSection');
   const ingredientsSection = getSectionByKey(cmsSchema as any[], 'ingredientsSection');
   const teamSection = getSectionByKey(cmsSchema as any[], 'teamSection');
+  const aboutSection = getSectionByKey(cmsSchema as any[], 'aboutSection');
 
   const [activeReviewTab, setActiveReviewTab] = useState('google');
   const { reviews: trustIndexReviewsData, loading: trustIndexLoading } = useTrustIndexReviews();
@@ -99,29 +100,8 @@ export default function Homepage() {
       {/* Team Section - Using TeamSection Component with CMS Schema Data */}
       <TeamSection items={teamSection?.items} />
 
-      {/* About Section */}
-      <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <img 
-                src={aboutUsImage} 
-                alt="Spa team"
-                className="w-full h-[500px] object-cover rounded-lg shadow-lg"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            
-            <div>
-              <h2 className="font-dream text-5xl font-medium mb-6" style={{ color: '#3a2c1b' }}>About Diora spa</h2>
-              <p className="font-garet text-lg mb-6 leading-relaxed" style={{ color: '#3a2c1b' }}>
-              At Diora Spa, beauty is more than appearanceâ€”itâ€™s the harmony of confidence and inner calm. As the sister brand of Nail Queen, we bring over a decade of trusted expertise into luxurious head spa rituals, facials, and holistic treatments. With premium products, skilled therapists, and a serene escape in the heart of Singapore, Diora Spa offers an experience where professionalism meets indulgence, leaving you refreshed, radiant, and renewed.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* About Section - Using AboutSection Component with CMS Schema Data */}
+      <AboutSection items={aboutSection?.items} />
 
       {/* Reviews Section - Plugin Container */}
       <section className="relative py-24">
@@ -147,3 +127,7 @@ export default function Homepage() {
     </div>
   );
 }
+
+
+
+

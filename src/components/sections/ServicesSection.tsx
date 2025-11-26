@@ -24,7 +24,14 @@ export default function ServicesSection({ items = [] }: ServicesSectionProps) {
 
   const title = titleItem?.content || "Our Services";
   const subtitle = subtitleItem?.content || "";
-  const services = servicesItem?.items || [];
+  const serviceColumns = servicesItem?.items || [];
+
+  // Helper to extract image and button data from column structure
+  const getServiceData = (column: SchemaItem) => {
+    const imageItem = column.items?.find(item => item.key === 'ServiceImage');
+    const buttonItem = column.items?.find(item => item.key === 'ServiceButton');
+    return { imageItem, buttonItem };
+  };
 
   return (
     <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>
@@ -39,9 +46,17 @@ export default function ServicesSection({ items = [] }: ServicesSectionProps) {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {services.map((service, index) => (
-            <ServiceCard key={service.key || index} service={service} index={index} />
-          ))}
+          {serviceColumns.map((column, index) => {
+            const { imageItem, buttonItem } = getServiceData(column);
+            return (
+              <ServiceCard 
+                key={column.key || index} 
+                imageItem={imageItem} 
+                buttonItem={buttonItem}
+                index={index} 
+              />
+            );
+          })}
         </div>
       </div>
     </section>

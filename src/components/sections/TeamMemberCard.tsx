@@ -4,7 +4,7 @@ interface SchemaItem {
   name?: string;
   role?: string;
   description?: string;
-  image?: string;
+  src?: string;
   [key: string]: any;
 }
 
@@ -18,7 +18,7 @@ export default function TeamMemberCard({ member, index }: TeamMemberCardProps) {
     <div key={index} className="p-6 text-center">
       <div className="mb-4">
         <img
-          src={member.image}
+          src={member.src}
           alt={member.name}
           className="w-full aspect-square object-cover rounded-lg shadow-lg"
           loading="lazy"

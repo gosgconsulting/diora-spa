@@ -52,36 +52,100 @@
         "type": "array",
         "items": [
           {
-            "key": "service1",
-            "type": "card",
-            "title": "Head Spa",
-            "description": "Curated rituals to deeply relax, detoxify, and revive your scalp, skin, and senses — like a holiday for your whole being.",
-            "image": "src/assets/our service head spa.jpg",
-            "price": "from $25"
+            "type": "array",
+            "key": "column1",
+            "items": [
+                {
+                    "key": "ServiceImage",
+                    "type": "image",
+                    "title": "Head Spa",
+                    "alt": "Curated rituals to deeply relax, detoxify, and revive your scalp, skin, and senses — like a holiday for your whole being.",
+                    "src": "src/assets/our service head spa.jpg",
+                    "price": "from $25",
+                    "settings": {
+                        "layout": "medium",
+                        "options": ["thumbnail", "full", "medium", "small"]
+                    }
+                },
+                {
+                    "key": "ServiceButton",
+                    "type": "button",
+                    "link": "/pricing",
+                    "content": "Explore More"
+                }
+            ]
           },
           {
-            "key": "service2",
-            "type": "card",
-            "title": "Waxing",
-            "description": "Instant smoothness with professional waxing for both men and women. Removes hair from the root, leaving skin clean, soft, and refreshed.",
-            "image": "src/assets/waxing.jpg",
-            "price": "from $12"
+            "type": "array",
+            "key": "column2",
+            "items": [
+                {
+                    "key": "ServiceImage",
+                    "type": "image",
+                    "title": "Waxing",
+                    "alt": "Instant smoothness with professional waxing for both men and women. Removes hair from the root, leaving skin clean, soft, and refreshed.",
+                    "src": "src/assets/waxing.jpg",
+                    "price": "from $12",
+                    "settings": {
+                        "layout": "medium",
+                        "options": ["thumbnail", "full", "medium", "small"]
+                    }
+                },
+                {
+                    "key": "ServiceButton",
+                    "type": "button",
+                    "link": "/pricing",
+                    "content": "Explore More"
+                }
+            ]
           },
           {
-            "key": "service3",
-            "type": "card",
-            "title": "Laser Hair Removal",
-            "description": "Advanced laser technology for long-lasting hair reduction. Safe, effective, and visibly smoother skin from the very first session.",
-            "image": "src/assets/our service laser hair removal.jpg",
-            "price": "from $25"
+            "type": "array",
+            "key": "column3",
+            "items": [
+                {
+                    "key": "ServiceImage",
+                    "type": "image",
+                    "title": "Laser Hair Removal",
+                    "alt": "Advanced laser technology for long-lasting hair reduction. Safe, effective, and visibly smoother skin from the very first session.",
+                    "src": "src/assets/our service laser hair removal.jpg",
+                    "price": "from $25",
+                    "settings": {
+                        "layout": "medium",
+                        "options": ["thumbnail", "full", "medium", "small"]
+                    }
+                },
+                {
+                    "key": "ServiceButton",
+                    "type": "button",
+                    "link": "/pricing",
+                    "content": "Explore More"
+                }
+            ]
           },
           {
-            "key": "service4",
-            "type": "card",
-            "title": "Eyelash Extension Menu",
-            "description": "Enhance your eyes with custom lash styles crafted to flatter your unique beauty. All lashes are applied by certified lash artists using premium materials and gentle adhesive.",
-            "image": "src/assets/our service lash.png",
-            "price": "from $25"
+            "type": "array",
+            "key": "column4",
+            "items": [
+                {
+                    "key": "ServiceImage",
+                    "type": "image",
+                    "title": "Eyelash Extension Menu",
+                    "alt": "Enhance your eyes with custom lash styles crafted to flatter your unique beauty. All lashes are applied by certified lash artists using premium materials and gentle adhesive.",
+                    "src": "src/assets/our service lash.png",
+                    "price": "from $25",
+                    "settings": {
+                        "layout": "medium",
+                        "options": ["thumbnail", "full", "medium", "small"]
+                    }
+                },
+                {
+                    "key": "ServiceButton",
+                    "type": "button",
+                    "link": "/pricing",
+                    "content": "Explore More"
+                }
+            ]
           }
         ]
       }
@@ -108,24 +172,36 @@
         "items": [
           {
             "key": "feature1",
-            "type": "card",
+            "type": "image",
             "title": "Premium Products",
             "description": "We use only the finest organic and natural beauty products for all treatments.",
-            "image": "src/assets/why-choose-us/Premium Products.jpg"
+            "src": "src/assets/why-choose-us/Premium Products.jpg",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           },
           {
             "key": "feature2",
-            "type": "card",
+            "type": "image",
             "title": "Caring Approach",
             "description": "Our experienced therapists provide personalized care tailored to your needs.",
-            "image": "src/assets/why-choose-us/Caring Approach.jpg"
+            "src": "src/assets/why-choose-us/Caring Approach.jpg",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           },
           {
             "key": "feature3",
-            "type": "card",
+            "type": "image",
             "title": "Safe & Hygienic",
             "description": "Maintaining the highest standards of cleanliness and safety protocols.",
-            "image": "src/assets/why-choose-us/Safe and Hygienic.jpg"
+            "src": "src/assets/why-choose-us/Safe and Hygienic.jpg",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           }
         ]
       }
@@ -152,73 +228,113 @@
         "items": [
           {
             "key": "ingredient1",
-            "type": "card",
+            "type": "image",
             "name": "White Truffle Extract",
             "benefit": "Rich in fatty acids and vitamins, it deeply restores damaged hair and enhances unparalleled shine.",
-            "image": "src/assets/ingredients/White Truffle Extract.png"
+            "src": "src/assets/ingredients/White Truffle Extract.png",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           },
           {
             "key": "ingredient2",
-            "type": "card",
+            "type": "image",
             "name": "Caviar Extract",
             "benefit": "Packed with Omega-3, proteins, and minerals; regenerates hair from within and combats scalp aging.",
-            "image": "src/assets/ingredients/Caviar Extract.png"
+            "src": "src/assets/ingredients/Caviar Extract.png",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           },
           {
             "key": "ingredient3",
-            "type": "card",
+            "type": "image",
             "name": "Pearl Powder",
             "benefit": "Infuses hair with minerals, purifies the scalp, and imparts a luminous, silky gloss.",
-            "image": "src/assets/ingredients/Pearl Powder.png"
+            "src": "src/assets/ingredients/Pearl Powder.png",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           },
           {
             "key": "ingredient4",
-            "type": "card",
+            "type": "image",
             "name": "24K Gold Infusion",
             "benefit": "Boosts circulation, delivers powerful antioxidants, and leaves hair and scalp with a radiant glow.",
-            "image": "src/assets/ingredients/24K Gold Infusio.png"
+            "src": "src/assets/ingredients/24K Gold Infusio.png",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           },
           {
             "key": "ingredient5",
-            "type": "card",
+            "type": "image",
             "name": "Saffron",
             "benefit": "Known as 'red gold,' it soothes sensitive scalps while nourishing hair with potent antioxidants.",
-            "image": "src/assets/ingredients/Saffron.png"
+            "src": "src/assets/ingredients/Saffron.png",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           },
           {
             "key": "ingredient6",
-            "type": "card",
+            "type": "image",
             "name": "Camellia Oil",
             "benefit": "Japan's beauty secret, rich in oleic acid; absorbs quickly to soften and smooth hair like silk.",
-            "image": "src/assets/ingredients/Camellia Oil.png"
+            "src": "src/assets/ingredients/Camellia Oil.png",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           },
           {
             "key": "ingredient7",
-            "type": "card",
+            "type": "image",
             "name": "Premium Seaweed Complex (Kombu, Wakame)",
             "benefit": "Provides marine minerals, restores hydration balance, and revitalizes weakened strands.",
-            "image": "src/assets/ingredients/Seaweed Complex.png"
+            "src": "src/assets/ingredients/Seaweed Complex.png",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           },
           {
             "key": "ingredient8",
-            "type": "card",
+            "type": "image",
             "name": "Royal Jelly",
             "benefit": "A superfood for the scalp, abundant in proteins and B vitamins; strengthens and reduces breakage.",
-            "image": "src/assets/ingredients/royal jelly.png"
+            "src": "src/assets/ingredients/royal jelly.png",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           },
           {
             "key": "ingredient9",
-            "type": "card",
+            "type": "image",
             "name": "Japanese Hinoki Essential Oil",
             "benefit": "Distilled from sacred cypress wood; deeply cleanses, purifies, and offers a calming, spa-like aroma.",
-            "image": "src/assets/ingredients/Japanese Hinoki Essential Oil.png"
+            "src": "src/assets/ingredients/Japanese Hinoki Essential Oil.png",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           },
           {
             "key": "ingredient10",
-            "type": "card",
+            "type": "image",
             "name": "Placenta Extract (Botanical / Biotech)",
             "benefit": "Supports cell regeneration, revitalizes follicles, and promotes denser, healthier hair growth.",
-            "image": "src/assets/ingredients/placenta extrac.png"
+            "src": "src/assets/ingredients/placenta extrac.png",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           }
         ]
       }
@@ -245,45 +361,92 @@
         "items": [
           {
             "key": "member1",
-            "type": "card",
+            "type": "image",
             "name": "Kris",
             "role": "Lash & Head Spa Specialist",
             "description": "Trained in advanced lash artistry and Japanese scalp therapy, Kris delivers flawless lash designs and deeply restorative head spa treatments. Her expertise ensures every guest enjoys both beauty and true relaxation.",
-            "image": "src/assets/team-members/kris.jpg"
+            "src": "src/assets/team-members/kris.jpg",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           },
           {
             "key": "member2",
-            "type": "card",
+            "type": "image",
             "name": "Rose",
             "role": "Head Spa & Laser Specialist",
             "description": "Specialized in scalp therapy and advanced laser hair removal, Rose combines technical expertise with a caring touch. She helps clients achieve both deep relaxation and long-lasting smoothness with confidence.",
-            "image": "src/assets/team-members/Rose.jpg"
+            "src": "src/assets/team-members/Rose.jpg",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           },
           {
             "key": "member3",
-            "type": "card",
+            "type": "image",
             "name": "Shina",
             "role": "Head Spa, Laser, Waxing & Massage Therapist",
             "description": "With multi-disciplinary training in spa wellness, Shina offers everything from rejuvenating head spa rituals to precise waxing and soothing massage. Her versatility makes every treatment tailored and complete.",
-            "image": "src/assets/team-members/Shina.jpg"
+            "src": "src/assets/team-members/Shina.jpg",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           },
           {
             "key": "member4",
-            "type": "card",
+            "type": "image",
             "name": "Lina",
             "role": "Head Spa, Laser & Waxing Therapist",
             "description": "Lina is skilled in combining effective hair removal with scalp relaxation therapies. Detail-oriented and gentle, she ensures clients leave with both refreshed skin and a calm mind.",
-            "image": "src/assets/team-members/Lina.jpg"
+            "src": "src/assets/team-members/Lina.jpg",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           },
           {
             "key": "member5",
-            "type": "card",
+            "type": "image",
             "name": "Mei Ling",
             "role": "Spa Manager",
             "description": "With years of hands-on experience across all beauty and wellness services, Mei Ling now leads Diora Spa as Manager. Her deep expertise, professionalism, and passion for client care ensure the highest standards across every treatment.",
-            "image": "src/assets/team-members/Mei ling.jpg"
+            "src": "src/assets/team-members/Mei ling.jpg",
+            "settings": {
+              "layout": "thumbnail",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
           }
         ]
+      }
+    ]
+  },
+  {
+    "key": "aboutSection",
+    "name": "AboutSection",
+    "type": "aboutSection",
+    "items": [
+      {
+        "key": "title",
+        "type": "text",
+        "content": "About Diora Spa"
+      },
+      {
+        "key": "description",
+        "type": "text",
+        "content": "At Diora Spa, beauty is more than appearance—it's the harmony of confidence and inner calm. As the sister brand of Nail Queen, we bring over a decade of trusted expertise into luxurious head spa rituals, facials, and holistic treatments. With premium products, skilled therapists, and a serene escape in the heart of Singapore, Diora Spa offers an experience where professionalism meets indulgence, leaving you refreshed, radiant, and renewed."
+      },
+      {
+        "key": "image",
+        "type": "image",
+        "src": "src/assets/about-us.jpg",
+        "alt": "Diora Spa team",
+            "settings": {
+              "layout": "medium",
+              "options": ["thumbnail", "full", "medium", "small"]
+            }
       }
     ]
   }
