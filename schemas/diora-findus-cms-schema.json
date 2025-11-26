@@ -1,0 +1,134 @@
+[
+  {
+    "key": "Gmap",
+    "name": "Google Map",
+    "type": "image",
+    "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7937851068216!2d103.83101307584752!3d1.3069183617520304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1935b9656b1f%3A0xdd8a252b6e41872b!2sDiora%20Spa%20By%20Michelle%20Tran!5e0!3m2!1sen!2sth!4v1694171376653!5m2!1sen!2sth"
+  },
+  {
+    "key": "ContactInfoSection",
+    "type": "array",
+    "items": [
+      {
+        "key": "AddressInfo",
+        "name": "Address Info",
+        "type": "array",
+        "items": [
+          {
+            "key": "AddressHeading",
+            "name": "Address Heading",
+            "type": "heading",
+            "level": 3,
+            "content": "Address"
+          },
+          {
+            "key": "Address",
+            "name": "Address",
+            "type": "text",
+            "content": "14 Scotts Rd, #05-80 Far East Plaza, Singapore 228213"
+          }
+        ]
+      },
+      {
+        "key": "PhoneInfo",
+        "name": "Phone Info",
+        "type": "array",
+        "items": [
+          {
+            "key": "PhoneHeading",
+            "name": "Phone Heading",
+            "type": "heading",
+            "level": 3,
+            "content": "Phone"
+          },
+          {
+            "key": "PhoneNumber",
+            "name": "Phone Number",
+            "type": "text",
+            "content": "+65 9224 6789"
+          },
+          {
+            "key": "PhoneLink",
+            "name": "Phone Link",
+            "type": "link",
+            "href": "tel:+6592246789",
+            "content": "+65 9224 6789"
+          }
+        ]
+      },
+      {
+        "key": "EmailInfo",
+        "name": "Email Info",
+        "type": "array",
+        "items": [
+          {
+            "key": "EmailHeading",
+            "name": "Email Heading",
+            "type": "heading",
+            "level": 3,
+            "content": "Email"
+          },
+          {
+            "key": "EmailAddress",
+            "name": "Email Address",
+            "type": "text",
+            "content": "dioraspabymichelletran@gmail.com"
+          },
+          {
+            "key": "EmailLink",
+            "name": "Email Link",
+            "type": "link",
+            "href": "mailto:dioraspabymichelletran@gmail.com",
+            "content": "dioraspabymichelletran@gmail.com"
+          }
+        ]
+      },
+      {
+        "key": "ChatButton",
+        "name": "Chat Button",
+        "type": "button",
+        "content": "Open Chat",
+        "action": "chat"
+      },
+      {
+        "key": "SocialMediaLinks",
+        "name": "Social Media Links",
+        "type": "array",
+        "items": [
+          {
+            "key": "Instagram",
+            "name": "Instagram",
+            "type": "link",
+            "href": "https://www.instagram.com/dioraspa_bymichelletran/",
+            "content": "Instagram",
+            "icon": "instagram"
+          },
+          {
+            "key": "Facebook",
+            "name": "Facebook",
+            "type": "link",
+            "href": "https://www.facebook.com/profile.php?id=61579251501889",
+            "content": "Facebook",
+            "icon": "facebook"
+          },
+          {
+            "key": "TikTok",
+            "name": "TikTok",
+            "type": "link",
+            "href": "https://www.tiktok.com/@dioraspa_bymichel",
+            "content": "TikTok",
+            "icon": "tiktok"
+          },
+          {
+            "key": "YouTube",
+            "name": "YouTube",
+            "type": "link",
+            "href": "#",
+            "content": "YouTube",
+            "icon": "youtube"
+          }
+        ]
+      }
+    ]
+  }
+]

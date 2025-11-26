@@ -2,13 +2,23 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SimpleHeroBanner from "@/components/sections/SimpleHeroBanner";
 import { Calendar, User, ArrowRight, Loader2, RefreshCw } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { getWordPressPosts, WordPressPost, getPostImage, getPostAuthor, getPostCategory, formatDate, stripHtml } from "@/api/wordpress";
+import cmsSchema from "../../schemas/diora-blog-cms-schema.json";
+
+// Helper function to find section by key
+const getSectionByKey = (sections: any[], key: string) => {
+  return sections.find(section => section.key === key);
+};
 
 export default function Blog() {
   const navigate = useNavigate();
+  // Load simple hero banner from CMS schema
+  const simpleHeroBanner = getSectionByKey(cmsSchema as any[], 'SimpleHeroBanner');
+  
   const [blogPosts, setBlogPosts] = useState<WordPressPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -69,15 +79,8 @@ export default function Blog() {
     <div className="min-h-screen" style={{ backgroundColor: '#FAF8F4' }}>
       <Header />
       
-      {/* Page Title */}
-      <section className="pt-24 pb-16" style={{ backgroundColor: '#3a2c1b' }}>
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="font-dream text-8xl font-medium text-white mb-4">Our Blog</h1>
-          <p className="font-garet text-xl text-white/90 max-w-2xl mx-auto">
-            Stay updated with the latest beauty tips, treatment insights, and wellness advice from our expert team
-          </p>
-        </div>
-      </section>
+      {/* Simple Hero Banner - Using SimpleHeroBanner Component with CMS Schema Data */}
+      <SimpleHeroBanner items={simpleHeroBanner?.items} />
 
       {/* Blog Posts */}
       <section className="py-16" style={{ backgroundColor: '#FAF8F4' }}>

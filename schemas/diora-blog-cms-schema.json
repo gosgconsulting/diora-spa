@@ -1,0 +1,19 @@
+[
+    {
+      "key": "SimpleHeroBanner",
+      "name": "SimpleHeroBanner",
+      "type": "SimpleHeroBanner",
+      "items": [
+        {
+          "key": "title",
+          "type": "text",
+          "content": "Blog"
+        },
+        {
+          "key": "subtitle",
+          "type": "text",
+          "content": "Stay updated with the latest beauty tips, treatment insights, and wellness advice from our expert team"
+        }
+      ]
+    }
+]

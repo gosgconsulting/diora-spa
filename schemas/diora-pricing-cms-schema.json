@@ -1,0 +1,671 @@
+[
+  {
+    "key": "SimpleHeroBanner",
+    "name": "SimpleHeroBanner",
+    "type": "SimpleHeroBanner",
+    "items": [
+      {
+        "key": "title",
+        "type": "text",
+        "content": "Pricing"
+      },
+      {
+        "key": "subtitle",
+        "type": "text",
+        "content": "Thoughtfully curated treatments with transparent, relaxing prices"
+      }
+    ]
+  },
+  {
+    "key": "PricingGrid",
+    "type": "array",
+    "items": [
+      {
+        "key": "PricingColumnLeft",
+        "type": "array",
+        "items": [
+          {
+            "key": "HeadSpaService",
+            "type": "array",
+            "items": [
+              {
+                "key": "HeadSpaServiceImage",
+                "type": "image",
+                "src": "src/assets/our service head spa.jpg",
+                "alt": "Head Spa Services"
+              },
+              {
+                "key": "HeadSpaServiceHeading",
+                "type": "heading",
+                "level": 2,
+                "content": "Head Spa Services"
+              }
+            ]
+          },
+          {
+            "key": "Service1",
+            "type": "array",
+            "items": [
+              {
+                "key": "ExpressCleansing",
+                "type": "heading",
+                "level": 3,
+                "content": "Express Cleansing"
+              },
+              {
+                "key": "ServiceDescription1",
+                "type": "text",
+                "content": "A short and effective refresh for scalp and hair"
+              },
+              {
+                "key": "ServiceButton1",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover1",
+                "type": "image",
+                "src": "src/assets/head-spa-pricing/01-head spa/express cleansing.jpg",
+                "alt": "Express Cleansing"
+              },
+              {
+                "key": "ServiceLightBox1",
+                "type": "image",
+                "src": "src/assets/head-spa-pricing/service-prices/01-Express Cleansing.png",
+                "alt": "Express Cleansing Menu"
+              }
+            ]
+          },
+          {
+            "key": "Service2",
+            "type": "array",
+            "items": [
+              {
+                "key": "DetoxBloom",
+                "type": "heading",
+                "level": 3,
+                "content": "Detox & Bloom"
+              },
+              {
+                "key": "ServiceDescription2",
+                "type": "text",
+                "content": "A quick sensory detox to refresh both skin and soul"
+              },
+              {
+                "key": "ServiceButton2",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover2",
+                "type": "image",
+                "src": "src/assets/head-spa-pricing/01-head spa/detox & bloom.jpg",
+                "alt": "Detox & Bloom"
+              },
+              {
+                "key": "ServiceLightBox2",
+                "type": "image",
+                "src": "src/assets/head-spa-pricing/service-prices/02-Detox & Bloom.png",
+                "alt": "Detox & Bloom Menu"
+              }
+            ]
+          },
+          {
+            "key": "Service3",
+            "type": "array",
+            "items": [
+              {
+                "key": "DioraSignature",
+                "type": "heading",
+                "level": 3,
+                "content": "Diora's Signature"
+              },
+              {
+                "key": "ServiceDescription3",
+                "type": "text",
+                "content": "A luxurious blend of body, energy, and emotional balance"
+              },
+              {
+                "key": "ServiceButton3",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover3",
+                "type": "image",
+                "src": "src/assets/head-spa-pricing/01-head spa/diora_s signature.jpg",
+                "alt": "Diora's Signature"
+              },
+              {
+                "key": "ServiceLightBox3",
+                "type": "image",
+                "src": "src/assets/head-spa-pricing/service-prices/03-Diora_s Signature.png",
+                "alt": "Diora's Signature Menu"
+              }
+            ]
+          },
+          {
+            "key": "Service4",
+            "type": "array",
+            "items": [
+              {
+                "key": "FiveSenseRelaxation",
+                "type": "heading",
+                "level": 3,
+                "content": "5 Sense Relaxation"
+              },
+              {
+                "key": "ServiceDescription4",
+                "type": "text",
+                "content": "A full-body nervous system reset through rhythmic flow and deep touch"
+              },
+              {
+                "key": "ServiceButton4",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover4",
+                "type": "image",
+                "src": "src/assets/head-spa-pricing/01-head spa/5 sense relaxation.jpg",
+                "alt": "5 Sense Relaxation"
+              },
+              {
+                "key": "ServiceLightBox4",
+                "type": "image",
+                "src": "src/assets/head-spa-pricing/service-prices/04-5 Sense Relaxation.png",
+                "alt": "5 Sense Relaxation Menu"
+              }
+            ]
+          },
+          {
+            "key": "Service5",
+            "type": "array",
+            "items": [
+              {
+                "key": "BotanicalHealing",
+                "type": "heading",
+                "level": 3,
+                "content": "Diora's Botanical Healing"
+              },
+              {
+                "key": "ServiceDescription5",
+                "type": "text",
+                "content": "A 2-hour ritual based on traditional Eastern healing designed to deeply cleanse, circulate energy and nourish body & mind"
+              },
+              {
+                "key": "ServiceButton5",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover5",
+                "type": "image",
+                "src": "src/assets/head-spa-pricing/01-head spa/diora_s botanical healing.jpg",
+                "alt": "Diora's Botanical Healing"
+              },
+              {
+                "key": "ServiceLightBox5",
+                "type": "image",
+                "src": "src/assets/head-spa-pricing/service-prices/05-Botanical Healing.png",
+                "alt": "Diora's Botanical Healing Menu"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "PricingColumnRight",
+        "type": "array",
+        "items": [
+          {
+            "key": "EyelashExtensionService",
+            "type": "array",
+            "items": [
+              {
+                "key": "EyelashExtensionServiceImage",
+                "type": "image",
+                "src": "src/assets/our service lash.png",
+                "alt": "Eyelash Extensions"
+              },
+              {
+                "key": "EyelashExtensionServiceHeading",
+                "type": "heading",
+                "level": 2,
+                "content": "Eyelash Extensions"
+              }
+            ]
+          },
+          {
+            "key": "Service1",
+            "type": "array",
+            "items": [
+              {
+                "key": "LashLift",
+                "type": "heading",
+                "level": 3,
+                "content": "Lash Lift"
+              },
+              {
+                "key": "ServiceDescription1",
+                "type": "text",
+                "content": "Natural lash curl enhancement. Effect: Open, refreshed eyes."
+              },
+              {
+                "key": "ServiceButton1",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover1",
+                "type": "image",
+                "src": "src/assets/eye-lash-pricing/01-lash lift.png",
+                "alt": "Lash Lift"
+              },
+              {
+                "key": "ServiceLightBox1",
+                "type": "image",
+                "src": "src/assets/eye-lash-pricing/service-prices/Lash lift.jpg",
+                "alt": "Lash Lift Menu"
+              }
+            ]
+          },
+          {
+            "key": "Service2",
+            "type": "array",
+            "items": [
+              {
+                "key": "JapaneseLash",
+                "type": "heading",
+                "level": 3,
+                "content": "Japanese Lash"
+              },
+              {
+                "key": "ServiceDescription2",
+                "type": "text",
+                "content": "Soft, natural, weightless. Effect: Neat, defined, like your lashes but better."
+              },
+              {
+                "key": "ServiceButton2",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover2",
+                "type": "image",
+                "src": "src/assets/eye-lash-pricing/02-japanese lash.png",
+                "alt": "Japanese Lash"
+              },
+              {
+                "key": "ServiceLightBox2",
+                "type": "image",
+                "src": "src/assets/eye-lash-pricing/service-prices/Japanese Lash.jpg",
+                "alt": "Japanese Lash Menu"
+              }
+            ]
+          },
+          {
+            "key": "Service3",
+            "type": "array",
+            "items": [
+              {
+                "key": "AngelLash",
+                "type": "heading",
+                "level": 3,
+                "content": "2D Angel Lash"
+              },
+              {
+                "key": "ServiceDescription3",
+                "type": "text",
+                "content": "Two lashes per natural lash. Fluttery look. Effect: Light, airy, romantic."
+              },
+              {
+                "key": "ServiceButton3",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover3",
+                "type": "image",
+                "src": "src/assets/eye-lash-pricing/03-2d angel lash.png",
+                "alt": "2D Angel Lash"
+              },
+              {
+                "key": "ServiceLightBox3",
+                "type": "image",
+                "src": "src/assets/eye-lash-pricing/service-prices/2D Angel Lash.jpg",
+                "alt": "2D Angel Lash Menu"
+              }
+            ]
+          },
+          {
+            "key": "Service4",
+            "type": "array",
+            "items": [
+              {
+                "key": "CamelliaLash",
+                "type": "heading",
+                "level": 3,
+                "content": "Camellia Lash"
+              },
+              {
+                "key": "ServiceDescription4",
+                "type": "text",
+                "content": "Multi-length fans, wispy texture. Effect: Flirty, feminine, dimensional."
+              },
+              {
+                "key": "ServiceButton4",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover4",
+                "type": "image",
+                "src": "src/assets/eye-lash-pricing/04-camelite lash.png",
+                "alt": "Camellia Lash"
+              },
+              {
+                "key": "ServiceLightBox4",
+                "type": "image",
+                "src": "src/assets/eye-lash-pricing/service-prices/Camellia Lash.jpg",
+                "alt": "Camellia Lash Menu"
+              }
+            ]
+          },
+          {
+            "key": "Service5",
+            "type": "array",
+            "items": [
+              {
+                "key": "RussianVolume",
+                "type": "heading",
+                "level": 3,
+                "content": "Russian Volume"
+              },
+              {
+                "key": "ServiceDescription5",
+                "type": "text",
+                "content": "Triple fans, moderate volume. Effect: Fuller with a soft-focus finish."
+              },
+              {
+                "key": "ServiceButton5",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover5",
+                "type": "image",
+                "src": "src/assets/eye-lash-pricing/05-russian volume.png",
+                "alt": "Russian Volume"
+              },
+              {
+                "key": "ServiceLightBox5",
+                "type": "image",
+                "src": "src/assets/eye-lash-pricing/service-prices/Russian Volume.jpg",
+                "alt": "Russian Volume Menu"
+              }
+            ]
+          },
+          {
+            "key": "Service6",
+            "type": "array",
+            "items": [
+              {
+                "key": "DesignLash",
+                "type": "heading",
+                "level": 3,
+                "content": "Design Lash"
+              },
+              {
+                "key": "ServiceDescription6",
+                "type": "text",
+                "content": "Ultra-fine, bold volume. Effect: Fluffy, full, lightweight."
+              },
+              {
+                "key": "ServiceButton6",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover6",
+                "type": "image",
+                "src": "src/assets/eye-lash-pricing/06-design lash.png",
+                "alt": "Design Lash"
+              },
+              {
+                "key": "ServiceLightBox6",
+                "type": "image",
+                "src": "src/assets/eye-lash-pricing/service-prices/Design Lash.jpg",
+                "alt": "Design Lash Menu"
+              }
+            ]
+          },
+          {
+            "key": "Service7",
+            "type": "array",
+            "items": [
+              {
+                "key": "BrowServices",
+                "type": "heading",
+                "level": 3,
+                "content": "Brow Services"
+              },
+              {
+                "key": "ServiceDescription7",
+                "type": "text",
+                "content": "Precise eyebrow shaping using traditional threading technique. Effect: Clean, defined brows."
+              },
+              {
+                "key": "ServiceButton7",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover7",
+                "type": "image",
+                "src": "src/assets/eye-lash-pricing/07-brow threading.png",
+                "alt": "Brow Services"
+              },
+              {
+                "key": "ServiceLightBox7",
+                "type": "image",
+                "src": "src/assets/eye-lash-pricing/service-prices/Brow Threading.jpg",
+                "alt": "Brow Services Menu"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "PricingGrid2",
+    "type": "array",
+    "items": [
+      {
+        "key": "PricingColumnLeft",
+        "type": "array",
+        "items": [
+          {
+            "key": "LaserHairRemovalService",
+            "type": "array",
+            "items": [
+              {
+                "key": "LaserHairRemovalServiceImage",
+                "type": "image",
+                "src": "src/assets/our service laser hair removal.jpg",
+                "alt": "Laser Hair Removal"
+              },
+              {
+                "key": "LaserHairRemovalServiceHeading",
+                "type": "heading",
+                "level": 2,
+                "content": "Laser Hair Removal"
+              }
+            ]
+          },
+          {
+            "key": "Service1",
+            "type": "array",
+            "items": [
+              {
+                "key": "LaserLadies",
+                "type": "heading",
+                "level": 3,
+                "content": "For Ladies"
+              },
+              {
+                "key": "ServiceDescription1",
+                "type": "text",
+                "content": "Enjoy hair-free, silky-smooth skin that keeps you confident, comfortable, and effortlessly beautiful in every moment of your daily life."
+              },
+              {
+                "key": "ServiceButton1",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover1",
+                "type": "image",
+                "src": "src/assets/laser-hair-removal-pricing/03-laser hair removal/buttocks.jpg",
+                "alt": "Laser Hair Removal For Ladies"
+              },
+              {
+                "key": "ServiceLightBox1",
+                "type": "image",
+                "src": "src/assets/laser-hair-removal-pricing/service-prices/03-Laser hair removal - popup.png",
+                "alt": "Laser Hair Removal For Ladies Menu"
+              }
+            ]
+          },
+          {
+            "key": "Service2",
+            "type": "array",
+            "items": [
+              {
+                "key": "LaserGentlemen",
+                "type": "heading",
+                "level": 3,
+                "content": "For Gentlemen"
+              },
+              {
+                "key": "ServiceDescription2",
+                "type": "text",
+                "content": "Long-lasting smoothness, less regrowth, and a clean, confident look without daily shaving."
+              },
+              {
+                "key": "ServiceButton2",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover2",
+                "type": "image",
+                "src": "src/assets/laser-hair-removal-pricing/03-laser hair removal/Men Laser.png",
+                "alt": "Laser Hair Removal For Gentlemen"
+              },
+              {
+                "key": "ServiceLightBox2",
+                "type": "image",
+                "src": "src/assets/laser-hair-removal-pricing/service-prices/03-Laser hair removal - popup.png",
+                "alt": "Laser Hair Removal For Gentlemen Menu"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "PricingColumnRight",
+        "type": "array",
+        "items": [
+          {
+            "key": "WaxingService",
+            "type": "array",
+            "items": [
+              {
+                "key": "WaxingServiceImage",
+                "type": "image",
+                "src": "src/assets/waxing-pricing/04-waxing services/arm area.jpg",
+                "alt": "Waxing Services"
+              },
+              {
+                "key": "WaxingServiceHeading",
+                "type": "heading",
+                "level": 2,
+                "content": "Waxing Services"
+              }
+            ]
+          },
+          {
+            "key": "Service1",
+            "type": "array",
+            "items": [
+              {
+                "key": "LadiesWaxing",
+                "type": "heading",
+                "level": 3,
+                "content": "Ladies Waxing"
+              },
+              {
+                "key": "ServiceDescription1",
+                "type": "text",
+                "content": "Gentle, precise hair removal using premium hard wax for smooth, long-lasting results with minimal discomfort."
+              },
+              {
+                "key": "ServiceButton1",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover1",
+                "type": "image",
+                "src": "src/assets/waxing-pricing/04-waxing services/under arm.jpg",
+                "alt": "Ladies Waxing"
+              },
+              {
+                "key": "ServiceLightBox1",
+                "type": "image",
+                "src": "src/assets/waxing-pricing/service-prices/04-Waxing - popup.png",
+                "alt": "Ladies Waxing Menu"
+              }
+            ]
+          },
+          {
+            "key": "Service2",
+            "type": "array",
+            "items": [
+              {
+                "key": "GentlemenWaxing",
+                "type": "heading",
+                "level": 3,
+                "content": "Gentlemen's Waxing"
+              },
+              {
+                "key": "ServiceDescription2",
+                "type": "text",
+                "content": "Professional waxing tailored for men—efficient, hygienic, and skin-conscious for a clean, confident finish."
+              },
+              {
+                "key": "ServiceButton2",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "key": "ServiceCover2",
+                "type": "image",
+                "src": "src/assets/waxing-pricing/04-waxing services/Men wax.png",
+                "alt": "Gentlemen's Waxing"
+              },
+              {
+                "key": "ServiceLightBox2",
+                "type": "image",
+                "src": "src/assets/waxing-pricing/service-prices/04-Waxing - popup.png",
+                "alt": "Gentlemen's Waxing Menu"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
