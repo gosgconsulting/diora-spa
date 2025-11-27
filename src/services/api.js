@@ -1,13 +1,13 @@
-// Base URL for API requests - use environment variable
-const API_BASE_URL = process.env.REACT_APP_CMS_API_URL || 'https://your-cms-api.com/api';
+// Base URL for API requests - use environment variable (Vite uses import.meta.env)
+const API_BASE_URL = import.meta.env.VITE_CMS_BASE_URL;
 
 // API key for authentication (if required)
-const API_KEY = process.env.REACT_APP_CMS_API_KEY || '';
+const API_KEY = import.meta.env.VITE_CMS_INTEGRATION_API;
 
 // Helper function for API requests
 const fetchWithAuth = async (endpoint, options = {}) => {
   const url = `${API_BASE_URL}${endpoint}`;
-  
+
   // Add authentication headers if API key is available
   const headers = {
     'Content-Type': 'application/json',
@@ -29,8 +29,12 @@ const fetchWithAuth = async (endpoint, options = {}) => {
 
 // Fetch page data by slug
 export async function fetchPageContent(slug) {
+
+  // console.log('Fetching page content for slug:', slug);
+
   try {
-    return await fetchWithAuth(`/pages/${slug}`);
+    // return await fetchWithAuth(`/pages/${slug}`);
+    return await fetchWithAuth(`/${slug}`);
   } catch (error) {
     console.error(`Error fetching page content for slug "${slug}":`, error);
     throw error;
@@ -53,6 +57,18 @@ export async function fetchMenuItems(menuLocation) {
     return await fetchWithAuth(`/menus/${menuLocation}`);
   } catch (error) {
     console.error(`Error fetching menu items for location "${menuLocation}":`, error);
+    throw error;
+  }
+}
+
+// Fetch CMS schema by page name (e.g., 'home', 'pricing', 'gallery', 'blog', 'findus')
+export async function fetchCMSSchema(pageName) {
+  try {
+    // return await fetchWithAuth(`/schema/${pageName}`);
+    // return await fetchWithAuth(`/${pageName}`);
+    return await fetchWithAuth(`/api/v1/pages/${pageName}`);
+  } catch (error) {
+    console.error(`Error fetching CMS schema for page "${pageName}":`, error);
     throw error;
   }
 }

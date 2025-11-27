@@ -8,16 +8,44 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { getWordPressPosts, WordPressPost, getPostImage, getPostAuthor, getPostCategory, formatDate, stripHtml } from "@/api/wordpress";
 import cmsSchema from "../../schemas/diora-blog-cms-schema.json";
+import { useCMSSchema } from "../hooks/useCMSSchema";
+
+interface Section {
+  key: string;
+  name: string;
+  type: string;
+  items: any[];
+}
+
+interface Layout {
+  components: Section[];
+}
+
+interface ApiResponse {
+  data: {
+    layout: Layout;
+  };
+}
 
 // Helper function to find section by key
-const getSectionByKey = (sections: any[], key: string) => {
-  return sections.find(section => section.key === key);
+const getSectionByKey = (sections: any[], key: string): Section | null => {
+  if (Array.isArray(sections)) {
+    return sections.find(section => section.key === key) || null;
+  } else {
+    // Type assertion to tell TypeScript the shape
+    const response = sections as ApiResponse;
+    return response.data.layout.components.find(section => section.key === key) || null;
+  }
 };
 
 export default function Blog() {
   const navigate = useNavigate();
+  // Fetch schema from API with fallback to local JSON
+  const { schema: cmsData } = useCMSSchema('about', () => cmsSchema);
+  const schema = cmsData || cmsSchema;
+  
   // Load simple hero banner from CMS schema
-  const simpleHeroBanner = getSectionByKey(cmsSchema as any[], 'SimpleHeroBanner');
+  const simpleHeroBanner = getSectionByKey(schema as any[], 'SimpleHeroBanner');
   
   const [blogPosts, setBlogPosts] = useState<WordPressPost[]>([]);
   const [loading, setLoading] = useState(true);

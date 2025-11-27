@@ -17,20 +17,62 @@ import { useTrustIndexReviews } from "../hooks/useTrustIndexReviews";
 import reviewImage from "@/assets/review.jpg";
 
 import cmsSchema from "../../schemas/diora-home-cms-schema.json";
+import { useCMSSchema } from "../hooks/useCMSSchema";
 
 // Helper function to find section by key
-const getSectionByKey = (sections: any[], key: string) => {
-  return sections.find(section => section.key === key);
+// const getSectionByKey = (sections: any[], key: string) => {
+
+//   if ( Array.isArray(sections) ) {
+//     return sections.find(section => section.key === key);
+//   } else {
+//     const response = sections.data.layout.components;
+//     // console.log("Schema sections is not an array:", sections.data.layout.components);
+//     return response.find(section => section.key === key);
+//   }
+// };
+
+interface Section {
+  key: string;
+  name: string;
+  type: string;
+  items: any[];
+}
+
+interface Layout {
+  components: Section[];
+}
+
+interface ApiResponse {
+  data: {
+    layout: Layout;
+  };
+}
+
+// Helper function to find section by key
+const getSectionByKey = (sections: any[], key: string): Section | null => {
+  if (Array.isArray(sections)) {
+    return sections.find(section => section.key === key) || null;
+  } else {
+    // Type assertion to tell TypeScript the shape
+    const response = sections as ApiResponse;
+    return response.data.layout.components.find(section => section.key === key) || null;
+  }
 };
 
 export default function Homepage() {
-  // Load sections directly from CMS schema - no image mapping needed as paths are in schema
-  const heroSection = getSectionByKey(cmsSchema as any[], 'HeroSection');
-  const servicesSection = getSectionByKey(cmsSchema as any[], 'servicesSection');
-  const featuresSection = getSectionByKey(cmsSchema as any[], 'featuresSection');
-  const ingredientsSection = getSectionByKey(cmsSchema as any[], 'ingredientsSection');
-  const teamSection = getSectionByKey(cmsSchema as any[], 'teamSection');
-  const aboutSection = getSectionByKey(cmsSchema as any[], 'aboutSection');
+  // Fetch schema from API with fallback to local JSON
+  const { schema: cmsData, loading: schemaLoading } = useCMSSchema('home', () => cmsSchema);
+  
+  // Use API data if available, otherwise fall back to local schema
+  const schema = cmsData || cmsSchema;
+  
+  // Load sections from CMS schema - no image mapping needed as paths are in schema
+  const heroSection = getSectionByKey(schema as any[], 'HeroSection');
+  const servicesSection = getSectionByKey(schema as any[], 'servicesSection');
+  const featuresSection = getSectionByKey(schema as any[], 'featuresSection');
+  const ingredientsSection = getSectionByKey(schema as any[], 'ingredientsSection');
+  const teamSection = getSectionByKey(schema as any[], 'teamSection');
+  const aboutSection = getSectionByKey(schema as any[], 'aboutSection');
 
   const [activeReviewTab, setActiveReviewTab] = useState('google');
   const { reviews: trustIndexReviewsData, loading: trustIndexLoading } = useTrustIndexReviews();
