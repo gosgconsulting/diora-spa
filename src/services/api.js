@@ -29,9 +29,7 @@ const fetchWithAuth = async (endpoint, options = {}) => {
 
 // Fetch page data by slug
 export async function fetchPageContent(slug) {
-
   // console.log('Fetching page content for slug:', slug);
-
   try {
     // return await fetchWithAuth(`/pages/${slug}`);
     return await fetchWithAuth(`/${slug}`);
@@ -54,7 +52,8 @@ export async function fetchSettings() {
 // Fetch menu items
 export async function fetchMenuItems(menuLocation) {
   try {
-    return await fetchWithAuth(`/menus/${menuLocation}`);
+    console.log(menuLocation)
+    return await fetchWithAuth(`/api/v1/global-schema/`);
   } catch (error) {
     console.error(`Error fetching menu items for location "${menuLocation}":`, error);
     throw error;
@@ -64,11 +63,19 @@ export async function fetchMenuItems(menuLocation) {
 // Fetch CMS schema by page name (e.g., 'home', 'pricing', 'gallery', 'blog', 'findus')
 export async function fetchCMSSchema(pageName) {
   try {
-    // return await fetchWithAuth(`/schema/${pageName}`);
-    // return await fetchWithAuth(`/${pageName}`);
     return await fetchWithAuth(`/api/v1/pages/${pageName}`);
   } catch (error) {
     console.error(`Error fetching CMS schema for page "${pageName}":`, error);
+    throw error;
+  }
+}
+
+// Fetch global schema for header/footer components
+export async function fetchGlobalSchema() {
+  try {
+    return await fetchWithAuth('/api/v1/global-schema/');
+  } catch (error) {
+    console.error('Error fetching global schema:', error);
     throw error;
   }
 }
