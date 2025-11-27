@@ -50,6 +50,9 @@ export default function PrivacyPolicy() {
   const pageTitle = getContentByKey(heroSection, 'title') || 'Privacy Policy';
   const updatedDate = getContentByKey(contentSection, 'updatedDate') || 'September 10, 2025';
 
+  // Filter out the updatedDate item from the content section items
+  const contentItems = contentSection ? contentSection.items.filter(item => item.key !== 'updatedDate') : [];
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FAF8F4' }}>
       <Header />
@@ -72,8 +75,8 @@ export default function PrivacyPolicy() {
                     Last Updated: {updatedDate}
                   </p>
 
-                  {/* Dynamically render content from CMS schema */}
-                  {contentSection && contentSection.items.map((item, index) => {
+                  {/* Dynamically render content from CMS schema (excluding updatedDate) */}
+                  {contentItems.map((item, index) => {
                     if (item.type === 'heading') {
                       return (
                         <h2 
@@ -106,7 +109,7 @@ export default function PrivacyPolicy() {
                   })}
 
                   {/* Fallback content if no CMS data */}
-                  {!contentSection && (
+                  {contentItems.length === 0 && (
                     <>
                       <h2 className="font-dream text-3xl font-medium mb-4">1. Introduction</h2>
                       <p className="mb-6">
