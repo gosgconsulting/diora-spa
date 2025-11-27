@@ -59,7 +59,7 @@ export default function GalleryImageGrid({ section }: GalleryImageGridProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
           {images.map((image, idx) => {
-            const imgCaption = formatFileName(image.src || "");
+            const imgCaption = formatFileName(image.alt || "");
             return (
               <div key={image.key || idx} className="aspect-[4/3] overflow-hidden rounded-2xl relative group shadow-lg">
                 <img

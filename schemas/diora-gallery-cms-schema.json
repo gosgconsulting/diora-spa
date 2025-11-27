@@ -21,53 +21,53 @@
     "name": "Gallery Section",
     "type": "GallerySection",
     "items": [
-        {
-            "key": "HeadSpa",
-            "type": "heading",
-            "level": 2,
-            "content": "Head Spa"
-        },
-        {
-            "key": "DescriptionSpa",
-            "type": "text",
-            "content": "Experience our luxurious head spa and scalp massage treatments"
-        },
-        {
-            "key": "GalleryImageGrid",
-            "type": "array",
-            "items": [
-                {
-                    "key": "gallery1",
-                    "type": "image",
-                    "src": "src/assets/gallery/head-spa/5 sense relaxation.jpg",
-                    "alt": "5 Sense Relaxation"
-                },
-                {
-                    "key": "gallery2",
-                    "type": "image",
-                    "src": "src/assets/gallery/head-spa/detox & bloom.jpg",
-                    "alt": "Detox & Bloom"
-                },
-                {
-                    "key": "gallery3",
-                    "type": "image",
-                    "src": "src/assets/gallery/head-spa/diora_s botanical healing.jpg",
-                    "alt": "Diora's Botanical Healing"
-                },
-                {
-                    "key": "gallery4",
-                    "type": "image",
-                    "src": "src/assets/gallery/head-spa/diora_s signature.jpg",
-                    "alt": "Diora's Signature"
-                },
-                {
-                    "key": "gallery5",
-                    "type": "image",
-                    "src": "src/assets/gallery/head-spa/express cleansing.jpg",
-                    "alt": "Express Cleansing"
-                }
-            ]
-        }
+      {
+        "key": "HeadSpa",
+        "type": "heading",
+        "level": 2,
+        "content": "Head Spa"
+      },
+      {
+        "key": "DescriptionSpa",
+        "type": "text",
+        "content": "Experience our luxurious head spa and scalp massage treatments"
+      },
+      {
+        "key": "GalleryImageGrid",
+        "type": "array",
+        "items": [
+          {
+            "alt": "5 Sense Relaxation",
+            "key": "gallery1",
+            "src": "https://cms.sparti.ai/uploads/file-1764231030017-626903105.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Detox & Bloom",
+            "key": "gallery2",
+            "src": "https://cms.sparti.ai/uploads/file-1764231047248-255201905.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Diora's Botanical Healing",
+            "key": "gallery3",
+            "src": "https://cms.sparti.ai/uploads/file-1764231054363-583453233.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Diora's Signature",
+            "key": "gallery4",
+            "src": "https://cms.sparti.ai/uploads/file-1764231065997-140858404.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Express Cleansing",
+            "key": "gallery5",
+            "src": "https://cms.sparti.ai/uploads/file-1764231070369-5222879.jpg",
+            "type": "image"
+          }
+        ]
+      }
     ]
   },
   {
@@ -75,77 +75,77 @@
     "name": "Gallery Section",
     "type": "GallerySection",
     "items": [
-        {
-            "key": "Waxing",
-            "type": "heading",
-            "level": 2,
-            "content": "Waxing"
-        },
-        {
-            "key": "DescriptionSpa",
-            "type": "text",
-            "content": "Professional waxing services in our comfortable and hygienic environment"
-        },
-        {
-            "key": "GalleryImageGrid",
-            "type": "array",
-            "items": [
-                {
-                    "key": "gallery1",
-                    "type": "image",
-                    "src": "src/assets/gallery/wax/arm area.jpg",
-                    "alt": "Arm Area"
-                },
-                {
-                    "key": "gallery2",
-                    "type": "image",
-                    "src": "src/assets/gallery/wax/back area.jpg",
-                    "alt": "Back Area"
-                },
-                {
-                    "key": "gallery3",
-                    "type": "image",
-                    "src": "src/assets/gallery/wax/brazillian area.jpg",
-                    "alt": "Brazilian Area"
-                },
-                {
-                    "key": "gallery4",
-                    "type": "image",
-                    "src": "src/assets/gallery/wax/buttocks.jpg",
-                    "alt": "Buttocks"
-                },
-                {
-                    "key": "gallery5",
-                    "type": "image",
-                    "src": "src/assets/gallery/wax/facial area.jpg",
-                    "alt": "Facial Area"
-                },
-                {
-                    "key": "gallery6",
-                    "type": "image",
-                    "src": "src/assets/gallery/wax/leg area.jpg",
-                    "alt": "Leg Area"
-                },
-                {
-                    "key": "gallery7",
-                    "type": "image",
-                    "src": "src/assets/gallery/wax/lip area.png",
-                    "alt": "Lip Area"
-                },
-                {
-                    "key": "gallery8",
-                    "type": "image",
-                    "src": "src/assets/gallery/wax/stomach_chest.jpg",
-                    "alt": "Stomach & Chest"
-                },
-                {
-                    "key": "gallery9",
-                    "type": "image",
-                    "src": "src/assets/gallery/wax/under arm.jpg",
-                    "alt": "Under Arm"
-                }
-            ]
-        }
+      {
+        "key": "Waxing",
+        "type": "heading",
+        "level": 2,
+        "content": "Waxing"
+      },
+      {
+        "key": "DescriptionSpa",
+        "type": "text",
+        "content": "Professional waxing services in our comfortable and hygienic environment"
+      },
+      {
+        "key": "GalleryImageGrid",
+        "type": "array",
+        "items": [
+          {
+            "alt": "Arm Area",
+            "key": "gallery1",
+            "src": "https://cms.sparti.ai/uploads/file-1764231121727-438667337.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Back Area",
+            "key": "gallery2",
+            "src": "https://cms.sparti.ai/uploads/file-1764231134592-594056000.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Brazilian Area",
+            "key": "gallery3",
+            "src": "https://cms.sparti.ai/uploads/file-1764231142058-759304543.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Buttocks",
+            "key": "gallery4",
+            "src": "https://cms.sparti.ai/uploads/file-1764231147792-808391521.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Facial Area",
+            "key": "gallery5",
+            "src": "https://cms.sparti.ai/uploads/file-1764231157887-825130567.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Leg Area",
+            "key": "gallery6",
+            "src": "https://cms.sparti.ai/uploads/file-1764231166063-432025844.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Lip Area",
+            "key": "gallery7",
+            "src": "https://cms.sparti.ai/uploads/file-1764231173772-964666163.png",
+            "type": "image"
+          },
+          {
+            "alt": "Stomach & Chest",
+            "key": "gallery8",
+            "src": "https://cms.sparti.ai/uploads/file-1764231180398-855167897.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Under Arm",
+            "key": "gallery9",
+            "src": "https://cms.sparti.ai/uploads/file-1764231187422-436082514.jpg",
+            "type": "image"
+          }
+        ]
+      }
     ]
   },
   {
@@ -153,65 +153,65 @@
     "name": "Gallery Section",
     "type": "GallerySection",
     "items": [
-        {
-            "key": "LashExtension",
-            "type": "heading",
-            "level": 2,
-            "content": "Lash Extensions"
-        },
-        {
-            "key": "DescriptionLash",
-            "type": "text",
-            "content": "Enhance your natural beauty with premium lash extension services"
-        },
-        {
-            "key": "GalleryImageGrid",
-            "type": "array",
-            "items": [
-                {
-                    "key": "gallery1",
-                    "type": "image",
-                    "src": "src/assets/gallery/lash/1.png",
-                    "alt": "Lash Extension 1"
-                },
-                {
-                    "key": "gallery2",
-                    "type": "image",
-                    "src": "src/assets/gallery/lash/2.png",
-                    "alt": "Lash Extension 2"
-                },
-                {
-                    "key": "gallery3",
-                    "type": "image",
-                    "src": "src/assets/gallery/lash/3.png",
-                    "alt": "Lash Extension 3"
-                },
-                {
-                    "key": "gallery4",
-                    "type": "image",
-                    "src": "src/assets/gallery/lash/4.png",
-                    "alt": "Lash Extension 4"
-                },
-                {
-                    "key": "gallery5",
-                    "type": "image",
-                    "src": "src/assets/gallery/lash/5.png",
-                    "alt": "Lash Extension 5"
-                },
-                {
-                    "key": "gallery6",
-                    "type": "image",
-                    "src": "src/assets/gallery/lash/6.png",
-                    "alt": "Lash Extension 6"
-                },
-                {
-                    "key": "gallery7",
-                    "type": "image",
-                    "src": "src/assets/gallery/lash/7.png",
-                    "alt": "Lash Extension 7"
-                }
-            ]
-        }
+      {
+        "key": "LashExtension",
+        "type": "heading",
+        "level": 2,
+        "content": "Lash Extensions"
+      },
+      {
+        "key": "DescriptionLash",
+        "type": "text",
+        "content": "Enhance your natural beauty with premium lash extension services"
+      },
+      {
+        "key": "GalleryImageGrid",
+        "type": "array",
+        "items": [
+          {
+            "alt": "Lash Extension 1",
+            "key": "gallery1",
+            "src": "https://cms.sparti.ai/uploads/file-1764231786596-914779817.png",
+            "type": "image"
+          },
+          {
+            "alt": "Lash Extension 2",
+            "key": "gallery2",
+            "src": "https://cms.sparti.ai/uploads/file-1764231792396-432113234.png",
+            "type": "image"
+          },
+          {
+            "alt": "Lash Extension 3",
+            "key": "gallery3",
+            "src": "https://cms.sparti.ai/uploads/file-1764231797877-786766327.png",
+            "type": "image"
+          },
+          {
+            "alt": "Lash Extension 4",
+            "key": "gallery4",
+            "src": "https://cms.sparti.ai/uploads/file-1764231802789-260025608.png",
+            "type": "image"
+          },
+          {
+            "alt": "Lash Extension 5",
+            "key": "gallery5",
+            "src": "https://cms.sparti.ai/uploads/file-1764231807979-581498876.png",
+            "type": "image"
+          },
+          {
+            "alt": "Lash Extension 6",
+            "key": "gallery6",
+            "src": "https://cms.sparti.ai/uploads/file-1764231813471-105359292.png",
+            "type": "image"
+          },
+          {
+            "alt": "Lash Extension 7",
+            "key": "gallery7",
+            "src": "https://cms.sparti.ai/uploads/file-1764231817373-451233386.png",
+            "type": "image"
+          }
+        ]
+      }
     ]
   },
   {
@@ -219,77 +219,77 @@
     "name": "Gallery Section",
     "type": "GallerySection",
     "items": [
-        {
-            "key": "Laser",
-            "type": "heading",
-            "level": 2,
-            "content": "Laser Hair Removal"
-        },
-        {
-            "key": "DescriptionLaser",
-            "type": "text",
-            "content": "Advanced laser hair removal treatments for smooth, long-lasting results"
-        },
-        {
-            "key": "GalleryImageGrid",
-            "type": "array",
-            "items": [
-                {
-                    "key": "gallery1",
-                    "type": "image",
-                    "src": "src/assets/gallery/laser/arm area.jpg",
-                    "alt": "Arm Area"
-                },
-                {
-                    "key": "gallery2",
-                    "type": "image",
-                    "src": "src/assets/gallery/laser/back area.jpg",
-                    "alt": "Back Area"
-                },
-                {
-                    "key": "gallery3",
-                    "type": "image",
-                    "src": "src/assets/gallery/laser/brazillian area.jpg",
-                    "alt": "Brazilian Area"
-                },
-                {
-                    "key": "gallery4",
-                    "type": "image",
-                    "src": "src/assets/gallery/laser/buttocks.jpg",
-                    "alt": "Buttocks"
-                },
-                {
-                    "key": "gallery5",
-                    "type": "image",
-                    "src": "src/assets/gallery/laser/facial area.jpg",
-                    "alt": "Facial Area"
-                },
-                {
-                    "key": "gallery6",
-                    "type": "image",
-                    "src": "src/assets/gallery/laser/leg area.jpg",
-                    "alt": "Leg Area"
-                },
-                {
-                    "key": "gallery7",
-                    "type": "image",
-                    "src": "src/assets/gallery/laser/lip area.png",
-                    "alt": "Lip Area"
-                },
-                {
-                    "key": "gallery8",
-                    "type": "image",
-                    "src": "src/assets/gallery/laser/stomach_chest.jpg",
-                    "alt": "Stomach & Chest"
-                },
-                {
-                    "key": "gallery9",
-                    "type": "image",
-                    "src": "src/assets/gallery/laser/under arm.jpg",
-                    "alt": "Under Arm"
-                }
-            ]
-        }
+      {
+        "key": "Laser",
+        "type": "heading",
+        "level": 2,
+        "content": "Laser Hair Removal"
+      },
+      {
+        "key": "DescriptionLaser",
+        "type": "text",
+        "content": "Advanced laser hair removal treatments for smooth, long-lasting results"
+      },
+      {
+        "key": "GalleryImageGrid",
+        "type": "array",
+        "items": [
+          {
+            "alt": "Arm Area",
+            "key": "gallery1",
+            "src": "https://cms.sparti.ai/uploads/file-1764231121727-438667337.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Back Area",
+            "key": "gallery2",
+            "src": "https://cms.sparti.ai/uploads/file-1764231134592-594056000.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Brazilian Area",
+            "key": "gallery3",
+            "src": "https://cms.sparti.ai/uploads/file-1764231142058-759304543.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Buttocks",
+            "key": "gallery4",
+            "src": "https://cms.sparti.ai/uploads/file-1764231147792-808391521.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Facial Area",
+            "key": "gallery5",
+            "src": "https://cms.sparti.ai/uploads/file-1764231157887-825130567.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Leg Area",
+            "key": "gallery6",
+            "src": "https://cms.sparti.ai/uploads/file-1764231166063-432025844.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Lip Area",
+            "key": "gallery7",
+            "src": "https://cms.sparti.ai/uploads/file-1764231173772-964666163.png",
+            "type": "image"
+          },
+          {
+            "alt": "Stomach & Chest",
+            "key": "gallery8",
+            "src": "https://cms.sparti.ai/uploads/file-1764231180398-855167897.jpg",
+            "type": "image"
+          },
+          {
+            "alt": "Under Arm",
+            "key": "gallery9",
+            "src": "https://cms.sparti.ai/uploads/file-1764231187422-436082514.jpg",
+            "type": "image"
+          }
+        ]
+      }
     ]
   }
 ]

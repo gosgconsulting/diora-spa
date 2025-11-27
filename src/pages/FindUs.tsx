@@ -34,7 +34,7 @@ const getSectionByKey = (sections: any[], key: string): Section | null => {
 
 export default function FindUs() {
   // Fetch schema from API with fallback to local JSON
-  const { schema: cmsData } = useCMSSchema('findus', () => cmsSchema);
+  const { schema: cmsData } = useCMSSchema('find-us', () => cmsSchema);
   const schema = cmsData || cmsSchema;
   
   // Load sections from CMS schema

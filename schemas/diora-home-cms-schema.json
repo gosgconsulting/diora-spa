@@ -11,7 +11,7 @@
           {
             "alt": "Diora Spa Hero",
             "key": "slide1",
-            "src": "src/assets/home.png",
+            "src": "https://cms.sparti.ai/uploads/file-1764228236479-745574017.jpg",
             "type": "image",
             "settings": {
               "layout": "full"
@@ -27,7 +27,7 @@
       {
         "alt": "Diora Spa by Michelle Tran",
         "key": "logo",
-        "src": "src/assets/3.png",
+        "src": "https://cms.sparti.ai/uploads/file-1764228251959-370383598.png",
         "type": "image"
       }
     ]
@@ -40,7 +40,7 @@
       {
         "key": "title",
         "type": "text",
-        "content": "Our Services test"
+        "content": "Untested Our Services"
       },
       {
         "key": "subtitle",
@@ -192,7 +192,7 @@
         "items": [
           {
             "key": "feature1",
-            "src": "src/assets/why-choose-us/Premium Products.jpg",
+            "src": "https://cms.sparti.ai/uploads/file-1764228438165-493999317.jpg",
             "type": "image",
             "title": "Premium Products",
             "settings": {
@@ -208,7 +208,7 @@
           },
           {
             "key": "feature2",
-            "src": "src/assets/why-choose-us/Caring Approach.jpg",
+            "src": "https://cms.sparti.ai/uploads/file-1764228453526-651470128.jpg",
             "type": "image",
             "title": "Caring Approach",
             "settings": {
@@ -224,7 +224,7 @@
           },
           {
             "key": "feature3",
-            "src": "src/assets/why-choose-us/Safe and Hygienic.jpg",
+            "src": "https://cms.sparti.ai/uploads/file-1764228475152-749519754.jpg",
             "type": "image",
             "title": "Safe & Hygienic",
             "settings": {

@@ -29,10 +29,10 @@
             "type": "array",
             "items": [
               {
+                "alt": "Head Spa Services",
                 "key": "HeadSpaServiceImage",
-                "type": "image",
-                "src": "src/assets/our service head spa.jpg",
-                "alt": "Head Spa Services"
+                "src": "https://cms.sparti.ai/uploads/file-1764233673575-360860.jpg",
+                "type": "image"
               },
               {
                 "key": "HeadSpaServiceHeading",
@@ -63,16 +63,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "Express Cleansing",
                 "key": "ServiceCover1",
-                "type": "image",
-                "src": "src/assets/head-spa-pricing/01-head spa/express cleansing.jpg",
-                "alt": "Express Cleansing"
+                "src": "https://cms.sparti.ai/uploads/file-1764233708424-790674838.jpg",
+                "type": "image"
               },
               {
+                "alt": "Express Cleansing Menu",
                 "key": "ServiceLightBox1",
-                "type": "image",
-                "src": "src/assets/head-spa-pricing/service-prices/01-Express Cleansing.png",
-                "alt": "Express Cleansing Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764233757559-888784654.png",
+                "type": "image"
               }
             ]
           },
@@ -97,16 +97,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "Detox & Bloom",
                 "key": "ServiceCover2",
-                "type": "image",
-                "src": "src/assets/head-spa-pricing/01-head spa/detox & bloom.jpg",
-                "alt": "Detox & Bloom"
+                "src": "https://cms.sparti.ai/uploads/file-1764233784687-682529036.jpg",
+                "type": "image"
               },
               {
+                "alt": "Detox & Bloom Menu",
                 "key": "ServiceLightBox2",
-                "type": "image",
-                "src": "src/assets/head-spa-pricing/service-prices/02-Detox & Bloom.png",
-                "alt": "Detox & Bloom Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764233793675-151830604.png",
+                "type": "image"
               }
             ]
           },
@@ -131,16 +131,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "Diora's Signature",
                 "key": "ServiceCover3",
-                "type": "image",
-                "src": "src/assets/head-spa-pricing/01-head spa/diora_s signature.jpg",
-                "alt": "Diora's Signature"
+                "src": "https://cms.sparti.ai/uploads/file-1764233807353-864961068.jpg",
+                "type": "image"
               },
               {
+                "alt": "Diora's Signature Menu",
                 "key": "ServiceLightBox3",
-                "type": "image",
-                "src": "src/assets/head-spa-pricing/service-prices/03-Diora_s Signature.png",
-                "alt": "Diora's Signature Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764233816226-93483200.png",
+                "type": "image"
               }
             ]
           },
@@ -165,16 +165,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "5 Sense Relaxation",
                 "key": "ServiceCover4",
-                "type": "image",
-                "src": "src/assets/head-spa-pricing/01-head spa/5 sense relaxation.jpg",
-                "alt": "5 Sense Relaxation"
+                "src": "https://cms.sparti.ai/uploads/file-1764233828628-533938320.jpg",
+                "type": "image"
               },
               {
+                "alt": "5 Sense Relaxation Menu",
                 "key": "ServiceLightBox4",
-                "type": "image",
-                "src": "src/assets/head-spa-pricing/service-prices/04-5 Sense Relaxation.png",
-                "alt": "5 Sense Relaxation Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764233837615-325637555.png",
+                "type": "image"
               }
             ]
           },
@@ -199,16 +199,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "Diora's Botanical Healing",
                 "key": "ServiceCover5",
-                "type": "image",
-                "src": "src/assets/head-spa-pricing/01-head spa/diora_s botanical healing.jpg",
-                "alt": "Diora's Botanical Healing"
+                "src": "https://cms.sparti.ai/uploads/file-1764233847510-240800846.jpg",
+                "type": "image"
               },
               {
+                "alt": "Diora's Botanical Healing Menu",
                 "key": "ServiceLightBox5",
-                "type": "image",
-                "src": "src/assets/head-spa-pricing/service-prices/05-Botanical Healing.png",
-                "alt": "Diora's Botanical Healing Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764233854758-869904004.png",
+                "type": "image"
               }
             ]
           }
@@ -223,10 +223,10 @@
             "type": "array",
             "items": [
               {
+                "alt": "Eyelash Extensions",
                 "key": "EyelashExtensionServiceImage",
-                "type": "image",
-                "src": "src/assets/our service lash.png",
-                "alt": "Eyelash Extensions"
+                "src": "https://cms.sparti.ai/uploads/file-1764233904499-642385397.png",
+                "type": "image"
               },
               {
                 "key": "EyelashExtensionServiceHeading",
@@ -257,16 +257,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "Lash Lift",
                 "key": "ServiceCover1",
-                "type": "image",
-                "src": "src/assets/eye-lash-pricing/01-lash lift.png",
-                "alt": "Lash Lift"
+                "src": "https://cms.sparti.ai/uploads/file-1764233960656-825550397.png",
+                "type": "image"
               },
               {
+                "alt": "Lash Lift Menu",
                 "key": "ServiceLightBox1",
-                "type": "image",
-                "src": "src/assets/eye-lash-pricing/service-prices/Lash lift.jpg",
-                "alt": "Lash Lift Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764233970613-307537106.jpg",
+                "type": "image"
               }
             ]
           },
@@ -291,16 +291,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "Japanese Lash",
                 "key": "ServiceCover2",
-                "type": "image",
-                "src": "src/assets/eye-lash-pricing/02-japanese lash.png",
-                "alt": "Japanese Lash"
+                "src": "https://cms.sparti.ai/uploads/file-1764233983266-176908695.png",
+                "type": "image"
               },
               {
+                "alt": "Japanese Lash Menu",
                 "key": "ServiceLightBox2",
-                "type": "image",
-                "src": "src/assets/eye-lash-pricing/service-prices/Japanese Lash.jpg",
-                "alt": "Japanese Lash Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764233989871-399972799.jpg",
+                "type": "image"
               }
             ]
           },
@@ -325,16 +325,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "2D Angel Lash",
                 "key": "ServiceCover3",
-                "type": "image",
-                "src": "src/assets/eye-lash-pricing/03-2d angel lash.png",
-                "alt": "2D Angel Lash"
+                "src": "https://cms.sparti.ai/uploads/file-1764233997503-331002608.png",
+                "type": "image"
               },
               {
+                "alt": "2D Angel Lash Menu",
                 "key": "ServiceLightBox3",
-                "type": "image",
-                "src": "src/assets/eye-lash-pricing/service-prices/2D Angel Lash.jpg",
-                "alt": "2D Angel Lash Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764234006012-289662537.jpg",
+                "type": "image"
               }
             ]
           },
@@ -359,16 +359,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "Camellia Lash",
                 "key": "ServiceCover4",
-                "type": "image",
-                "src": "src/assets/eye-lash-pricing/04-camelite lash.png",
-                "alt": "Camellia Lash"
+                "src": "https://cms.sparti.ai/uploads/file-1764234015940-485081242.png",
+                "type": "image"
               },
               {
+                "alt": "Camellia Lash Menu",
                 "key": "ServiceLightBox4",
-                "type": "image",
-                "src": "src/assets/eye-lash-pricing/service-prices/Camellia Lash.jpg",
-                "alt": "Camellia Lash Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764234026547-726677125.jpg",
+                "type": "image"
               }
             ]
           },
@@ -393,16 +393,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "Russian Volume",
                 "key": "ServiceCover5",
-                "type": "image",
-                "src": "src/assets/eye-lash-pricing/05-russian volume.png",
-                "alt": "Russian Volume"
+                "src": "https://cms.sparti.ai/uploads/file-1764234035641-818960201.png",
+                "type": "image"
               },
               {
+                "alt": "Russian Volume Menu",
                 "key": "ServiceLightBox5",
-                "type": "image",
-                "src": "src/assets/eye-lash-pricing/service-prices/Russian Volume.jpg",
-                "alt": "Russian Volume Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764234048508-121250445.jpg",
+                "type": "image"
               }
             ]
           },
@@ -427,16 +427,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "Design Lash",
                 "key": "ServiceCover6",
-                "type": "image",
-                "src": "src/assets/eye-lash-pricing/06-design lash.png",
-                "alt": "Design Lash"
+                "src": "https://cms.sparti.ai/uploads/file-1764234056858-843333495.png",
+                "type": "image"
               },
               {
+                "alt": "Design Lash Menu",
                 "key": "ServiceLightBox6",
-                "type": "image",
-                "src": "src/assets/eye-lash-pricing/service-prices/Design Lash.jpg",
-                "alt": "Design Lash Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764234065711-149406544.jpg",
+                "type": "image"
               }
             ]
           },
@@ -461,16 +461,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "Brow Services",
                 "key": "ServiceCover7",
-                "type": "image",
-                "src": "src/assets/eye-lash-pricing/07-brow threading.png",
-                "alt": "Brow Services"
+                "src": "https://cms.sparti.ai/uploads/file-1764234073702-477277582.png",
+                "type": "image"
               },
               {
+                "alt": "Brow Services Menu",
                 "key": "ServiceLightBox7",
-                "type": "image",
-                "src": "src/assets/eye-lash-pricing/service-prices/Brow Threading.jpg",
-                "alt": "Brow Services Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764234081247-750890447.jpg",
+                "type": "image"
               }
             ]
           }
@@ -491,10 +491,10 @@
             "type": "array",
             "items": [
               {
+                "alt": "Laser Hair Removal",
                 "key": "LaserHairRemovalServiceImage",
-                "type": "image",
-                "src": "src/assets/our service laser hair removal.jpg",
-                "alt": "Laser Hair Removal"
+                "src": "https://cms.sparti.ai/uploads/file-1764231142058-759304543.jpg",
+                "type": "image"
               },
               {
                 "key": "LaserHairRemovalServiceHeading",
@@ -525,16 +525,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "Laser Hair Removal For Ladies",
                 "key": "ServiceCover1",
-                "type": "image",
-                "src": "src/assets/laser-hair-removal-pricing/03-laser hair removal/buttocks.jpg",
-                "alt": "Laser Hair Removal For Ladies"
+                "src": "https://cms.sparti.ai/uploads/file-1764231147792-808391521.jpg",
+                "type": "image"
               },
               {
+                "alt": "Laser Hair Removal For Ladies Menu",
                 "key": "ServiceLightBox1",
-                "type": "image",
-                "src": "src/assets/laser-hair-removal-pricing/service-prices/03-Laser hair removal - popup.png",
-                "alt": "Laser Hair Removal For Ladies Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764232641783-558480276.png",
+                "type": "image"
               }
             ]
           },
@@ -559,16 +559,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "Laser Hair Removal For Gentlemen",
                 "key": "ServiceCover2",
-                "type": "image",
-                "src": "src/assets/laser-hair-removal-pricing/03-laser hair removal/Men Laser.png",
-                "alt": "Laser Hair Removal For Gentlemen"
+                "src": "https://cms.sparti.ai/uploads/file-1764232658483-573551534.png",
+                "type": "image"
               },
               {
+                "alt": "Laser Hair Removal For Gentlemen Menu",
                 "key": "ServiceLightBox2",
-                "type": "image",
-                "src": "src/assets/laser-hair-removal-pricing/service-prices/03-Laser hair removal - popup.png",
-                "alt": "Laser Hair Removal For Gentlemen Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764232641783-558480276.png",
+                "type": "image"
               }
             ]
           }
@@ -583,10 +583,10 @@
             "type": "array",
             "items": [
               {
+                "alt": "Waxing Services",
                 "key": "WaxingServiceImage",
-                "type": "image",
-                "src": "src/assets/waxing-pricing/04-waxing services/arm area.jpg",
-                "alt": "Waxing Services"
+                "src": "https://cms.sparti.ai/uploads/file-1764231121727-438667337.jpg",
+                "type": "image"
               },
               {
                 "key": "WaxingServiceHeading",
@@ -617,16 +617,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "Ladies Waxing",
                 "key": "ServiceCover1",
-                "type": "image",
-                "src": "src/assets/waxing-pricing/04-waxing services/under arm.jpg",
-                "alt": "Ladies Waxing"
+                "src": "https://cms.sparti.ai/uploads/file-1764231187422-436082514.jpg",
+                "type": "image"
               },
               {
+                "alt": "Ladies Waxing Menu",
                 "key": "ServiceLightBox1",
-                "type": "image",
-                "src": "src/assets/waxing-pricing/service-prices/04-Waxing - popup.png",
-                "alt": "Ladies Waxing Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764232262812-877469287.png",
+                "type": "image"
               }
             ]
           },
@@ -651,16 +651,16 @@
                 "content": "Enquire now"
               },
               {
+                "alt": "Gentlemen's Waxing",
                 "key": "ServiceCover2",
-                "type": "image",
-                "src": "src/assets/waxing-pricing/04-waxing services/Men wax.png",
-                "alt": "Gentlemen's Waxing"
+                "src": "https://cms.sparti.ai/uploads/file-1764232237157-447501315.png",
+                "type": "image"
               },
               {
+                "alt": "Gentlemen's Waxing Menu",
                 "key": "ServiceLightBox2",
-                "type": "image",
-                "src": "src/assets/waxing-pricing/service-prices/04-Waxing - popup.png",
-                "alt": "Gentlemen's Waxing Menu"
+                "src": "https://cms.sparti.ai/uploads/file-1764232262812-877469287.png",
+                "type": "image"
               }
             ]
           }
