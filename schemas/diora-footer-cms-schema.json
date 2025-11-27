@@ -1,27 +1,36 @@
 {
-  "logo": {
-    "src": "",
-    "alt": ""
-  },
-  "sections": [],
-  "legalLinks": [],
-  "copyright": "",
-  "description": "",
-  "showCurrencySwitcher": true,
-  "showLanguageSwitcher": true,
-  "footerContactInfo": [
-    {
-      "footerContactHeader": "Contact Us",
-      "footerAddress": "14 Scotts Rd, #05-80 Far East Plaza, Singapore 228213",
-      "footerPhone": "+65 9224 6789",
-      "footerEmail": "dioraspabymichelletran@gmail.com"
-    }
-  ],
-  "footerService": [
-    {
-      "footerServiceHeader": "Working Hours",
-      "footerServiceDay": "Open daily",
-      "footerServiceHour": "10.00 AM - 9.00 PM UTC+7"
-    }
-  ]
-}
+    "logo": {
+      "src": "",
+      "alt": ""
+    },
+    "sections": [],
+    "legalLinks": [
+      {
+        "label": "Privacy Policy",
+        "link": "/privacy-policy"
+      },
+      {
+        "label": "Terms & Conditions",
+        "link": "/terms-conditions"
+      }
+    ],
+    "copyright": "",
+    "description": "",
+    "showCurrencySwitcher": true,
+    "showLanguageSwitcher": true,
+    "footerContactInfo": [
+      {
+        "footerContactHeader": "Contact Us",
+        "footerAddress": "14 Scotts Rd, #05-80 Far East Plaza, Singapore 228213",
+        "footerPhone": "+65 9224 6789",
+        "footerEmail": "dioraspabymichelletran@gmail.com"
+      }
+    ],
+    "footerService": [
+      {
+        "footerServiceHeader": "Working Hours",
+        "footerServiceDay": "Open daily",
+        "footerServiceHour": "10.00 AM - 9.00 PM UTC+7"
+      }
+    ]
+  }

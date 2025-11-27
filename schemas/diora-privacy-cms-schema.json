@@ -1,0 +1,273 @@
+[
+    {
+      "key": "SimpleHeroBanner",
+      "name": "SimpleHeroBanner",
+      "type": "SimpleHeroBanner",
+      "items": [
+        {
+          "key": "title",
+          "type": "text",
+          "content": "Privacy Policy"
+        },
+        {
+          "key": "subtitle",
+          "type": "text",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "key": "sectionPrivacy",
+      "name": "Privacy Policy Content",
+      "type": "array",
+      "items": [
+        {
+          "key": "updatedDate",
+          "type": "text",
+          "content": "September 10, 2025"
+        },
+        {
+          "key": "privacyHeading1",
+          "type": "heading",
+          "level": 2,
+          "content": "1. Introduction"
+        },
+        {
+          "key": "privacyDescription1",
+          "type": "text",
+          "content": "Diora Spa by Michelle Tran (\"we,\" \"our,\" or \"us\") respects your privacy and is committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and inform you of your privacy rights and how the law protects you."
+        },
+        {
+          "key": "privacyDescription2",
+          "type": "text",
+          "content": "This privacy policy applies to all personal information collected through our website, in-store, and during the provision of our spa services."
+        },
+        {
+          "key": "privacyHeading2",
+          "type": "heading",
+          "level": 2,
+          "content": "2. Information We Collect"
+        },
+        {
+          "key": "privacyDescription3",
+          "type": "text",
+          "content": "We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows:"
+        },
+        {
+          "key": "privacyList1",
+          "type": "list",
+          "items": [
+            {
+              "key": "listItem1",
+              "type": "text",
+              "content": "<strong>Identity Data</strong> includes first name, last name, username or similar identifier, title, date of birth."
+            },
+            {
+              "key": "listItem2",
+              "type": "text",
+              "content": "<strong>Contact Data</strong> includes billing address, delivery address, email address and telephone numbers."
+            },
+            {
+              "key": "listItem3",
+              "type": "text",
+              "content": "<strong>Health Data</strong> includes information about allergies, skin conditions, medical history relevant to treatments."
+            },
+            {
+              "key": "listItem4",
+              "type": "text",
+              "content": "<strong>Transaction Data</strong> includes details about payments to and from you and other details of products and services you have purchased from us."
+            },
+            {
+              "key": "listItem5",
+              "type": "text",
+              "content": "<strong>Technical Data</strong> includes internet protocol (IP) address, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform, and other technology on the devices you use to access this website."
+            },
+            {
+              "key": "listItem6",
+              "type": "text",
+              "content": "<strong>Profile Data</strong> includes your username and password, purchases or orders made by you, your preferences, feedback and survey responses."
+            },
+            {
+              "key": "listItem7",
+              "type": "text",
+              "content": "<strong>Usage Data</strong> includes information about how you use our website, products and services."
+            },
+            {
+              "key": "listItem8",
+              "type": "text",
+              "content": "<strong>Marketing and Communications Data</strong> includes your preferences in receiving marketing from us and our third parties and your communication preferences."
+            }
+          ]
+        },
+        {
+          "key": "privacyHeading3",
+          "type": "heading",
+          "level": 2,
+          "content": "3. How We Use Your Information"
+        },
+        {
+          "key": "privacyDescription4",
+          "type": "text",
+          "content": "We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:"
+        },
+        {
+          "key": "privacyList2",
+          "type": "list",
+          "items": [
+            {
+              "key": "listItem9",
+              "type": "text",
+              "content": "To register you as a new customer"
+            },
+            {
+              "key": "listItem10",
+              "type": "text",
+              "content": "To process and deliver your order including managing payments"
+            },
+            {
+              "key": "listItem11",
+              "type": "text",
+              "content": "To provide appropriate spa treatments based on your health information"
+            },
+            {
+              "key": "listItem12",
+              "type": "text",
+              "content": "To manage our relationship with you including notifying you about changes to our terms or privacy policy"
+            },
+            {
+              "key": "listItem13",
+              "type": "text",
+              "content": "To enable you to participate in promotions or complete a survey"
+            },
+            {
+              "key": "listItem14",
+              "type": "text",
+              "content": "To administer and protect our business and this website"
+            },
+            {
+              "key": "listItem15",
+              "type": "text",
+              "content": "To deliver relevant website content and advertisements to you"
+            },
+            {
+              "key": "listItem16",
+              "type": "text",
+              "content": "To use data analytics to improve our website, products/services, marketing, customer relationships and experiences"
+            },
+            {
+              "key": "listItem17",
+              "type": "text",
+              "content": "To make suggestions and recommendations to you about goods or services that may be of interest to you"
+            }
+          ]
+        },
+        {
+          "key": "privacyHeading4",
+          "type": "heading",
+          "level": 2,
+          "content": "4. Data Security"
+        },
+        {
+          "key": "privacyDescription5",
+          "type": "text",
+          "content": "We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know. They will only process your personal data on our instructions and they are subject to a duty of confidentiality."
+        },
+        {
+          "key": "privacyHeading5",
+          "type": "heading",
+          "level": 2,
+          "content": "5. Data Retention"
+        },
+        {
+          "key": "privacyDescription6",
+          "type": "text",
+          "content": "We will only retain your personal data for as long as necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements. To determine the appropriate retention period for personal data, we consider the amount, nature, and sensitivity of the personal data, the potential risk of harm from unauthorized use or disclosure of your personal data, the purposes for which we process your personal data and whether we can achieve those purposes through other means, and the applicable legal requirements."
+        },
+        {
+          "key": "privacyHeading6",
+          "type": "heading",
+          "level": 2,
+          "content": "6. Your Legal Rights"
+        },
+        {
+          "key": "privacyDescription7",
+          "type": "text",
+          "content": "Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to:"
+        },
+        {
+          "key": "privacyList3",
+          "type": "list",
+          "items": [
+            {
+              "key": "listItem18",
+              "type": "text",
+              "content": "Request access to your personal data"
+            },
+            {
+              "key": "listItem19",
+              "type": "text",
+              "content": "Request correction of your personal data"
+            },
+            {
+              "key": "listItem20",
+              "type": "text",
+              "content": "Request erasure of your personal data"
+            },
+            {
+              "key": "listItem21",
+              "type": "text",
+              "content": "Object to processing of your personal data"
+            },
+            {
+              "key": "listItem22",
+              "type": "text",
+              "content": "Request restriction of processing your personal data"
+            },
+            {
+              "key": "listItem23",
+              "type": "text",
+              "content": "Request transfer of your personal data"
+            },
+            {
+              "key": "listItem24",
+              "type": "text",
+              "content": "Right to withdraw consent"
+            }
+          ]
+        },
+        {
+          "key": "privacyHeading7",
+          "type": "heading",
+          "level": 2,
+          "content": "7. Cookies"
+        },
+        {
+          "key": "privacyDescription8",
+          "type": "text",
+          "content": "Our website uses cookies to distinguish you from other users of our website. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site. By continuing to browse the site, you are agreeing to our use of cookies."
+        },
+        {
+          "key": "privacyHeading8",
+          "type": "heading",
+          "level": 2,
+          "content": "8. Changes to This Privacy Policy"
+        },
+        {
+          "key": "privacyDescription9",
+          "type": "text",
+          "content": "We may update this privacy policy from time to time by publishing a new version on our website. You should check this page occasionally to ensure you are happy with any changes to this policy."
+        },
+        {
+          "key": "privacyHeading9",
+          "type": "heading",
+          "level": 2,
+          "content": "9. Contact Us"
+        },
+        {
+          "key": "privacyDescription10",
+          "type": "text",
+          "content": "If you have any questions about this privacy policy or our privacy practices, please contact us at:<br />Email: dioraspabymichelletran@gmail.com<br />Phone: +65 9224 6789<br />Address: 14 Scotts Rd, #05-80 Far East Plaza, Singapore 228213"
+        }
+      ]
+    }
+  ]

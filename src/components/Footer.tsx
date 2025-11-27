@@ -27,7 +27,7 @@ interface FooterSchema {
   footerService?: FooterService[];
   legalLinks?: Array<{
     label: string;
-    url: string;
+    link: string;
   }>;
   copyright?: string;
   description?: string;
@@ -70,8 +70,8 @@ export default function Footer() {
   };
 
   const legalLinks = footerData.legalLinks || [
-    { label: "Privacy Policy", url: "/privacy-policy" },
-    { label: "Terms & Conditions", url: "/terms-conditions" }
+    { label: "Privacy Policy", link: "/privacy-policy" },
+    { label: "Terms & Conditions", link: "/terms-conditions" }
   ];
 
   const copyrightText = footerData.copyright || "© Diora Spa By Michelle Tran. All rights reserved.";
@@ -160,13 +160,13 @@ export default function Footer() {
               <span>{copyrightText}</span>
             </div>
             <div className="flex space-x-6">
-              {legalLinks.map((link, index) => (
+              {legalLinks.map((data, index) => (
                 <a 
                   key={index}
-                  href={link.url} 
+                  href={data.link} 
                   className="hover:text-white transition-colors"
                 >
-                  {link.label}
+                  {data.label}
                 </a>
               ))}
             </div>
