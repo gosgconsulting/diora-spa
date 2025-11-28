@@ -165,9 +165,10 @@ export default function PricingGrid({ section }: PricingGridProps) {
   // Find left and right columns
   const leftColumn = gridItems.find(item => item.key === 'PricingColumnLeft');
   const rightColumn = gridItems.find(item => item.key === 'PricingColumnRight');
+  const gridID = section.key;
 
   return (
-    <section className="py-16">
+    <section id={gridID} className="py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {leftColumn && <PricingColumn column={leftColumn} />}

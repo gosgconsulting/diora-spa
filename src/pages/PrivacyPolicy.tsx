@@ -94,13 +94,15 @@ export default function PrivacyPolicy() {
                           dangerouslySetInnerHTML={{ __html: item.content }}
                         />
                       );
-                    } else if (item.type === 'list') {
+                    } else if (item.type === 'array') {
                       return (
                         <ul key={item.key || index} className="list-disc pl-6 mb-6">
                           {item.items?.map((listItem: any, listIndex: number) => (
-                            <li key={listIndex} className="mb-2">
-                              {listItem.content}
-                            </li>
+                            <li 
+                              key={listIndex} 
+                              className="mb-2"
+                              dangerouslySetInnerHTML={{ __html: listItem.content }}
+                            />
                           ))}
                         </ul>
                       );

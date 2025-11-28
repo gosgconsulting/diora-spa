@@ -10,6 +10,7 @@ interface SchemaItem {
   src?: string;
   alt?: string;
   href?: string;
+  link?: string;  // New: for button-type items with URLs
   icon?: string;
   action?: string;
   [key: string]: any;
@@ -71,7 +72,9 @@ const ContactInfoItem = ({ items, icon: Icon }: { items: SchemaItem[]; icon: any
 
 // Render social media icon
 const SocialMediaIcon = ({ item }: { item: SchemaItem }) => {
-  const { href, icon, content } = item;
+  const { link, href, icon, content } = item;
+  // Support both 'link' (new schema) and 'href' (legacy)
+  const url = link || href;
   
   const getIconStyles = (iconType: string) => {
     switch (iconType) {
@@ -121,7 +124,9 @@ const SocialMediaIcon = ({ item }: { item: SchemaItem }) => {
 
   return (
     <a
-      href={href || '#'}
+      href={url || '#'}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`w-10 h-10 ${getIconStyles(icon || '')} rounded-full flex items-center justify-center transition-colors duration-200`}
       aria-label={content || icon}
     >
@@ -131,20 +136,28 @@ const SocialMediaIcon = ({ item }: { item: SchemaItem }) => {
 };
 
 export default function FindUsSection({ gmapSection, contactInfoSection }: FindUsSectionProps) {
-  const handleOpenChat = () => {
-    // This will be connected to your chat system later
-    console.log("Opening chat...");
-  };
-
-  const mapSrc = gmapSection?.src || "";
+  // Get Google Map URL from the button-type item's link property
+  const googleMapItem = gmapSection?.items?.[0];
+  const mapSrc = googleMapItem?.link || googleMapItem?.src || "";
+  
   const contactItems = contactInfoSection?.items || [];
 
   // Find specific contact info items
   const addressInfo = getItemByKey(contactItems, 'AddressInfo');
   const phoneInfo = getItemByKey(contactItems, 'PhoneInfo');
   const emailInfo = getItemByKey(contactItems, 'EmailInfo');
-  const chatButton = getItemByKey(contactItems, 'ChatButton');
-  const socialMediaLinks = getItemByKey(contactItems, 'SocialMediaLinks');
+  const socialMediaLinksSection = getItemByKey(contactItems, 'SocialMediaLinks');
+  
+  // Separate chat button from social media icons
+  const socialMediaItems = socialMediaLinksSection?.items || [];
+  const chatButton = socialMediaItems.find(item => item.key === 'OpenChat');
+  const socialIcons = socialMediaItems.filter(item => item.key !== 'OpenChat');
+
+  const handleOpenChat = () => {
+    if (chatButton?.link) {
+      window.open(chatButton.link, '_blank');
+    }
+  };
 
   return (
     <section className="relative h-screen">
@@ -202,10 +215,10 @@ export default function FindUsSection({ gmapSection, contactInfoSection }: FindU
             )}
 
             {/* Social Media Icons */}
-            {socialMediaLinks && socialMediaLinks.items && (
+            {socialIcons.length > 0 && (
               <div className="pt-4">
                 <div className="flex justify-center space-x-4">
-                  {socialMediaLinks.items.map((item: SchemaItem) => (
+                  {socialIcons.map((item: SchemaItem) => (
                     <SocialMediaIcon key={item.key} item={item} />
                   ))}
                 </div>

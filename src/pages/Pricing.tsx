@@ -1,9 +1,11 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SimpleHeroBanner from "@/components/sections/SimpleHeroBanner";
 import PricingGrid from "@/components/sections/PricingGrid";
 import cmsSchema from "../../schemas/diora-pricing-cms-schema.json";
 import { useCMSSchema } from "../hooks/useCMSSchema";
+import { useSectionScroll } from "../hooks/useSectionScroll";
 
 interface Section {
   key: string;
@@ -45,16 +47,42 @@ export default function Pricing() {
   const pricingGrid = getSectionByKey(schema as any[], 'PricingGrid');
   const pricingGrid2 = getSectionByKey(schema as any[], 'PricingGrid2');
   
+  // Initialize section scroll hook
+  const { registerSection, handleHashScroll } = useSectionScroll();
+
+  // Handle hash scroll on page load and when hash changes
+  useEffect(() => {
+    handleHashScroll(window.location.hash);
+    
+    // Listen for hash changes
+    const handleHashChange = () => {
+      handleHashScroll(window.location.hash);
+    };
+    
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [handleHashScroll]);
+  
   return (
     <div>
       <Header />
 
       {/* Simple Hero Banner - Using SimpleHeroBanner Component with CMS Schema Data */}
-      <SimpleHeroBanner items={simpleHeroBanner?.items} />
+      <div ref={(el) => registerSection('hero', el)}>
+        <SimpleHeroBanner items={simpleHeroBanner?.items} />
+      </div>
 
       {/* Pricing Grids - Using PricingGrid Component with CMS Schema Data */}
-      {pricingGrid && <PricingGrid section={pricingGrid} />}
-      {pricingGrid2 && <PricingGrid section={pricingGrid2} />}
+      {pricingGrid && (
+        <div ref={(el) => registerSection(pricingGrid.key, el)}>
+          <PricingGrid section={pricingGrid} />
+        </div>
+      )}
+      {pricingGrid2 && (
+        <div ref={(el) => registerSection(pricingGrid2.key, el)}>
+          <PricingGrid section={pricingGrid2} />
+        </div>
+      )}
 
       <Footer />
     </div>
