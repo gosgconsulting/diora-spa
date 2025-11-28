@@ -18,6 +18,20 @@ interface FooterService {
   footerServiceHour: string;
 }
 
+interface FooterSocial1 {
+  footerSocialHeader: string;
+  footerInstagram: string;
+  footerFacebook: string;
+  footerTikTok: string;
+}
+
+interface FooterSocial2 {
+  footerYouTube: string;
+  footerTagline: string;
+  footerTaglineLink: string;
+  footerOpenChat: string;
+}
+
 interface FooterSchema {
   logo?: {
     src: string;
@@ -25,6 +39,8 @@ interface FooterSchema {
   };
   footerContactInfo?: FooterContactInfo[];
   footerService?: FooterService[];
+  footerSocial1?: FooterSocial1[];
+  footerSocial2?: FooterSocial2[];
   legalLinks?: Array<{
     label: string;
     link: string;
@@ -75,6 +91,21 @@ export default function Footer() {
   ];
 
   const copyrightText = footerData.copyright || "© Diora Spa By Michelle Tran. All rights reserved.";
+
+  // Social data from split schema
+  const social1 = footerData.footerSocial1?.[0] || {
+    footerSocialHeader: "Get Social",
+    footerInstagram: "https://www.instagram.com/dioraspa_bymichelletran/",
+    footerFacebook: "https://www.facebook.com/profile.php?id=61579251501889",
+    footerTikTok: "https://www.tiktok.com/@dioraspa_bymichel"
+  };
+
+  const social2 = footerData.footerSocial2?.[0] || {
+    footerYouTube: "https://www.youtube.com/@dioraspa_bymichelletran/",
+    footerTagline: "Tag us in your photos!",
+    footerTaglineLink: "https://www.instagram.com/dioraspa_bymichelletran/",
+    footerOpenChat: "https://wa.me/6592246789"
+  };
 
   // Use logo from assets if no logo in schema, or use schema logo if provided
   const logoSource = footerData.logo?.src || logo;
@@ -132,24 +163,53 @@ export default function Footer() {
 
           {/* Get Social */}
           <div className="border border-white p-6">
-            <h3 className="font-garet text-xl font-semibold mb-4 text-white">Get Social</h3>
+            <h3 className="font-garet text-xl font-semibold mb-4 text-white">{social1.footerSocialHeader}</h3>
             <div className="flex space-x-4 mb-6">
-              <a href="https://www.instagram.com/dioraspa_bymichelletran/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
+              <a 
+                href={social1.footerInstagram} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all"
+                title="Instagram"
+              >
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61579251501889" target="_blank" rel="noopener noreferrer" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
+              <a 
+                href={social1.footerFacebook} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all"
+                title="Facebook"
+              >
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="https://www.tiktok.com/@dioraspa_bymichel" target="_blank" rel="noopener noreferrer" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all">
+              <a 
+                href={social1.footerTikTok} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all"
+                title="TikTok"
+              >
                 <FaTiktok className="w-6 h-6" />
               </a>
-              <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all opacity-50 cursor-not-allowed" title="Coming Soon">
+              <a 
+                href={social2.footerYouTube} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all"
+                title="YouTube"
+              >
                 <Youtube className="w-6 h-6" />
               </a>
             </div>
-            <div className="inline-block border-2 border-white rounded-full px-6 py-3 text-white font-garet text-sm">
-              Tag us in your photos!
-            </div>
+            <a 
+              href={social2.footerTaglineLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border-2 border-white rounded-full px-6 py-3 text-white font-garet text-sm hover:bg-white/10 transition-all cursor-pointer"
+            >
+              {social2.footerTagline}
+            </a>
           </div>
         </div>
         

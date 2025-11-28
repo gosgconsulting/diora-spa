@@ -1,7 +1,7 @@
 {
     "logo": {
-      "src": "",
-      "alt": ""
+      "src": "https://cms.sparti.ai/uploads/file-1764331731643-993327640.png",
+      "alt": "Diora spa by Michelle Tran"
     },
     "sections": [],
     "legalLinks": [
@@ -14,7 +14,7 @@
         "link": "/terms-conditions"
       }
     ],
-    "copyright": "",
+    "copyright": "© Diora Spa By Michelle Tran. All rights reserved.",
     "description": "",
     "showCurrencySwitcher": true,
     "showLanguageSwitcher": true,
@@ -29,8 +29,26 @@
     "footerService": [
       {
         "footerServiceHeader": "Working Hours",
-        "footerServiceDay": "Open daily",
-        "footerServiceHour": "10.00 AM - 9.00 PM UTC+7"
+        "footerServiceDay": "Monday to Sunday",
+        "footerServiceHour": "10:00 AM - 9:00 PM"
+      }
+    ],
+    "footerSocial1": [
+      {
+        "footerSocialHeader": "Get Social",
+        "footerInstagram": "https://www.instagram.com/dioraspa_bymichelletran/",
+        "footerFacebook": "https://www.facebook.com/profile.php?id=61579251501889/",
+        "footerTikTok": "https://www.tiktok.com/@dioraspa_bymichel/"
+      }
+    ],
+    "footerSocial2": [
+      {
+        "footerYouTube": "https://www.youtube.com/@dioraspa_bymichelletran/",
+        "footerTagline": "Tag us in your photos!",
+        "footerTaglineLink": "https://www.instagram.com/dioraspa_bymichelletran/",
+        "footerOpenChat": "https://wa.me/6592246789"
       }
     ]
-  }
+
+
+}
