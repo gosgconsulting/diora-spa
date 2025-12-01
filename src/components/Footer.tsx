@@ -111,6 +111,17 @@ export default function Footer() {
   const logoSource = footerData.logo?.src || logo;
   const logoAlt = footerData.logo?.alt || "Diora spa by Michelle Tran";
 
+  // Helper function to check if URL is valid
+  const isValidUrl = (url: string | undefined): boolean => {
+    if (!url || url.trim() === '' || url === '#') return false;
+    try {
+      const urlObj = new URL(url);
+      return urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
+    } catch {
+      return false;
+    }
+  };
+
   return (
     <footer style={{ backgroundColor: '#3a2c1b' }} className="text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
@@ -166,47 +177,77 @@ export default function Footer() {
             <h3 className="font-garet text-xl font-semibold mb-4 text-white">{social1.footerSocialHeader}</h3>
             <div className="flex space-x-4 mb-6">
               <a 
-                href={social1.footerInstagram} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all"
-                title="Instagram"
+                {...(isValidUrl(social1.footerInstagram) ? { 
+                  href: social1.footerInstagram,
+                  target: "_blank",
+                  rel: "noopener noreferrer"
+                } : {})}
+                className={`w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white transition-all ${
+                  isValidUrl(social1.footerInstagram) 
+                    ? 'hover:bg-white/10 cursor-pointer' 
+                    : 'opacity-50 cursor-default'
+                }`}
+                title={isValidUrl(social1.footerInstagram) ? "Instagram" : "Coming Soon"}
               >
                 <Instagram className="w-6 h-6" />
               </a>
               <a 
-                href={social1.footerFacebook} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all"
-                title="Facebook"
+                {...(isValidUrl(social1.footerFacebook) ? { 
+                  href: social1.footerFacebook,
+                  target: "_blank",
+                  rel: "noopener noreferrer"
+                } : {})}
+                className={`w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white transition-all ${
+                  isValidUrl(social1.footerFacebook) 
+                    ? 'hover:bg-white/10 cursor-pointer' 
+                    : 'opacity-50 cursor-default'
+                }`}
+                title={isValidUrl(social1.footerFacebook) ? "Facebook" : "Coming Soon"}
               >
                 <Facebook className="w-6 h-6" />
               </a>
               <a 
-                href={social1.footerTikTok} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all"
-                title="TikTok"
+                {...(isValidUrl(social1.footerTikTok) ? { 
+                  href: social1.footerTikTok,
+                  target: "_blank",
+                  rel: "noopener noreferrer"
+                } : {})}
+                className={`w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white transition-all ${
+                  isValidUrl(social1.footerTikTok) 
+                    ? 'hover:bg-white/10 cursor-pointer' 
+                    : 'opacity-50 cursor-default'
+                }`}
+                title={isValidUrl(social1.footerTikTok) ? "TikTok" : "Coming Soon"}
               >
                 <FaTiktok className="w-6 h-6" />
               </a>
               <a 
-                href={social2.footerYouTube} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-all"
-                title="YouTube"
+                {...(isValidUrl(social2.footerYouTube) ? { 
+                  href: social2.footerYouTube,
+                  target: "_blank",
+                  rel: "noopener noreferrer"
+                } : {})}
+                className={`w-12 h-12 border-2 border-white rounded-full flex items-center justify-center text-white transition-all ${
+                  isValidUrl(social2.footerYouTube) 
+                    ? 'hover:bg-white/10 cursor-pointer' 
+                    : 'opacity-50 cursor-default'
+                }`}
+                title={isValidUrl(social2.footerYouTube) ? "YouTube" : "Coming Soon"}
               >
                 <Youtube className="w-6 h-6" />
               </a>
             </div>
             <a 
-              href={social2.footerTaglineLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block border-2 border-white rounded-full px-6 py-3 text-white font-garet text-sm hover:bg-white/10 transition-all cursor-pointer"
+              {...(isValidUrl(social2.footerTaglineLink) ? { 
+                href: social2.footerTaglineLink,
+                target: "_blank",
+                rel: "noopener noreferrer"
+              } : {})}
+              className={`inline-block border-2 border-white rounded-full px-6 py-3 text-white font-garet text-sm transition-all ${
+                isValidUrl(social2.footerTaglineLink) 
+                  ? 'hover:bg-white/10 cursor-pointer' 
+                  : 'opacity-50 cursor-default'
+              }`}
             >
               {social2.footerTagline}
             </a>

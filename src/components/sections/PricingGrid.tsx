@@ -56,9 +56,11 @@ const ServiceHeader = ({ items }: { items: SchemaItem[] }) => {
         </div>
       )}
       {headingItem && (
-        <h2 className="font-dream text-4xl font-bold" style={{ color: '#3a2c1b' }}>
-          {headingItem.content}
-        </h2>
+        <h2 
+          className="font-dream text-4xl font-bold" 
+          style={{ color: '#3a2c1b' }}
+          dangerouslySetInnerHTML={{ __html: headingItem.content || '' }}
+        />
       )}
     </div>
   );
@@ -83,11 +85,16 @@ const ServiceItem = ({ items, index }: { items: SchemaItem[]; index: number }) =
   return (
     <div className={`grid grid-cols-1 lg:grid-cols-2 gap-6 items-start ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} ${index > 0 ? 'mt-12' : ''}`}>
       <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-        <h3 className="font-garet text-2xl font-bold mb-2" style={{ color: '#3a2c1b' }}>
-          {title}
-        </h3>
+        <h3 
+          className="font-garet text-2xl font-bold mb-2" 
+          style={{ color: '#3a2c1b' }}
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
         <div className="min-h-[120px] mb-6">
-          <p className="font-garet text-gray-700">{description}</p>
+          <p 
+            className="font-garet text-gray-700"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </div>
         {lightboxImage && (
           <Dialog>
