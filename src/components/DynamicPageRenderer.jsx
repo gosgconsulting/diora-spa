@@ -3,7 +3,7 @@ import componentRegistry from '../utils/componentRegistry';
 
 // This component renders dynamic components based on data from the CMS
 const DynamicPageRenderer = ({ components = [] }) => {
-  console.log('Rendering components:', components.length);
+  // console.log('Rendering components:', components.length);
   
   return (
     <>
