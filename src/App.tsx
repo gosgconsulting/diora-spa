@@ -15,6 +15,11 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import NotFound from "./pages/NotFound";
 
+// import DynamicPage from './pages/DynamicPage';
+// import AboutPage from './pages/AboutPage'; // Static page example
+// import ContactPage from './pages/ContactPage'; // Static page example
+
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -32,7 +37,11 @@ const App = () => (
           <Route path="/find-us" element={<FindUs />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* <Route path="/about" element={<Blog />} />
+          <Route path="/about/:id" element={<BlogPost />} /> */}
+
           <Route path="*" element={<NotFound />} />
         </Routes>
         <WhatsAppButton />

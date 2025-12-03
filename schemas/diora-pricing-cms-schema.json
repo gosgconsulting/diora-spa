@@ -1,0 +1,671 @@
+[
+  {
+    "key": "SimpleHeroBanner",
+    "name": "SimpleHeroBanner",
+    "type": "SimpleHeroBanner",
+    "items": [
+      {
+        "key": "title",
+        "type": "text",
+        "content": "Pricing"
+      },
+      {
+        "key": "subtitle",
+        "type": "text",
+        "content": "Thoughtfully curated treatments with transparent, relaxing prices"
+      }
+    ]
+  },
+  {
+    "key": "PricingGrid",
+    "type": "array",
+    "items": [
+      {
+        "key": "PricingColumnLeft",
+        "type": "array",
+        "items": [
+          {
+            "key": "HeadSpaService",
+            "type": "array",
+            "items": [
+              {
+                "alt": "Head Spa Services",
+                "key": "HeadSpaServiceImage",
+                "src": "https://cms.sparti.ai/uploads/file-1764233673575-360860.jpg",
+                "type": "image"
+              },
+              {
+                "key": "HeadSpaServiceHeading",
+                "type": "heading",
+                "level": 2,
+                "content": "Head Spa Services"
+              }
+            ]
+          },
+          {
+            "key": "Service1",
+            "type": "array",
+            "items": [
+              {
+                "key": "ExpressCleansing",
+                "type": "heading",
+                "level": 3,
+                "content": "Express Cleansing"
+              },
+              {
+                "key": "ServiceDescription1",
+                "type": "text",
+                "content": "A short and effective refresh for scalp and hair"
+              },
+              {
+                "key": "ServiceButton1",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "Express Cleansing",
+                "key": "ServiceCover1",
+                "src": "https://cms.sparti.ai/uploads/file-1764233708424-790674838.jpg",
+                "type": "image"
+              },
+              {
+                "alt": "Express Cleansing Menu",
+                "key": "ServiceLightBox1",
+                "src": "https://cms.sparti.ai/uploads/file-1764233757559-888784654.png",
+                "type": "image"
+              }
+            ]
+          },
+          {
+            "key": "Service2",
+            "type": "array",
+            "items": [
+              {
+                "key": "DetoxBloom",
+                "type": "heading",
+                "level": 3,
+                "content": "Detox & Bloom"
+              },
+              {
+                "key": "ServiceDescription2",
+                "type": "text",
+                "content": "A quick sensory detox to refresh both skin and soul"
+              },
+              {
+                "key": "ServiceButton2",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "Detox & Bloom",
+                "key": "ServiceCover2",
+                "src": "https://cms.sparti.ai/uploads/file-1764233784687-682529036.jpg",
+                "type": "image"
+              },
+              {
+                "alt": "Detox & Bloom Menu",
+                "key": "ServiceLightBox2",
+                "src": "https://cms.sparti.ai/uploads/file-1764233793675-151830604.png",
+                "type": "image"
+              }
+            ]
+          },
+          {
+            "key": "Service3",
+            "type": "array",
+            "items": [
+              {
+                "key": "DioraSignature",
+                "type": "heading",
+                "level": 3,
+                "content": "Diora's Signature"
+              },
+              {
+                "key": "ServiceDescription3",
+                "type": "text",
+                "content": "A luxurious blend of body, energy, and emotional balance"
+              },
+              {
+                "key": "ServiceButton3",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "Diora's Signature",
+                "key": "ServiceCover3",
+                "src": "https://cms.sparti.ai/uploads/file-1764233807353-864961068.jpg",
+                "type": "image"
+              },
+              {
+                "alt": "Diora's Signature Menu",
+                "key": "ServiceLightBox3",
+                "src": "https://cms.sparti.ai/uploads/file-1764233816226-93483200.png",
+                "type": "image"
+              }
+            ]
+          },
+          {
+            "key": "Service4",
+            "type": "array",
+            "items": [
+              {
+                "key": "FiveSenseRelaxation",
+                "type": "heading",
+                "level": 3,
+                "content": "5 Sense Relaxation"
+              },
+              {
+                "key": "ServiceDescription4",
+                "type": "text",
+                "content": "A full-body nervous system reset through rhythmic flow and deep touch"
+              },
+              {
+                "key": "ServiceButton4",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "5 Sense Relaxation",
+                "key": "ServiceCover4",
+                "src": "https://cms.sparti.ai/uploads/file-1764233828628-533938320.jpg",
+                "type": "image"
+              },
+              {
+                "alt": "5 Sense Relaxation Menu",
+                "key": "ServiceLightBox4",
+                "src": "https://cms.sparti.ai/uploads/file-1764233837615-325637555.png",
+                "type": "image"
+              }
+            ]
+          },
+          {
+            "key": "Service5",
+            "type": "array",
+            "items": [
+              {
+                "key": "BotanicalHealing",
+                "type": "heading",
+                "level": 3,
+                "content": "Diora's Botanical Healing"
+              },
+              {
+                "key": "ServiceDescription5",
+                "type": "text",
+                "content": "A 2-hour ritual based on traditional Eastern healing designed to deeply cleanse, circulate energy and nourish body & mind"
+              },
+              {
+                "key": "ServiceButton5",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "Diora's Botanical Healing",
+                "key": "ServiceCover5",
+                "src": "https://cms.sparti.ai/uploads/file-1764233847510-240800846.jpg",
+                "type": "image"
+              },
+              {
+                "alt": "Diora's Botanical Healing Menu",
+                "key": "ServiceLightBox5",
+                "src": "https://cms.sparti.ai/uploads/file-1764233854758-869904004.png",
+                "type": "image"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "PricingColumnRight",
+        "type": "array",
+        "items": [
+          {
+            "key": "EyelashExtensionService",
+            "type": "array",
+            "items": [
+              {
+                "alt": "Eyelash Extensions",
+                "key": "EyelashExtensionServiceImage",
+                "src": "https://cms.sparti.ai/uploads/file-1764233904499-642385397.png",
+                "type": "image"
+              },
+              {
+                "key": "EyelashExtensionServiceHeading",
+                "type": "heading",
+                "level": 2,
+                "content": "Eyelash Extensions"
+              }
+            ]
+          },
+          {
+            "key": "Service1",
+            "type": "array",
+            "items": [
+              {
+                "key": "LashLift",
+                "type": "heading",
+                "level": 3,
+                "content": "Lash Lift"
+              },
+              {
+                "key": "ServiceDescription1",
+                "type": "text",
+                "content": "Natural lash curl enhancement. Effect: Open, refreshed eyes."
+              },
+              {
+                "key": "ServiceButton1",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "Lash Lift",
+                "key": "ServiceCover1",
+                "src": "https://cms.sparti.ai/uploads/file-1764233960656-825550397.png",
+                "type": "image"
+              },
+              {
+                "alt": "Lash Lift Menu",
+                "key": "ServiceLightBox1",
+                "src": "https://cms.sparti.ai/uploads/file-1764233970613-307537106.jpg",
+                "type": "image"
+              }
+            ]
+          },
+          {
+            "key": "Service2",
+            "type": "array",
+            "items": [
+              {
+                "key": "JapaneseLash",
+                "type": "heading",
+                "level": 3,
+                "content": "Japanese Lash"
+              },
+              {
+                "key": "ServiceDescription2",
+                "type": "text",
+                "content": "Soft, natural, weightless. Effect: Neat, defined, like your lashes but better."
+              },
+              {
+                "key": "ServiceButton2",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "Japanese Lash",
+                "key": "ServiceCover2",
+                "src": "https://cms.sparti.ai/uploads/file-1764233983266-176908695.png",
+                "type": "image"
+              },
+              {
+                "alt": "Japanese Lash Menu",
+                "key": "ServiceLightBox2",
+                "src": "https://cms.sparti.ai/uploads/file-1764233989871-399972799.jpg",
+                "type": "image"
+              }
+            ]
+          },
+          {
+            "key": "Service3",
+            "type": "array",
+            "items": [
+              {
+                "key": "AngelLash",
+                "type": "heading",
+                "level": 3,
+                "content": "2D Angel Lash"
+              },
+              {
+                "key": "ServiceDescription3",
+                "type": "text",
+                "content": "Two lashes per natural lash. Fluttery look. Effect: Light, airy, romantic."
+              },
+              {
+                "key": "ServiceButton3",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "2D Angel Lash",
+                "key": "ServiceCover3",
+                "src": "https://cms.sparti.ai/uploads/file-1764233997503-331002608.png",
+                "type": "image"
+              },
+              {
+                "alt": "2D Angel Lash Menu",
+                "key": "ServiceLightBox3",
+                "src": "https://cms.sparti.ai/uploads/file-1764234006012-289662537.jpg",
+                "type": "image"
+              }
+            ]
+          },
+          {
+            "key": "Service4",
+            "type": "array",
+            "items": [
+              {
+                "key": "CamelliaLash",
+                "type": "heading",
+                "level": 3,
+                "content": "Camellia Lash"
+              },
+              {
+                "key": "ServiceDescription4",
+                "type": "text",
+                "content": "Multi-length fans, wispy texture. Effect: Flirty, feminine, dimensional."
+              },
+              {
+                "key": "ServiceButton4",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "Camellia Lash",
+                "key": "ServiceCover4",
+                "src": "https://cms.sparti.ai/uploads/file-1764234015940-485081242.png",
+                "type": "image"
+              },
+              {
+                "alt": "Camellia Lash Menu",
+                "key": "ServiceLightBox4",
+                "src": "https://cms.sparti.ai/uploads/file-1764234026547-726677125.jpg",
+                "type": "image"
+              }
+            ]
+          },
+          {
+            "key": "Service5",
+            "type": "array",
+            "items": [
+              {
+                "key": "RussianVolume",
+                "type": "heading",
+                "level": 3,
+                "content": "Russian Volume"
+              },
+              {
+                "key": "ServiceDescription5",
+                "type": "text",
+                "content": "Triple fans, moderate volume. Effect: Fuller with a soft-focus finish."
+              },
+              {
+                "key": "ServiceButton5",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "Russian Volume",
+                "key": "ServiceCover5",
+                "src": "https://cms.sparti.ai/uploads/file-1764234035641-818960201.png",
+                "type": "image"
+              },
+              {
+                "alt": "Russian Volume Menu",
+                "key": "ServiceLightBox5",
+                "src": "https://cms.sparti.ai/uploads/file-1764234048508-121250445.jpg",
+                "type": "image"
+              }
+            ]
+          },
+          {
+            "key": "Service6",
+            "type": "array",
+            "items": [
+              {
+                "key": "DesignLash",
+                "type": "heading",
+                "level": 3,
+                "content": "Design Lash"
+              },
+              {
+                "key": "ServiceDescription6",
+                "type": "text",
+                "content": "Ultra-fine, bold volume. Effect: Fluffy, full, lightweight."
+              },
+              {
+                "key": "ServiceButton6",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "Design Lash",
+                "key": "ServiceCover6",
+                "src": "https://cms.sparti.ai/uploads/file-1764234056858-843333495.png",
+                "type": "image"
+              },
+              {
+                "alt": "Design Lash Menu",
+                "key": "ServiceLightBox6",
+                "src": "https://cms.sparti.ai/uploads/file-1764234065711-149406544.jpg",
+                "type": "image"
+              }
+            ]
+          },
+          {
+            "key": "Service7",
+            "type": "array",
+            "items": [
+              {
+                "key": "BrowServices",
+                "type": "heading",
+                "level": 3,
+                "content": "Brow Services"
+              },
+              {
+                "key": "ServiceDescription7",
+                "type": "text",
+                "content": "Precise eyebrow shaping using traditional threading technique. Effect: Clean, defined brows."
+              },
+              {
+                "key": "ServiceButton7",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "Brow Services",
+                "key": "ServiceCover7",
+                "src": "https://cms.sparti.ai/uploads/file-1764234073702-477277582.png",
+                "type": "image"
+              },
+              {
+                "alt": "Brow Services Menu",
+                "key": "ServiceLightBox7",
+                "src": "https://cms.sparti.ai/uploads/file-1764234081247-750890447.jpg",
+                "type": "image"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "PricingGrid2",
+    "type": "array",
+    "items": [
+      {
+        "key": "PricingColumnLeft",
+        "type": "array",
+        "items": [
+          {
+            "key": "LaserHairRemovalService",
+            "type": "array",
+            "items": [
+              {
+                "alt": "Laser Hair Removal",
+                "key": "LaserHairRemovalServiceImage",
+                "src": "https://cms.sparti.ai/uploads/file-1764231142058-759304543.jpg",
+                "type": "image"
+              },
+              {
+                "key": "LaserHairRemovalServiceHeading",
+                "type": "heading",
+                "level": 2,
+                "content": "Laser Hair Removal"
+              }
+            ]
+          },
+          {
+            "key": "Service1",
+            "type": "array",
+            "items": [
+              {
+                "key": "LaserLadies",
+                "type": "heading",
+                "level": 3,
+                "content": "For Ladies"
+              },
+              {
+                "key": "ServiceDescription1",
+                "type": "text",
+                "content": "Enjoy hair-free, silky-smooth skin that keeps you confident, comfortable, and effortlessly beautiful in every moment of your daily life."
+              },
+              {
+                "key": "ServiceButton1",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "Laser Hair Removal For Ladies",
+                "key": "ServiceCover1",
+                "src": "https://cms.sparti.ai/uploads/file-1764231147792-808391521.jpg",
+                "type": "image"
+              },
+              {
+                "alt": "Laser Hair Removal For Ladies Menu",
+                "key": "ServiceLightBox1",
+                "src": "https://cms.sparti.ai/uploads/file-1764232641783-558480276.png",
+                "type": "image"
+              }
+            ]
+          },
+          {
+            "key": "Service2",
+            "type": "array",
+            "items": [
+              {
+                "key": "LaserGentlemen",
+                "type": "heading",
+                "level": 3,
+                "content": "For Gentlemen"
+              },
+              {
+                "key": "ServiceDescription2",
+                "type": "text",
+                "content": "Long-lasting smoothness, less regrowth, and a clean, confident look without daily shaving."
+              },
+              {
+                "key": "ServiceButton2",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "Laser Hair Removal For Gentlemen",
+                "key": "ServiceCover2",
+                "src": "https://cms.sparti.ai/uploads/file-1764232658483-573551534.png",
+                "type": "image"
+              },
+              {
+                "alt": "Laser Hair Removal For Gentlemen Menu",
+                "key": "ServiceLightBox2",
+                "src": "https://cms.sparti.ai/uploads/file-1764232641783-558480276.png",
+                "type": "image"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "PricingColumnRight",
+        "type": "array",
+        "items": [
+          {
+            "key": "WaxingService",
+            "type": "array",
+            "items": [
+              {
+                "alt": "Waxing Services",
+                "key": "WaxingServiceImage",
+                "src": "https://cms.sparti.ai/uploads/file-1764231121727-438667337.jpg",
+                "type": "image"
+              },
+              {
+                "key": "WaxingServiceHeading",
+                "type": "heading",
+                "level": 2,
+                "content": "Waxing Services"
+              }
+            ]
+          },
+          {
+            "key": "Service1",
+            "type": "array",
+            "items": [
+              {
+                "key": "LadiesWaxing",
+                "type": "heading",
+                "level": 3,
+                "content": "Ladies Waxing"
+              },
+              {
+                "key": "ServiceDescription1",
+                "type": "text",
+                "content": "Gentle, precise hair removal using premium hard wax for smooth, long-lasting results with minimal discomfort."
+              },
+              {
+                "key": "ServiceButton1",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "Ladies Waxing",
+                "key": "ServiceCover1",
+                "src": "https://cms.sparti.ai/uploads/file-1764231187422-436082514.jpg",
+                "type": "image"
+              },
+              {
+                "alt": "Ladies Waxing Menu",
+                "key": "ServiceLightBox1",
+                "src": "https://cms.sparti.ai/uploads/file-1764232262812-877469287.png",
+                "type": "image"
+              }
+            ]
+          },
+          {
+            "key": "Service2",
+            "type": "array",
+            "items": [
+              {
+                "key": "GentlemenWaxing",
+                "type": "heading",
+                "level": 3,
+                "content": "Gentlemen's Waxing"
+              },
+              {
+                "key": "ServiceDescription2",
+                "type": "text",
+                "content": "Professional waxing tailored for men—efficient, hygienic, and skin-conscious for a clean, confident finish."
+              },
+              {
+                "key": "ServiceButton2",
+                "type": "button",
+                "content": "Enquire now"
+              },
+              {
+                "alt": "Gentlemen's Waxing",
+                "key": "ServiceCover2",
+                "src": "https://cms.sparti.ai/uploads/file-1764232237157-447501315.png",
+                "type": "image"
+              },
+              {
+                "alt": "Gentlemen's Waxing Menu",
+                "key": "ServiceLightBox2",
+                "src": "https://cms.sparti.ai/uploads/file-1764232262812-877469287.png",
+                "type": "image"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

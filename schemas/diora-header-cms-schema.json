@@ -1,0 +1,37 @@
+{
+  "logo": {
+    "alt": "",
+    "src": "",
+    "height": "h-8"
+  },
+  "menu": [
+    {
+      "id": "item_1764238319855",
+      "link": "/",
+      "label": "Home"
+    },
+    {
+      "id": "item_1764238343055",
+      "link": "/pricing",
+      "label": "Pricing"
+    },
+    {
+      "id": "item_1764238353783",
+      "link": "/gallery",
+      "label": "Gallery"
+    },
+    {
+      "id": "item_1764238368030",
+      "link": "/about",
+      "label": "Blog"
+    },
+    {
+      "id": "item_1764238393086",
+      "link": "/find-us",
+      "label": "Find Us"
+    }
+  ],
+  "showCart": true,
+  "showSearch": true,
+  "showAccount": true
+}

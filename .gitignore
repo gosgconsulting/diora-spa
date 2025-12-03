@@ -1,5 +1,8 @@
 # envs
-.env
+# .env  # Commented out - now tracked (private repo)
+
+# Assets - compressed for dev, use production CDN/sources instead
+# src/assets/  # Commented out - now tracked (private repo)
 
 # Logs
 logs
@@ -25,3 +28,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+

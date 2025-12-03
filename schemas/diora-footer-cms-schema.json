@@ -1,0 +1,54 @@
+{
+    "logo": {
+      "src": "https://cms.sparti.ai/uploads/file-1764331731643-993327640.png",
+      "alt": "Diora spa by Michelle Tran"
+    },
+    "sections": [],
+    "legalLinks": [
+      {
+        "label": "Privacy Policy",
+        "link": "/privacy-policy"
+      },
+      {
+        "label": "Terms & Conditions",
+        "link": "/terms-conditions"
+      }
+    ],
+    "copyright": "© Diora Spa By Michelle Tran. All rights reserved.",
+    "description": "",
+    "showCurrencySwitcher": true,
+    "showLanguageSwitcher": true,
+    "footerContactInfo": [
+      {
+        "footerContactHeader": "Contact Us",
+        "footerAddress": "14 Scotts Rd, #05-80 Far East Plaza, Singapore 228213",
+        "footerPhone": "+65 9224 6789",
+        "footerEmail": "dioraspabymichelletran@gmail.com"
+      }
+    ],
+    "footerService": [
+      {
+        "footerServiceHeader": "Working Hours",
+        "footerServiceDay": "Monday to Sunday",
+        "footerServiceHour": "10:00 AM - 9:00 PM"
+      }
+    ],
+    "footerSocial1": [
+      {
+        "footerSocialHeader": "Get Social",
+        "footerInstagram": "https://www.instagram.com/dioraspa_bymichelletran/",
+        "footerFacebook": "https://www.facebook.com/profile.php?id=61579251501889/",
+        "footerTikTok": "https://www.tiktok.com/@dioraspa_bymichel/"
+      }
+    ],
+    "footerSocial2": [
+      {
+        "footerYouTube": "https://www.youtube.com/@dioraspa_bymichelletran/",
+        "footerTagline": "Tag us in your photos!",
+        "footerTaglineLink": "https://www.instagram.com/dioraspa_bymichelletran/",
+        "footerOpenChat": "https://wa.me/6592246789"
+      }
+    ]
+
+
+}
