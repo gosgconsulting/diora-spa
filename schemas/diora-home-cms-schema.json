@@ -22,7 +22,7 @@
       {
         "key": "welcomeText",
         "type": "text",
-        "content": "VVelcome to"
+        "content": "Welcome to"
       },
       {
         "alt": "Diora Spa by Michelle Tran",
@@ -40,7 +40,7 @@
       {
         "key": "title",
         "type": "text",
-        "content": "Untested Our Services"
+        "content": "Our Services"
       },
       {
         "key": "subtitle",
@@ -74,7 +74,7 @@
               },
               {
                 "key": "ServiceButton",
-                "link": "/pricing",
+                "link": "/pricing#PricingGrid",
                 "type": "button",
                 "content": "Explore More"
               }
@@ -103,7 +103,7 @@
               },
               {
                 "key": "ServiceButton",
-                "link": "/pricing",
+                "link": "/pricing#PricingGrid2",
                 "type": "button",
                 "content": "Explore More"
               }
@@ -132,7 +132,7 @@
               },
               {
                 "key": "ServiceButton",
-                "link": "/pricing",
+                "link": "/pricing#PricingGrid2",
                 "type": "button",
                 "content": "Explore More"
               }
@@ -161,7 +161,7 @@
               },
               {
                 "key": "ServiceButton",
-                "link": "/pricing",
+                "link": "/pricing#PricingGrid",
                 "type": "button",
                 "content": "Explore More"
               }
@@ -255,7 +255,7 @@
       {
         "key": "subtitle",
         "type": "text",
-        "content": "Sourced from nature's finest treasures around the world"
+        "content": "Sourced from nature's finest treasures around the world."
       },
       {
         "key": "ingredients",
@@ -263,7 +263,7 @@
         "items": [
           {
             "key": "ingredient1",
-            "src": "src/assets/ingredients/White Truffle Extract.png",
+            "src": "https://cms.sparti.ai/uploads/file-1764739935100-427549972.png",
             "name": "White Truffle Extract",
             "type": "image",
             "benefit": "Rich in fatty acids and vitamins, it deeply restores damaged hair and enhances unparalleled shine.",
@@ -279,7 +279,7 @@
           },
           {
             "key": "ingredient2",
-            "src": "src/assets/ingredients/Caviar Extract.png",
+            "src": "https://cms.sparti.ai/uploads/file-1764739946095-888012076.png",
             "name": "Caviar Extract",
             "type": "image",
             "benefit": "Packed with Omega-3, proteins, and minerals; regenerates hair from within and combats scalp aging.",
@@ -295,7 +295,7 @@
           },
           {
             "key": "ingredient3",
-            "src": "src/assets/ingredients/Pearl Powder.png",
+            "src": "https://cms.sparti.ai/uploads/file-1764740019071-930612013.png",
             "name": "Pearl Powder",
             "type": "image",
             "benefit": "Infuses hair with minerals, purifies the scalp, and imparts a luminous, silky gloss.",
@@ -311,7 +311,7 @@
           },
           {
             "key": "ingredient4",
-            "src": "src/assets/ingredients/24K Gold Infusio.png",
+            "src": "https://cms.sparti.ai/uploads/file-1764740157881-175601321.png",
             "name": "24K Gold Infusion",
             "type": "image",
             "benefit": "Boosts circulation, delivers powerful antioxidants, and leaves hair and scalp with a radiant glow.",
@@ -327,7 +327,7 @@
           },
           {
             "key": "ingredient5",
-            "src": "src/assets/ingredients/Saffron.png",
+            "src": "https://cms.sparti.ai/uploads/file-1764740167954-587826235.png",
             "name": "Saffron",
             "type": "image",
             "benefit": "Known as 'red gold,' it soothes sensitive scalps while nourishing hair with potent antioxidants.",
@@ -343,7 +343,7 @@
           },
           {
             "key": "ingredient6",
-            "src": "src/assets/ingredients/Camellia Oil.png",
+            "src": "https://cms.sparti.ai/uploads/file-1764740178168-341591111.png",
             "name": "Camellia Oil",
             "type": "image",
             "benefit": "Japan's beauty secret, rich in oleic acid; absorbs quickly to soften and smooth hair like silk.",
@@ -359,7 +359,7 @@
           },
           {
             "key": "ingredient7",
-            "src": "src/assets/ingredients/Seaweed Complex.png",
+            "src": "https://cms.sparti.ai/uploads/file-1764740190880-496790855.png",
             "name": "Premium Seaweed Complex (Kombu, Wakame)",
             "type": "image",
             "benefit": "Provides marine minerals, restores hydration balance, and revitalizes weakened strands.",
@@ -375,7 +375,7 @@
           },
           {
             "key": "ingredient8",
-            "src": "src/assets/ingredients/royal jelly.png",
+            "src": "https://cms.sparti.ai/uploads/file-1764740203192-545250850.png",
             "name": "Royal Jelly",
             "type": "image",
             "benefit": "A superfood for the scalp, abundant in proteins and B vitamins; strengthens and reduces breakage.",
@@ -391,7 +391,7 @@
           },
           {
             "key": "ingredient9",
-            "src": "src/assets/ingredients/Japanese Hinoki Essential Oil.png",
+            "src": "https://cms.sparti.ai/uploads/file-1764740214424-684017582.png",
             "name": "Japanese Hinoki Essential Oil",
             "type": "image",
             "benefit": "Distilled from sacred cypress wood; deeply cleanses, purifies, and offers a calming, spa-like aroma.",
@@ -407,7 +407,7 @@
           },
           {
             "key": "ingredient10",
-            "src": "src/assets/ingredients/placenta extrac.png",
+            "src": "https://cms.sparti.ai/uploads/file-1764740233735-593180621.png",
             "name": "Placenta Extract (Botanical / Biotech)",
             "type": "image",
             "benefit": "Supports cell regeneration, revitalizes follicles, and promotes denser, healthier hair growth.",
@@ -446,7 +446,7 @@
         "items": [
           {
             "key": "member1",
-            "src": "src/assets/team-members/kris.jpg",
+            "src": "https://cms.sparti.ai/uploads/file-1764740283478-581259569.jpg",
             "name": "Kris",
             "role": "Lash & Head Spa Specialist",
             "type": "image",
@@ -463,7 +463,7 @@
           },
           {
             "key": "member2",
-            "src": "src/assets/team-members/Rose.jpg",
+            "src": "https://cms.sparti.ai/uploads/file-1764740292762-38507824.jpg",
             "name": "Rose",
             "role": "Head Spa & Laser Specialist",
             "type": "image",
@@ -480,7 +480,7 @@
           },
           {
             "key": "member3",
-            "src": "src/assets/team-members/Shina.jpg",
+            "src": "https://cms.sparti.ai/uploads/file-1764740304387-172546231.jpg",
             "name": "Shina",
             "role": "Head Spa, Laser, Waxing & Massage Therapist",
             "type": "image",
@@ -497,7 +497,7 @@
           },
           {
             "key": "member4",
-            "src": "src/assets/team-members/Lina.jpg",
+            "src": "https://cms.sparti.ai/uploads/file-1764740310680-225277556.jpg",
             "name": "Lina",
             "role": "Head Spa, Laser & Waxing Therapist",
             "type": "image",
@@ -514,7 +514,7 @@
           },
           {
             "key": "member5",
-            "src": "src/assets/team-members/Mei ling.jpg",
+            "src": "https://cms.sparti.ai/uploads/file-1764740321213-399244005.jpg",
             "name": "Mei Ling",
             "role": "Spa Manager",
             "type": "image",
@@ -551,7 +551,7 @@
       {
         "alt": "Diora Spa team",
         "key": "image",
-        "src": "src/assets/about-us.jpg",
+        "src": "https://cms.sparti.ai/uploads/file-1764740367114-169269735.jpg",
         "type": "image",
         "settings": {
           "layout": "medium",
