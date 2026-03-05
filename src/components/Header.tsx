@@ -142,7 +142,7 @@ export default function Header() {
           </nav>
 
           {/* Book Now Dropdown */}
-          <DropdownMenu>
+          <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
               <Button className={`font-garet font-medium transition-colors ${
                 isScrolled ? 'hover:bg-white/90 bg-[#FAF8F4] text-[#3a2c1b]' : 'hover:bg-white/30 bg-white/20 text-[#FAF8F4] border border-white/30'
@@ -151,7 +151,22 @@ export default function Header() {
                 <ChevronDown className="ml-2 h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="min-w-[120px] w-auto">
+            <DropdownMenuContent 
+              align="end" 
+              className="min-w-[120px] w-auto"
+              onOpenAutoFocus={(e) => e.preventDefault()}
+              onCloseAutoFocus={(e) => e.preventDefault()}
+            >
+              <DropdownMenuItem asChild>
+                <a 
+                  href="https://dioraspa.wessapp.com/home" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center w-full font-garet font-medium"
+                >
+                  Online Booking
+                </a>
+              </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <a 
                   href={bookNowLinks.whatsapp} 
@@ -160,16 +175,6 @@ export default function Header() {
                   className="flex items-center w-full font-garet font-medium"
                 >
                   WhatsApp
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <a 
-                  href={bookNowLinks.fresha} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center w-full font-garet font-medium"
-                >
-                  Fresha
                 </a>
               </DropdownMenuItem>
             </DropdownMenuContent>
