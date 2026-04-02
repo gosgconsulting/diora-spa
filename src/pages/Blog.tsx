@@ -181,7 +181,7 @@ export default function Blog() {
                             variant="outline" 
                             className="self-start font-garet group" 
                             style={{ borderColor: '#3a2c1b', color: '#3a2c1b' }}
-                            onClick={() => navigate(`/blog/${post.id}`)}
+                            onClick={() => navigate(`/blog/${encodeURIComponent(post.slug)}`)}
                           >
                             Read More
                             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

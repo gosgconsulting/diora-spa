@@ -1,6 +1,14 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { getWordPressPostById, WordPressPost, getPostImage, getPostAuthor, getPostCategory, formatDate } from "@/api/wordpress";
+import { useParams, Link, Navigate } from "react-router-dom";
+import {
+  getWordPressPost,
+  getWordPressPostById,
+  WordPressPost,
+  getPostImage,
+  getPostAuthor,
+  getPostCategory,
+  formatDate,
+} from "@/api/wordpress";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -9,49 +17,82 @@ import "@/styles/wordpress-content.css";
 // Removed unused hero image import
 
 export default function BlogPost() {
-  const { id } = useParams<{ id: string }>();
+  const { slug: slugParam } = useParams<{ slug: string }>();
   const [post, setPost] = useState<WordPressPost | null>(null);
+  const [redirectSlug, setRedirectSlug] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    let cancelled = false;
+
     const fetchPost = async () => {
-      if (!id) {
-        setError("Post ID is missing");
+      if (!slugParam) {
+        setError("Post not found");
         setLoading(false);
         return;
       }
 
       try {
         setLoading(true);
-        const postId = parseInt(id, 10);
-        
-        if (isNaN(postId)) {
-          setError("Invalid post ID");
+        setRedirectSlug(null);
+        setError(null);
+
+        const isNumericId = /^\d+$/.test(slugParam);
+
+        if (isNumericId) {
+          const postId = parseInt(slugParam, 10);
+          const postData = await getWordPressPostById(postId);
+          if (cancelled) return;
+          if (!postData) {
+            setError("Post not found");
+            setPost(null);
+          } else {
+            setRedirectSlug(postData.slug);
+            setPost(null);
+          }
           return;
         }
-        
-        const postData = await getWordPressPostById(postId);
-        
+
+        const decoded = decodeURIComponent(slugParam);
+        let postData = await getWordPressPost(decoded);
+        if (!postData && decoded !== decoded.toLowerCase()) {
+          postData = await getWordPressPost(decoded.toLowerCase());
+        }
+        if (cancelled) return;
+
         if (!postData) {
           setError("Post not found");
+          setPost(null);
+        } else if (postData.slug !== decoded) {
+          setRedirectSlug(postData.slug);
+          setPost(null);
         } else {
           setPost(postData);
-          setError(null);
-          
-          // Set page title
           document.title = `${postData.title.rendered} | Diora Spa`;
         }
       } catch (err) {
-        setError('Failed to load blog post. Please try again later.');
-        console.error('Error fetching blog post:', err);
+        if (!cancelled) {
+          setError("Failed to load blog post. Please try again later.");
+          console.error("Error fetching blog post:", err);
+          setPost(null);
+        }
       } finally {
-        setLoading(false);
+        if (!cancelled) {
+          setLoading(false);
+        }
       }
     };
 
     fetchPost();
-  }, [id]);
+    return () => {
+      cancelled = true;
+    };
+  }, [slugParam]);
+
+  if (redirectSlug) {
+    return <Navigate to={`/blog/${encodeURIComponent(redirectSlug)}`} replace />;
+  }
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FAF8F4' }}>

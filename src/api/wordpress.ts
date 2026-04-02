@@ -78,7 +78,7 @@ export async function getWordPressPosts(page = 1, perPage = 10): Promise<WordPre
 
 export async function getWordPressPost(slug: string): Promise<WordPressPost | null> {
   try {
-    const url = `${WORDPRESS_API_URL}/posts?slug=${slug}&_embed=true`;
+    const url = `${WORDPRESS_API_URL}/posts?slug=${encodeURIComponent(slug)}&_embed=true`;
     console.log('WordPress API request URL for slug:', url);
     
     // Add cache-busting parameter
