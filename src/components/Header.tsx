@@ -159,7 +159,7 @@ export default function Header() {
             >
               <DropdownMenuItem asChild>
                 <a 
-                  href="https://dioraspa.wessapp.com/home" 
+                  href="https://nailqueen-dioraspa.wessapp.com/home" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center w-full font-garet font-medium"
